@@ -46,7 +46,7 @@ h1, h2, h3 {
 }
 
 .school img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     border: 5px double #002D62;
     border-radius: 10px;
@@ -120,7 +120,7 @@ h1, h2, h3 {
     }
 
     .school img {
-        width: 90%;
+        max-width: 80%;
         height: auto;
     }
 

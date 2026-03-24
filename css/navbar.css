@@ -1,0 +1,85 @@
+/* NAVBAR.CSS - Stili globali e Navigazione */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: white; /* O il colore che preferisci per il testo del logo */
+}
+
+.logo a:hover {
+    /* Opzionale: un leggero effetto quando passi il mouse sul logo */
+    opacity: 0.9;
+}
+
+/* Tipografia specifica per gli elementi della Navbar */
+.logo span {
+    font-family: 'Roboto Slab', serif;
+    color: white;
+}
+
+.nav-links a {
+    font-family: 'Graduate', serif; /* Ripristinato Graduate come nel tuo file originale */
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+/* Struttura Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #002D62;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.logo:hover {
+    text-shadow: 2px 2px 5px #93c54b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a:hover {
+    color: #93c54b;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CORSO SPAVENTO - Stili specifici per la Facoltà di Spavento
+   SEZIONE CORSI - Stili specifici per la Facoltà di Spavento e Ingegneria
    Allineato con le spaziature e il layout dell'Index
    ========================================================================== */
 
@@ -7,7 +7,7 @@
     position: relative;
     width: 100%;
     /* Altezza minima generosa per dare importanza alla testata */
-    min-height: 500px; 
+    min-height: 500px;
     background-image: url('../assets/images/accademia-800.webp'); 
     background-size: cover;
     background-position: center;
@@ -134,17 +134,33 @@
 
 @media (max-width: 768px) {
     .hero-corsi {
-        margin-top: 60px; /* Riduzione margine navbar su mobile */
-        min-height: 400px;
+        margin-top: 60px;
+        /* Forza l'altezza a 450px per contenere comodamente le 3 righe di testo */
+        height: 450px !important; 
+        width: 100% !important;
+        display: flex;
+        overflow: hidden; /* Evita che il contenuto "esca" fuori */
     }
 
     .hero-overlay {
-        min-height: 400px;
-        padding: 40px 15px;
+        /* L'overlay ora occupa tutto lo spazio disponibile senza margini */
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra il testo nel box da 450px */
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .hero-contenuti {
+        width: 100%;
+        max-width: 100%; /* Si assicura di non superare lo schermo */
     }
 
     .hero-contenuti h1 {
-        /* 2.2rem come definito nella tua media query dell'index */
         font-size: 2.2rem; 
     }
 

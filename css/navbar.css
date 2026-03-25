@@ -169,7 +169,7 @@ body {
     }
 
 .menuSmartphone {
-    display: block;
+    display: flex;
     position: fixed;
     list-style: none;
     padding: 20px;
@@ -177,11 +177,14 @@ body {
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    top: 70px;
     clip-path: 100% at 50% -50%;
     -webkit-clip-path: circle(100px at 50% -50%);
     transition: all 1s ease-out;
     pointer-events: none;
+    z-index: 900;
 }
+
 .menuSmartphone a {
     display: block;
     padding: 15px 0;
@@ -190,9 +193,17 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
+.menuSmartphone.open {
+    /* MODIFICA: Riattiva i click solo quando è aperto */
+    pointer-events: auto;
+    -webkit-clip-path: circle(150% at 90% 0%);
+    clip-path: circle(150% at 90% 0%);
+}
+
 .open {
     display: flex;
     clip-path: 1500% at 50% -50%;
     -webkit-clip-path: circle(1500px at 90% -50%);
+    pointer-events: auto;
 }
 }

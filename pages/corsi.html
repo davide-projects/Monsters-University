@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Benvenuti alla Monsters University - La migliore accademia di spavento." />
+
+    <title>Monsters University</title>
+
+    <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
+
+    <link href="../assets/images/accademia-400.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/styleCorsi.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../assets/images/logoScuola.webp" alt="Logo MU" width="94" height="94"
+                    style="height: 60px; width: auto" />
+            </a>
+            <span>Monsters University</span>
+        </div>
+        <button class="hamburger" aria-label="Apri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Cosa Facciamo</a></li>
+                <li><a href="#">I Nostri Corsi</a></li>
+                <li><a href="#">Come Raggiungerci</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul class="menuSmartphone"> <!--Menu Smartphone a comparsa-->
+            <li><a href="#">Cosa Facciamo</a></li>
+            <li><a href="#">I Nostri Corsi</a></li>
+            <li><a href="#">Come Raggiungerci</a></li>
+        </ul>
+
+        <section class="title">
+            <h2>I nostri CORSI</h2>
+        </section>
+
+        <section class="scream">
+            <h2>Non fai paura a nessuno?</h2>
+            <img src="../assets/images/wtfbro.webp" sizes="(max-width: 600px) 400px, 800px" alt="Universita" width="800"
+                height="533" style="width: 100%; height: auto" fetchpriority="high" />
+            <h3>All'inizio è normale!</h3>
+        </section>
+
+        <h3 style="text-align: center; font-size: 170%;">-- I corsi --</h3>
+
+        <section class="coursesSection">
+            <div class="coursesGrid">
+                <article class="card">
+                    <img src="../assets/images/screaming.webp" alt="Mostri" />
+                    <h3>Mostruosità</h3>
+                    <p>Lo so, lo so... vorresti far paura ai bambini come un ragno gigante sulla maglietta. <br>Se non
+                        sei brutto come la morte, allora devi lavorarci su! Nel corso di <strong>mostruosità</strong>
+                        imparerai ad intimidire chiunque!</p>
+                    <a class="cardBtn" href="#">Scopri</a>
+                </article>
+
+                <article class="card">
+                    <img src="../assets/images/mikeatwork.webp" alt="Ingegneria dello Spavento" />
+                    <h3>Ingegneria dello Spavento</h3>
+                    <p>Ah... non c'è niente di meglio delle urla di un bambino! Pura energia! Nel corso
+                        <strong>Ingegneria dello Spavento</strong> scoprirai come usare questa preziosa fonte
+                        energetica.</p>
+                    <a class="cardBtn" href="#">Scopri</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="storia">
+            <div class="container-storia">
+                <h2>La Nostra Storia</h2>
+                <div class="storia-grid">
+                    <div class="testo-storia">
+                        <h3>Fondata nel 1313</h3>
+                        <p>
+                            Da oltre sette secoli, la <strong>Monsters University</strong> è
+                            il faro dell'istruzione nel mondo dei mostri.
+                        </p>
+                        <p>
+                            Il nostro motto, <em>"Visita Concilium"</em>, guida ogni studente.
+                        </p>
+                    </div>
+                    <div class="citazione">
+                        <blockquote>
+                            "Non si nasce mostri, si diventa leggende."
+                            <span> Rettore: <br />Tritamarmo</span>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JavaScript/customNavbar.js"></script>
+</body>
+
+</html>

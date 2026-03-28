@@ -9,16 +9,21 @@
 
     <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
 
+    <!-- Font Google: Roboto Slab usato come font principale del progetto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
 
+    <!-- Fogli di stile separati per responsabilità: navbar, stili globali, stili specifici per la sezione corsi -->
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/sezioneCorsi.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
+
+    <!-- NAVBAR DESKTOP: logo + hamburger button (solo mobile) + link di navigazione -->
     <header class="navbar">
         <div class="logo">
             <a href="../index.html">
@@ -27,6 +32,8 @@
             </a>
             <span>Monsters University</span>
         </div>
+
+        <!-- Il pulsante hamburger è visibile solo su mobile (gestito via CSS) -->
         <button class="hamburger" aria-label="Apri menu">
             <span></span>
             <span></span>
@@ -36,19 +43,26 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#">I Nostri Corsi</a></li>
+                <li><a href="./corsi.html">I Nostri Corsi</a></li>
                 <li><a href="#">Come Raggiungerci</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+
+        <!--
+            MENU MOBILE: duplicato dei link di navigazione, mostrato solo su smartphone.
+            Viene controllato da customNavbar.js al click sull'hamburger.
+            NB: mantenere sincronizzati i link con quelli della navbar desktop qui sopra.
+        -->
         <ul class="menuSmartphone">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#">I Nostri Corsi</a></li>
+            <li><a href="./corsi.html">I Nostri Corsi</a></li>
             <li><a href="#">Come Raggiungerci</a></li>
         </ul>
 
+        <!-- HERO: immagine di sfondo + overlay scuro + titolo corso e info rapide (durata e crediti) -->
         <section class="hero-corsi">
             <div class="hero-overlay">
                 <div class="hero-contenuti">
@@ -58,7 +72,8 @@
                         Monsters Inc.
                     </p>
 
-                    <div class="hero-dettagli">                        
+                    <!-- Dettagli sintetici del corso, visibili nell'hero -->
+                    <div class="hero-dettagli">
                         <div class="dettagli-elementi">
                             <strong>Durata</strong>
                             <span>4 Anni</span>
@@ -72,11 +87,18 @@
             </div>
         </section>
 
+        <!--
+            SEZIONE PROGRAMMA: struttura diversa rispetto alla pagina "Facoltà di Spavento".
+            Qui la colonna sinistra (colonna-didattica) contiene sia l'introduzione testuale
+            sia i moduli per anno, mentre la destra ospita la citazione del docente.
+            Vedi programma-grid in sezioneCorsi.css per il layout a due colonne.
+        -->
         <section class="programma">
             <div class="container-programma">
                 <div class="programma-grid">
 
                     <div class="colonna-didattica">
+                        <!-- Testo introduttivo del corso: descrive l'approccio didattico e i laboratori -->
                         <div class="testo-introduzione">
                             <h2>Percorso Accademico</h2>
                             <p>Non si tratta solo di fare paura. Si tratta di comprendere la fisica del suono, la
@@ -85,6 +107,7 @@
                                 offrono tecnologie all'avanguardia per catturare ogni singolo decibel di energia.</p>
                         </div>
 
+                        <!-- Un <div> per ogni anno accademico: questo corso dura 4 anni (vs 3 della Facoltà di Spavento) -->
                         <div class="moduli-didattici">
                             <div class="anno-accademico">
                                 <strong>Anno 1: Fondamenti di Spavento</strong>
@@ -108,7 +131,9 @@
                         </div>
                     </div>
 
+                    <!-- Citazione laterale: aggiornare nome e ruolo del docente se cambia -->
                     <aside class="citazione">
+                        <!-- L'attributo title sul blockquote identifica il corso di riferimento -->
                         <blockquote title="Ingegneria dello Spavento">
                             "L'urlo è energia pura, ma l'ingegneria è il contenitore che la trasforma in progresso. Non
                             cerchiamo solo decibel, cerchiamo l'efficienza assoluta del terrore."
@@ -119,8 +144,12 @@
                 </div>
             </div>
         </section>
+    </main>
 
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="../JavaScript/customNavbar.js"></script>
+    <!-- jQuery caricato da CDN prima dello script custom che lo usa -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JavaScript/customNavbar.js"></script>
+    <script src="../JavaScript/footer.js"></script>
 </body>
+
+</html>

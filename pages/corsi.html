@@ -4,25 +4,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Benvenuti alla Monsters University - La migliore accademia di spavento." />
-
+    <meta name="description" content="Corso Spavento" />
     <title>Monsters University</title>
 
     <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
 
-    <link href="../assets/images/accademia-400.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/styleCorsi.css" />
+    <link rel="stylesheet" href="../css/nostriCorsi.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="index.html">
+            <a href="../index.html">
                 <img src="../assets/images/logoScuola.webp" alt="Logo MU" width="94" height="94"
                     style="height: 60px; width: auto" />
             </a>
@@ -36,81 +35,86 @@
 
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Cosa Facciamo</a></li>
-                <li><a href="#">I Nostri Corsi</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/corsi.html">I Nostri Corsi</a></li>
                 <li><a href="#">Come Raggiungerci</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <ul class="menuSmartphone"> <!--Menu Smartphone a comparsa-->
-            <li><a href="#">Cosa Facciamo</a></li>
-            <li><a href="#">I Nostri Corsi</a></li>
+        <ul class="menuSmartphone">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/corsi.html">I Nostri Corsi</a></li>
             <li><a href="#">Come Raggiungerci</a></li>
         </ul>
 
-        <section class="title">
-            <h2>I nostri CORSI</h2>
-        </section>
-
-        <section class="scream">
-            <h2>Non fai paura a nessuno?</h2>
-            <img src="../assets/images/wtfbro.webp" sizes="(max-width: 600px) 400px, 800px" alt="Universita" width="800"
-                height="533" style="width: 100%; height: auto" fetchpriority="high" />
-            <h3>All'inizio è normale!</h3>
-        </section>
-
-        <h3 style="text-align: center; font-size: 170%;">-- I corsi --</h3>
-
-        <section class="coursesSection">
-            <div class="coursesGrid">
-                <article class="card">
-                    <img src="../assets/images/screaming.webp" alt="Mostri" />
-                    <h3>Mostruosità</h3>
-                    <p>Lo so, lo so... vorresti far paura ai bambini come un ragno gigante sulla maglietta. <br>Se non
-                        sei brutto come la morte, allora devi lavorarci su! Nel corso di <strong>mostruosità</strong>
-                        imparerai ad intimidire chiunque!</p>
-                    <a class="cardBtn" href="#">Scopri</a>
-                </article>
-
-                <article class="card">
-                    <img src="../assets/images/mikeatwork.webp" alt="Ingegneria dello Spavento" />
-                    <h3>Ingegneria dello Spavento</h3>
-                    <p>Ah... non c'è niente di meglio delle urla di un bambino! Pura energia! Nel corso
-                        <strong>Ingegneria dello Spavento</strong> scoprirai come usare questa preziosa fonte
-                        energetica.</p>
-                    <a class="cardBtn" href="#">Scopri</a>
-                </article>
+        <section class="hero-corsi" aria-label="Hero Corsi">
+            <!-- Immagine di sfondo (distesa) -->
+            <img src="../assets/images/accademia-800.webp" alt="Corsi - mappa città" class="hero-image">
+            <!-- Overlay semitrasparente sopra l'immagine -->
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <!-- Testo centrato sopra l'immagine -->
+            <div class="hero-contenuti">
+                <h1>CORSI</h1>
             </div>
         </section>
 
-        <section class="storia">
-            <div class="container-storia">
-                <h2>La Nostra Storia</h2>
-                <div class="storia-grid">
-                    <div class="testo-storia">
-                        <h3>Fondata nel 1313</h3>
-                        <p>
-                            Da oltre sette secoli, la <strong>Monsters University</strong> è
-                            il faro dell'istruzione nel mondo dei mostri.
-                        </p>
-                        <p>
-                            Il nostro motto, <em>"Visita Concilium"</em>, guida ogni studente.
-                        </p>
+        <section class="programma">
+            <div class="container-programma">
+                <img src="../assets/images/wtfSullivan.webp" alt="Sullivan che non spaventa nessuno." class="programma-img">
+
+                <div class="programma-content">
+                    <div class="titles-row">
+                        <h2>Non fai paura a nessuno?</h2>
+                        <h2>all'inizio è normale!</h2>
                     </div>
-                    <div class="citazione">
-                        <blockquote>
-                            "Non si nasce mostri, si diventa leggende."
-                            <span> Rettore: <br />Tritamarmo</span>
+
+                    <!-- nastro diagonale (ribbon) sotto i titoli -->
+                    <div class="highlight-alt" role="note" aria-label="Serve Preparazione alternativa">
+                        <span class="alt-text">Serve Preparazione!</span>
+                    </div>
+
+                    <aside class="citazione">
+                        <blockquote title="Ingegneria dello Spavento">
+                            "L'urlo è energia pura, ma l'ingegneria è il contenitore che la trasforma in progresso. Non
+                            cerchiamo solo decibel, cerchiamo l'efficienza assoluta del terrore."
+                            <span>— Dr. Phineas Arbuckle <br>Direttore del Laboratorio Energia Urla</span>
                         </blockquote>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Corsi: pannello a tutta larghezza che include titolo e cards -->
+        <section class="corsi" aria-labelledby="corsi-title">
+            <div class="corsi-inner">
+                <div class="corsi-panel">
+                    <h2 id="corsi-title">I nostri Corsi</h2>
+
+                    <div class="cards" role="list">
+                <article class="card" role="listitem">
+                    <img src="../assets/images/sullyAtWork.webp" alt="Corso Spavento">
+                    <h3>Spavento</h3>
+                    <p>Corso dedicato ai fondamenti del far paura: tecniche, tempismo e presenza scenica.</p>
+                    <a class="btn" href="../pages/corsoSpavento.html">Scopri</a>
+                </article>
+
+                <img src="../assets/images/logoScuola.webp" alt="" class="logoinBody">
+
+                <article class="card" role="listitem">
+                    <img src="../assets/images/mikeAtWork.webp" alt="Ingegneria dell'Urlo">
+                    <h3>Ingegneria dell'Urlo</h3>
+                    <p>Studio e progettazione dell'urlo: amplificazione, controllo e sicurezza energetica.</p>
+                    <a class="btn" href="../pages/corsoIngegneria.html">Scopri</a>
+                </article>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../JavaScript/customNavbar.js"></script>
-</body>
 
-</html>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../JavaScript/customNavbar.js"></script>
+        <script src="../JavaScript/footer.js"></script>
+</body>

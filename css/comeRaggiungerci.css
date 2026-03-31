@@ -1,0 +1,70 @@
+/* Modifiche per la pagina "Come Raggiungerci" */
+.hero-descrizione{
+  font-size: 1.2em;
+}
+/* Impostazione bordo e immagine della mappa */
+.mappa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.mappa img {
+    display: block;
+    height: auto;    /* Mantiene le proporzioni corrette */
+    margin: 0 auto;  /* La centra nel contenitore */
+    max-width: 50%;
+    border: 2px double #002d62;
+    box-shadow: 0 5px 5px rgb(0, 45, 98);
+    border-radius: 5px;
+}
+
+/* Su Desktop la vogliamo un po' più piccolina per non occupare tutto */
+@media (min-width: 769px) {
+    .mappa img {
+        max-width: 500px; 
+    }
+}
+
+/* Allineo tutti i testi al centro */
+#inizio{
+    text-align: center;
+    padding: 70px 5%;
+}
+
+.info-container {
+    display: flex;             
+    justify-content: space-between;
+    align-items: flex-start;       
+    padding: 60px 5%;             
+    background-color: #f9f9f9;
+    border-top: 4px solid #002D62;
+    right: 100%;
+}
+.contatti, .orari {
+    flex: 1;
+    max-width: 46%; /* Lasciamo un 10% di "aria" in mezzo */
+    text-align: center;
+}
+
+a{
+    font-family: 'Graduate', serif;
+    color: #002D62;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contatti p a:hover {
+    color: #93c54b;
+    font-weight: bold; /* Lo rende anche grassetto al passaggio */
+    font-size: 17px;
+}
+
+.orari {
+    text-align: center; /* Spinge il contenuto degli orari verso il bordo destro */
+}
+
+/* Rimuovi i padding-inline fissi che avevi prima per evitare conflitti */

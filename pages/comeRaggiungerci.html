@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Come Raggiungerci">
+    <title>Come Raggiungerci</title>
+
+    <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- richiamo del file CSS specifico per la pagina "Come Raggiungerci" -->
+    <link rel="stylesheet" href="../css/comeRaggiungerci.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/images/logoScuola.webp" alt="Logo MU" width="94" height="94" style="height: 60px; width: auto">
+            </a>
+            <span>Monsters University</span>
+        </div>
+        <button class="hamburger" aria-label="Apri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">I Nostri Corsi</a></li>
+                <li><a href="#">Come Raggiungerci</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul class="menuSmartphone">
+            <li><a href="../index.html">Home</a></li> 
+            <li><a href="#">I Nostri Corsi</a></li>
+            <li><a href="#">Come Raggiungerci</a></li>
+        </ul>
+
+        <!-- Contenuto della pagina "Come Raggiungerci" -->
+        <section class="hero-come-raggiungerci">
+            <div class="hero-overlay">
+                <div class="hero-contenuti" id="inizio">
+                    <h1 class="">Come Raggiungerci</h1>
+                    <p class="hero-descrizione">Scopri come arrivare alla Monsters University e unisciti a noi per un'avventura indimenticabile!</p>
+                    <div class="mappa">
+
+                        <img src="../assets/images/mappaUniversitaDesktop.webp" 
+                            srcset="../assets/images/mappaUniversitaDesktop.webp 500w, 
+                                    ../assets/images/mappaUniversitaDesktop.webp 1000w" 
+                            sizes="(max-width: 768px) 90vw, 500px"
+                            alt="Mappa della Monsters University"
+                            loading="lazy"
+                            width="500" 
+                            height="662">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info-container">
+            <div class="contatti">
+                <h2>I nostri contatti</h2>
+                    <p><strong>Indirizzo: </strong><a href="http://maps.google.com/?q=Via+dei+Monsters%2C+123+-+12345+-+Monstropolis" target="_blank">Via dei Monsters, 123 - 12345</a></p>
+                    <p><strong>Telefono: </strong><a href="tel:+390123456789">+39 012 3456789</a></p>
+                    <p><strong>Email: </strong><a href="mailto:info@monstersuniversity.it">info@monstersuniversity.it</a></p>
+            </div>
+            <div class="orari">
+                <h2>Orari</h2>
+                    <h3>Mattina</h3>
+                        <p><strong>Dal Lunedi al Venerdi:  </strong>Dalle 8:00 alle 13:00</p>
+                    <h3>Pomeriggio</h3>
+                        <p><strong>Dal Lunedi al Venerdi: </strong>Dalle 15:00 alle 18:00</p>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JavaScript/customNavbar.js"></script>
+</body>
+</html>

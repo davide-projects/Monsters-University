@@ -1,0 +1,31 @@
+/* FOOTER.CSS - Stili del footer globale */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer {
+    background-color: #002D62;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.85rem;
+    width: 100%;
+    box-sizing: border-box;
+    /* Forza il footer a ignorare eventuali margini del padre */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.site-footer p {
+    margin: 0;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .site-footer {
+        padding: 12px 15px;
+        font-size: 0.75rem;
+    }
+}

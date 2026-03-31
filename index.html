@@ -1,95 +1,113 @@
 <!doctype html>
 <html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Benvenuti alla Monsters University - La migliore accademia di spavento."
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Benvenuti alla Monsters University - La migliore accademia di spavento." />
+    <title>Monsters University</title>
 
-  <title>Monsters University</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/Favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/accademia-800.webp"
+      imagesrcset="assets/images/accademia-400.webp 400w, 
+               assets/images/accademia-800.webp 800w,
+               assets/images/accademia.webp 1200w"
+      imagesizes="(max-width: 480px) 400px, (max-width: 900px) 800px, 1200px"
+      fetchpriority="high"
+    />
 
-  <link rel="shortcut icon" href="assets/images/Favicon.ico" type="image/x-icon" />
+    <!-- Font Google: Roboto Slab usato come font principale del progetto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preload" as="image" href="assets/images/accademia-800.webp"
-    imagesrcset="assets/images/accademia-400.webp 400w, assets/images/accademia-800.webp 800w"
-    imagesizes="(max-width: 600px) 400px, 800px" fetchpriority="high" />
+    <!-- Fogli di stile separati per responsabilità: navbar, stili globali, footer -->
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <body>
+    <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
+    <div id="navbar-placeholder"></div>
 
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+    <main>
+      <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
+      <div id="menu-smartphone-placeholder"></div>
 
-<body>
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/logoScuola.webp" alt="Logo MU" width="94" height="94"
-          style="height: 60px; width: auto" />
-      </a>
-      <span>Monsters University</span>
-    </div>
-      <button class="hamburger" aria-label="Apri menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <!-- HERO TESTUALE: titolo e sottotitolo di benvenuto -->
+      <section class="title">
+        <h1>Benvenuti alla Monsters University</h1>
+        <p>Qui impariamo a spaventare con stile!</p>
+      </section>
 
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">I Nostri Corsi</a></li>
-        <li><a href="#">Come Raggiungerci</a></li>
-      </ul>
-    </nav>
-  </header>
+      <section class="school">
+        <img
+          src="assets/images/accademia-800.webp"
+          srcset="
+            assets/images/accademia-400.webp  400w,
+            assets/images/accademia-800.webp  800w,
+            assets/images/accademia.webp     1200w
+          "
+          sizes="(max-width: 480px) 400px, (max-width: 900px) 800px, 1200px"
+          alt="Universita"
+          width="800"
+          height="533"
+          style="width: 100%; height: auto"
+          fetchpriority="high"
+        />
+      </section>
 
-  <main>
-    <ul class="menuSmartphone"> <!--Menu Smartphone a comparsa-->
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">I Nostri Corsi</a></li>
-      <li><a href="#">Come Raggiungerci</a></li>
-    </ul>
-
-    <section class="title">
-      <h1>Benvenuti alla Monsters University</h1>
-      <p>Qui impariamo a spaventare con stile!</p>
-    </section>
-
-    <section class="school">
-      <img src="assets/images/accademia-800.webp"
-        srcset="assets/images/accademia-400.webp 400w, assets/images/accademia-800.webp 800w"
-        sizes="(max-width: 600px) 400px, 800px" alt="Universita" width="800" height="533"
-        style="width: 100%; height: auto" fetchpriority="high" />
-    </section>
-
-    <section class="storia">
-      <div class="container-storia">
-        <h2>La Nostra Storia</h2>
-        <div class="storia-grid">
-          <div class="testo-storia">
-            <h3>Fondata nel 1313</h3>
-            <p>
-              Da oltre sette secoli, la <strong>Monsters University</strong> è
-              il faro dell'istruzione nel mondo dei mostri.
-            </p>
-            <p>
-              Il nostro motto, <em>"Visita Concilium"</em>, guida ogni studente.
-            </p>
-          </div>
-          <div class="citazione">
-            <blockquote>
-              "Non si nasce mostri, si diventa leggende."
-              <span> Rettore: <br />Tritamarmo</span>
-            </blockquote>
+      <!-- SEZIONE STORIA: griglia con testo a sinistra e citazione del rettore a destra -->
+      <section class="storia">
+        <div class="container-storia">
+          <h2>La Nostra Storia</h2>
+          <div class="storia-grid">
+            <div class="testo-storia">
+              <h3>Fondata nel 1313</h3>
+              <p>
+                Da oltre sette secoli, la <strong>Monsters University</strong> è
+                il faro dell'istruzione nel mondo dei mostri.
+              </p>
+              <p>
+                Il nostro motto, <em>"Visita Concilium"</em>, guida ogni
+                studente.
+              </p>
+            </div>
+            <!-- Citazione laterale: aggiornare nome e ruolo del rettore se cambia -->
+            <div class="citazione">
+              <blockquote>
+                "Non si nasce mostri, si diventa leggende."
+                <span> Rettore: <br />Tritamarmo</span>
+              </blockquote>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="JavaScript/customNavbar.js"></script>
-</body>
+      </section>
+    </main>
+
+    <!-- jQuery: libreria esterna, deve essere caricata per prima -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Template HTML della navbar (deve precedere caricaNavBar.js) -->
+    <script src="./JavaScript/navbar.js"></script>
+    <!-- Servizio di iniezione dei componenti nel DOM -->
+    <script src="./services/caricaNavBar.js"></script>
+    <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
+    <script src="./JavaScript/customNavbar.js"></script>
+    <!-- Footer dinamico aggiunto dai colleghi -->
+    <script src="./JavaScript/footer.js"></script>
+  </body>
 </html>

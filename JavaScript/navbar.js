@@ -4,7 +4,8 @@
   Nota: il contenuto è HTML scritto come stringa JavaScript
   per permettere l'iniezione dinamica senza fetch,
   garantendo il funzionamento anche in locale senza server.
-  Viene iniettato nel DOM da: JavaScript/services/loadComponents.js
+  Viene iniettato nel DOM da: JavaScript/services/caricaNavBar.js
+  Abbiamo utilizzato linguaggio HTML scritto come stringa JavaScript per permettere l'iniezione dinamica senza fetch, garantendo il funzionamento anche in locale senza server.
 */
 
 const navbarTemplate = `
@@ -24,8 +25,8 @@ const navbarTemplate = `
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">I Nostri Corsi</a></li>
-        <li><a href="#">Come Raggiungerci</a></li>
+        <li><a href="../pages/corsi.html">I Nostri Corsi</a></li>
+        <li><a href="../pages/comeRaggiungerci.html">Come Raggiungerci</a></li>
       </ul>
     </nav>
   </header>
@@ -34,7 +35,7 @@ const navbarTemplate = `
 const menuSmartphoneTemplate = `
   <ul class="menuSmartphone">
     <li><a href="index.html">Home</a></li>
-    <li><a href="#">I Nostri Corsi</a></li>
-    <li><a href="#">Come Raggiungerci</a></li>
+    <li><a href="../pages/corsi.html">I Nostri Corsi</a></li>
+    <li><a href="../pages/comeRaggiungerci.html">Come Raggiungerci</a></li>
   </ul>
 `;

@@ -22,7 +22,7 @@ const navbarTemplate = `
     <nav>
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/corsi.html">I Nostri Corsi</a></li>
+        <li><a href="../pages/nostriCorsi.html">I Nostri Corsi</a></li>
         <li><a href="../pages/comeRaggiungerci.html">Come Raggiungerci</a></li>
       </ul>
     </nav>
@@ -32,7 +32,7 @@ const navbarTemplate = `
 const menuSmartphoneTemplate = `
   <ul class="menuSmartphone">
     <li><a href="../index.html">Home</a></li>
-    <li><a href="../pages/corsi.html">I Nostri Corsi</a></li>
+    <li><a href="../pages/nostriCorsi.html">I Nostri Corsi</a></li>
     <li><a href="../pages/comeRaggiungerci.html">Come Raggiungerci</a></li>
   </ul>
 `;

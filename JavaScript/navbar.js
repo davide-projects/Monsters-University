@@ -38,7 +38,7 @@ const navbarTemplate = `
     <nav>
       <ul class="nav-links">
         <li><a href="${_p}index.html">Home</a></li>
-        <li><a href="${_p}pages/corsi.html">I Nostri Corsi</a></li>
+        <li><a href="${_p}pages/nostriCorsi.html">I Nostri Corsi</a></li>
         <li><a href="${_p}pages/comeRaggiungerci.html">Come Raggiungerci</a></li>
       </ul>
     </nav>
@@ -48,7 +48,7 @@ const navbarTemplate = `
 const menuSmartphoneTemplate = `
   <ul class="menuSmartphone">
     <li><a href="${_p}index.html">Home</a></li>
-    <li><a href="${_p}pages/corsi.html">I Nostri Corsi</a></li>
+    <li><a href="${_p}pages/nostriCorsi.html">I Nostri Corsi</a></li>
     <li><a href="${_p}pages/comeRaggiungerci.html">Come Raggiungerci</a></li>
   </ul>
 `;

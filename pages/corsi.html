@@ -19,38 +19,11 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../assets/images/logoScuola.webp" alt="Logo MU" width="94" height="94"
-                    style="height: 60px; width: auto" />
-            </a>
-            <span>Monsters University</span>
-        </div>
-        <button class="hamburger" aria-label="Apri menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/corsi.html">I Nostri Corsi</a></li>
-                <li><a href="#">Come Raggiungerci</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <ul class="menuSmartphone">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/corsi.html">I Nostri Corsi</a></li>
-            <li><a href="#">Come Raggiungerci</a></li>
-        </ul>
-
+    <div id="navbar-placeholder"></div>
+        <div id="menu-smartphone-placeholder"></div>
         <section class="hero-corsi" aria-label="Hero Corsi">
-            <!-- Immagine di sfondo (distesa) -->
+
             <img src="../assets/images/accademia-800.webp" alt="Corsi - mappa città" class="hero-image">
             <!-- Overlay semitrasparente sopra l'immagine -->
             <div class="hero-overlay" aria-hidden="true"></div>
@@ -62,9 +35,10 @@
 
         <section class="programma">
             <div class="container-programma">
-                    <div class="programma-img-wrap">
-                        <img src="../assets/images/wtfSullivan.webp" alt="Sullivan che non spaventa nessuno." class="programma-img">
-                    </div>
+                <div class="programma-img-wrap">
+                    <img src="../assets/images/wtfSullivan.webp" alt="Sullivan che non spaventa nessuno."
+                        class="programma-img">
+                </div>
 
                 <div class="programma-content">
                     <div class="titles-row">
@@ -95,28 +69,33 @@
                     <h2 id="corsi-title">I nostri Corsi</h2>
 
                     <div class="cards" role="list">
-                <article class="card" role="listitem">
-                    <img src="../assets/images/sullyAtWork.webp" alt="Corso Spavento">
-                    <h3>Spavento</h3>
-                    <p>Corso dedicato ai fondamenti del far paura: tecniche, tempismo e presenza scenica.</p>
-                    <a class="btn" href="../pages/corsoSpavento.html">Scopri</a>
-                </article>
+                        <article class="card" role="listitem">
+                            <img src="../assets/images/sullyAtWork.webp" alt="Corso Spavento">
+                            <h3>Spavento</h3>
+                            <p>Corso dedicato ai fondamenti del far paura: tecniche, tempismo e presenza scenica.</p>
+                            <a class="btn" href="../pages/corsoSpavento.html">Scopri</a>
+                        </article>
 
-                <img src="../assets/images/logoScuola.webp" alt="" class="logoinBody">
+                        <img src="../assets/images/logoScuola.webp" alt="" class="logoinBody">
 
-                <article class="card" role="listitem">
-                    <img src="../assets/images/mikeAtWork.webp" alt="Ingegneria dell'Urlo">
-                    <h3>Ingegneria dell'Urlo</h3>
-                    <p>Studio e progettazione dell'urlo: amplificazione, controllo e sicurezza energetica.</p>
-                    <a class="btn" href="../pages/corsoIngegneria.html">Scopri</a>
-                </article>
+                        <article class="card" role="listitem">
+                            <img src="../assets/images/mikeAtWork.webp" alt="Ingegneria dell'Urlo">
+                            <h3>Ingegneria dell'Urlo</h3>
+                            <p>Studio e progettazione dell'urlo: amplificazione, controllo e sicurezza energetica.</p>
+                            <a class="btn" href="../pages/corsoIngegneria.html">Scopri</a>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
-
-
+        <!-- jQuery: libreria esterna, deve essere caricata per prima -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Template HTML della navbar (deve precedere caricaNavBar.js) -->
+        <script src="../JavaScript/navbar.js"></script>
+        <!-- Servizio di iniezione dei componenti nel DOM -->
+        <script src="../services/caricaNavBar.js"></script>
+        <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
         <script src="../JavaScript/customNavbar.js"></script>
+        <!-- Footer dinamico aggiunto dai colleghi -->
         <script src="../JavaScript/footer.js"></script>
 </body>

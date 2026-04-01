@@ -12,7 +12,7 @@
 // Questo permette ai link di funzionare sia quando si apre il file con
 // `file://` sia quando si serve la cartella con un server (Live Server).
 function calcPrefix() {
-  const path = window.location.pathname || '';
+  const path = globalThis.location.pathname || '';
   // Se siamo dentro la cartella `/pages/` allora dobbiamo salire di una
   // directory per raggiungere le altre pagine.
   if (path.includes('/pages/') || path.includes('\\pages\\')) return '../';

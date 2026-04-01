@@ -94,10 +94,6 @@ body {
     transition: 0.3s;
 }
 
-.menuSmartphone {
-    display: none;
-}
-
 /* Responsive Navbar */
 @media screen and (max-width: 768px) {
 
@@ -164,10 +160,6 @@ body {
         gap: 5px;
         margin-left: auto;
         margin-right: 50px;
-    }
-
-    .nav-links {
-        display: none;
     }
 
 .menuSmartphone {

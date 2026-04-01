@@ -1,0 +1,208 @@
+/* Stili per pages/test.html - coerenti con il tema del sito */
+
+/* Palette principale: #002D62 (blu), #93c54b (verde) */
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #212529;
+}
+
+/* Contenitore quiz */
+#quiz {
+    max-width: 720px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #002D62;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 28px 0;
+}
+
+#quiz p {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 18px 0 8px 0;
+}
+
+/* Nuovo design per le opzioni (label) - layout compatto e coerente col sito */
+label {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px 8px 56px;
+    margin: 4px 0;
+    border-radius: 10px;
+    transition: background 0.14s, transform 0.08s, box-shadow 0.10s, border-color 0.14s;
+    cursor: pointer;
+    background: #ffffff;
+    border: 1px solid rgba(0,45,98,0.06);
+    position: relative;
+}
+
+label:hover {
+    background: rgba(147,197,75,0.04);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+}
+
+/* Input radio invisibile ma focussabile - sovrapposto al quadrato sinistro */
+label input[type="radio"] {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    pointer-events: all;
+}
+
+/* Quadrato sinistro che contiene il pallino verde */
+label::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: white;
+    border: 2px solid #002D62;
+    box-shadow: inset 0 -2px 4px rgba(0,0,0,0.03);
+    transition: background 0.14s, border-color 0.14s, transform 0.14s;
+}
+
+/* Pallino interno posizionato al centro del quadrato */
+label::after {
+    content: "";
+    position: absolute;
+    left: calc(14.5px + (28px - 12px) / 2);
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    background: #93c54b;
+    transition: transform 0.12s ease;
+}
+
+/* Mantieni uno spazio maggiore tra la domanda e la prima opzione */
+p + label,
+#quiz p + label {
+    margin-top: 10px;
+}
+
+/* Stato checked (usa :has); evidenzia label e mostra il puntino */
+label:has(input[type="radio"]:checked) {
+    background: linear-gradient(180deg, rgba(147,197,75,0.06), rgba(147,197,75,0.02));
+    border-color: rgba(147,197,75,0.9);
+}
+
+label:has(input[type="radio"]:checked)::before {
+    border-color: rgba(147,197,75,0.9);
+}
+
+label:has(input[type="radio"]:checked)::after {
+    transform: translateY(-50%) scale(1);
+}
+
+/* Focus visibile per accessibilità */
+label:has(input[type="radio"]:focus) {
+    box-shadow: 0 0 0 4px rgba(147,197,75,0.12);
+}
+
+/* Fallback minimo per browser senza :has() */
+input[type="radio"] {
+    accent-color: #93c54b;
+}
+
+/* Pulsante principale coerente con il tema */
+button[type="button"] {
+    display: inline-block;
+    background-color: #93c54b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(147,197,75,0.18);
+    transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+button[type="button"]:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.98);
+}
+
+/* Bottone 'Scopri' coerente con lo stile del sito */
+.btn-scopri {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+    color: #002D62;
+    background: transparent;
+    border: 2px solid #002D62;
+    transition: background-color 200ms ease, color 200ms ease, transform 150ms ease;
+}
+
+#risultato {
+    margin: 22px auto 40px auto;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: #002D62;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Piccole ottimizzazioni responsive */
+@media (max-width: 600px) {
+    #quiz {
+        margin: 24px 16px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+        margin-top: 16px;
+    }
+
+    button[type="button"] {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Spazio superiore su mobile per evitare che la navbar assoluta copra il titolo */
+@media (max-width: 768px) {
+    h2 {
+        margin-top: 140px;
+    }
+}
+
+/* Se l'h2 è dentro .hero-contenuti (hero) annulla il margin-top aggiuntivo */
+.hero-contenuti h2 {
+    margin-top: 0 !important;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.4rem;
+    text-align: center;
+}

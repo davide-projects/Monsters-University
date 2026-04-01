@@ -15,8 +15,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Margin-top per non finire sotto la navbar (regola in base alla tua navbar) */
-    margin-top: 80px;
+    /* Nessuno spazio superiore: l'header deve partire subito sotto la navbar in desktop */
+    margin-top: 0;
 }
 
 .hero-overlay {
@@ -278,5 +278,37 @@
         border-radius: 14px;
         padding: 0px;
         max-width: 90%;
+    }
+}
+
+/* Variante ridotta della hero per pagine secondarie (es. test) */
+.hero-corsi.small {
+    min-height: 300px;
+}
+
+.hero-corsi.small .hero-overlay {
+    min-height: 300px;
+    padding: 36px 16px;
+}
+
+.hero-corsi.small .hero-contenuti h1,
+.hero-corsi.small .hero-contenuti h2 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
+    .hero-corsi.small {
+        height: 260px !important;
+        min-height: 260px !important;
+    }
+
+    .hero-corsi.small .hero-overlay {
+        padding: 28px 14px;
+    }
+
+    .hero-corsi.small .hero-contenuti h1,
+    .hero-corsi.small .hero-contenuti h2 {
+        font-size: 1.6rem;
     }
 }

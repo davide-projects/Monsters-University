@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Monsters University</title>
+    <link rel="stylesheet" href="../css/test.css">
+        <link rel="stylesheet" href="../css/nostriCorsi.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+</head>
+
+<body>
+
+    <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
+        <div id="menu-smartphone-placeholder"></div>
+
+            <section class="hero-corsi small">
+                <div class="hero-overlay">
+                    <div class="hero-contenuti">
+                        <h2>Test <br>Sei più Spavento o Ingegneria dello Spavento?</h2>
+                    </div>
+                </div>
+            </section>
+
+        <form id="quiz">
+            <p>1. Preferiresti avere 1.000€ subito o 10.000€ tra 6 mesi?</p>
+            <label><input type="radio" name="q1" value="spavento"> Dammi subito i soldi!
+                deciso</label><br>
+            <label><input type="radio" name="q1" value="urlo"> Meglio aspettare, tanto sono abituato a non avere soldi.</label>
+
+            <p>2. Ti entrano dei ladri in casa e prendono in ostaggio il tuo criceto. Come agisci?</p>            
+            <label><input type="radio" name="q2" value="urlo"> Meglio ragionare e avere le condizioni a favore: Stacco la luce e agisco nell'ombra. Loro sono più di me, non posso sottovalutare il nemico.</label>
+            <label><input type="radio" name="q2" value="spavento"> Prendo una mazza, li sfondo e li do al mio falegname che con 3.000 lire li fa meglio della madre.</label><br>
+
+            <p>3. Entri nella stanza di un bambino ma ti accorgi che è nascosto per colpirti alle spalle: che fai?</p>
+            <label><input type="radio" name="q3" value="spavento"> Osi usare i miei poteri contro di me, Potter? (lo spaventi così tanto che scappa in Germania)</label><br>
+            <label><input type="radio" name="q3" value="urlo"> Lo rapisco. Una sorgente di energia alla Monsters & Co. sarebbe perfetta per il nuovo uffico di Sullivan.</label>
+
+            <p>4. Cosa dicono di te gli altri mostri?</p>
+            <label><input type="radio" name="q4" value="spavento"> “Sei l'ultima persona che vorrei vedere in una stanza buia.”</label><br>
+            <label><input type="radio" name="q4" value="urlo"> “Hai una mente malefica, non c'è che dire!”</label>
+
+            <p>5. Sei con un mostro seduto su una fontana e parlate della vita: cosa gli dici?</p>
+            <label><input type="radio" name="q5" value="urlo"> “Ma sai che con 20 milioni si può comprare un bar in Costa Rica?”</label><br>
+            <label><input type="radio" name="q5" value="spavento"> “Ho fatto una schedina con 2 fisso Inter-Cagliari...”</label>
+            <br><br>
+            <button type="button" onclick="calcolaRisultato()">Scopri il tuo corso!</button>
+            <a class="btn-scopri" href="./nostriCorsi.html" aria-label="Scopri">Torna Indietro <span class="arrow">→</span></a>
+        </form>
+
+        <h3 id="risultato"></h3>
+        <!-- jQuery: libreria esterna, deve essere caricata per prima -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Template HTML della navbar per pagine in /pages (path con ../) -->
+        <script src="../JavaScript/navbar.js"></script>
+        <!-- Servizio di iniezione dei componenti nel DOM -->
+        <script src="../services/caricaNavBar.js"></script>
+        <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
+        <script src="../JavaScript/customNavbar.js"></script>
+        <!-- Footer dinamico aggiunto dai colleghi -->
+        <script src="../JavaScript/footer.js"></script>
+        <script src="../JavaScript/test.js" defer></script>
+
+</body>
+</html>

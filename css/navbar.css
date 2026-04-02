@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
+    padding-top: 70px; /* Spazio per la navbar fissa */
 }
 
 .logo a {
@@ -30,7 +31,7 @@ body {
     /* Ripristinato Graduate come nel tuo file originale */
     color: white;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: color 0.3s;
 }
 
@@ -42,9 +43,16 @@ body {
     padding: 15px 20px;
     background-color: #002D62;
     color: white;
-    position: relative;
-    z-index: 1000;
+    /* Rende la navbar fissa */
+    position: fixed;   
+    top: 0;            
+    left: 0;           
+    width: 100%;       
+    box-sizing: border-box; 
+    z-index: 1000;     
 }
+
+
 
 .logo {
     display: flex;
@@ -77,6 +85,7 @@ body {
 .menuSmartphone {
     display: none;
 }
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -118,7 +127,7 @@ body {
     }
 
     .navbar {
-        position: absolute;
+        position: fixed;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -159,7 +168,7 @@ body {
         flex-direction: column;
         gap: 5px;
         margin-left: auto;
-        margin-right: 50px;
+        margin-right: 8px;
     }
 
 .menuSmartphone {
@@ -184,6 +193,7 @@ body {
     padding: 15px 0;
     color: white;
     text-decoration: none;
+    font-size: 1.2rem; /*Dimensione del testo per i link del menu smartphone*/
     font-family: 'Roboto Slab', serif;
 }
 

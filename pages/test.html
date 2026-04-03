@@ -35,43 +35,58 @@
             </div>
         </section>
 
+        <div class="quiz-grid">
         <form id="quiz">
-            <p>1. Preferiresti avere 1.000€ subito o 10.000€ tra 6 mesi?</p>
-            <label><input type="radio" name="q1" value="spavento"> Dammi subito i soldi!
-                deciso</label><br>
-            <label><input type="radio" name="q1" value="urlo"> Meglio aspettare, tanto sono abituato a non avere
-                soldi.</label>
+            <p>1. Durante un esame pratico in "Spavento 101" ti chiedono di provocare un urlo immediato: cosa fai?</p>
+            <label><input type="radio" name="q1" value="spavento"> Uso voce, mimica e presenza per spaventare subito il bambino.</label><br>
+            <label><input type="radio" name="q1" value="ingegneria"> Attivo un congegno che ho progettato per ottenere il massimo dell'urlo.</label>
 
-            <p>2. Ti entrano dei ladri in casa e prendono in ostaggio il tuo criceto. Come agisci?</p>
-            <label><input type="radio" name="q2" value="urlo"> Meglio ragionare e avere le condizioni a favore: Stacco
-                la luce e agisco nell'ombra. Loro sono più di me, non posso sottovalutare il nemico.</label>
-            <label><input type="radio" name="q2" value="spavento"> Prendo una mazza, li sfondo e li do al mio falegname
-                che con 3.000 lire li fa meglio della madre.</label><br>
+            <p>2. Alle Scare Games la tua squadra deve mettere in scena uno spettacolo: qual è il tuo ruolo ideale?</p>
+            <label><input type="radio" name="q2" value="spavento"> Sono il performer: energia e improvvisazione sul palco.</label><br>
+            <label><input type="radio" name="q2" value="ingegneria"> Mi occupo degli effetti speciali e delle scenografie tecniche.</label>
 
-            <p>3. Entri nella stanza di un bambino ma ti accorgi che è nascosto per colpirti alle spalle: che fai?</p>
-            <label><input type="radio" name="q3" value="spavento"> Osi usare i miei poteri contro di me, Potter? (lo
-                spaventi così tanto che scappa in Germania)</label><br>
-            <label><input type="radio" name="q3" value="urlo"> Lo rapisco. Una sorgente di energia alla Monsters & Co.
-                sarebbe perfetta per il nuovo uffico di Sullivan.</label>
+            <p>3. Entri nella stanza di un bambino alla luce accesa: come massimizzi il risultato?</p>
+            <label><input type="radio" name="q3" value="spavento"> Studio il comportamento del bambino e sfrutto i rumori e i movimenti.</label><br>
+            <label><input type="radio" name="q3" value="ingegneria"> Modifico luci e dispositivi per creare ombre e trigger che aumentano l'urlo.</label>
 
-            <p>4. Cosa dicono di te gli altri mostri?</p>
-            <label><input type="radio" name="q4" value="spavento"> “Sei l'ultima persona che vorrei vedere in una stanza
-                buia.”</label><br>
-            <label><input type="radio" name="q4" value="urlo"> “Hai una mente malefica, non c'è che dire!”</label>
+            <p>4. Cosa dicono di te i compagni di corso?</p>
+            <label><input type="radio" name="q4" value="spavento"> "Ha una presenza naturale che terrorizza la stanza."</label><br>
+            <label><input type="radio" name="q4" value="ingegneria"> "È il cervello dietro ogni buona strategia e gadget."</label>
 
-            <p>5. Sei con un mostro seduto su una fontana e parlate della vita: cosa gli dici?</p>
-            <label><input type="radio" name="q5" value="urlo"> “Ma sai che con 20 milioni si può comprare un bar in
-                Costa Rica?”</label><br>
-            <label><input type="radio" name="q5" value="spavento"> “Ho fatto una schedina con 2 fisso
-                Inter-Cagliari...”</label>
+            <p>5. Devi fare squadra: preferisci collaborare con Sulley o con Mike?</p>
+            <label><input type="radio" name="q5" value="spavento"> Con Sulley: forza, carisma e improvvisazione pura.</label><br>
+            <label><input type="radio" name="q5" value="ingegneria"> Con Mike: pianificazione, tattica e ingegnosità.</label>
+            
+            <p>6. Per il progetto finale preferisci una performance dal vivo o un congegno ingegneristico?</p>
+            <label><input type="radio" name="q6" value="spavento"> Performance dal vivo: emozione, improvvisazione e presenza scenica.</label><br>
+            <label><input type="radio" name="q6" value="ingegneria"> Congegno ingegneristico: progettazione, test e ottimizzazione.</label>
             <br><br>
-            <button type="button" onclick="calcolaRisultato()">Scopri il tuo corso!</button>
             <a class="btn-scopri" href="./nostriCorsi.html" aria-label="Torna indietro alla pagina dei nostri corsi">
-                Torna Indietro <span class="arrow">→</span>
+                <span class="arrow">←</span> Torna Indietro
             </a>
+            <button type="button" class="btn-primary" onclick="calcolaRisultato()">Scopri il tuo corso!</button>
         </form>
 
-        <h3 id="risultato" aria-live="polite">In attesa dei risultati...</h3>
+        <aside class="test-aside" aria-label="Informazioni sul test">
+            <h4>Curiosità & Consigli</h4>
+            <img src="../assets/images/monsters/mike-wazowski.256.png" alt="Mike" class="aside-thumb">
+            <p>Rispondi con sincerità: le tue scelte mostreranno il profilo più adatto a te.</p>
+            <ul>
+                <li><strong>Spavento:</strong> preferisci l'improvvisazione e la presenza scenica.</li>
+                <li><strong>Ingegneria:</strong> ami progettare soluzioni e gadget.</li>
+                <li>Non esistono risposte giuste o sbagliate: divertiti!</li>
+            </ul>
+            <h5>Piccoli consigli</h5>
+            <ul>
+                <li>Leggi la domanda con calma e immagina la scena: la scelta istintiva è spesso la più significativa.</li>
+                <li>Sei indeciso? Scegli l'opzione che descrive meglio il tuo comportamento abituale, non l'eccezione.</li>
+                <li>Puoi ripetere il test dopo qualche giorno: il profilo può variare con l'esperienza.</li>
+            </ul>
+            <p style="margin-top:8px; font-size:0.95rem; color:#334513">Interpretazione rapida: il risultato indicherà il corso più affine—`Spavento` per chi punta alla performance, `Ingegneria` per chi ama progettare. In caso di pareggio avrai entrambe le qualità, utili in squadra.</p>
+        </aside>
+
+        <h3 id="risultato" aria-live="polite"></h3>
+        </div>
         <!-- jQuery: libreria esterna, deve essere caricata per prima -->
         <script src="../JavaScript/jquery-3.6.0.min.js"></script>
         <!-- Template HTML della navbar per pagine in /pages (path con ../) -->

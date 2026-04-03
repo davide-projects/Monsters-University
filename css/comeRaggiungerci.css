@@ -50,18 +50,13 @@
     text-align: center;
 }
 
-a{
+.informazioni{
     font-family: 'Graduate', serif;
     color: #002D62;
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contatti p a:hover {
-    color: #93c54b;
-    font-weight: bold; /* Lo rende anche grassetto al passaggio */
     font-size: 17px;
 }
+
 
 .orari {
     text-align: center; /* Spinge il contenuto degli orari verso il bordo destro */

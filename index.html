@@ -4,22 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta name="description"
-    content="Benvenuti alla Monsters University - La migliore accademia di spavento del mondo dei mostri." />
+  <meta name="description" content="Monsters University — corsi, eventi e vita da campus." />
 
   <title>Monsters University</title>
-
   <link rel="shortcut icon" href="./assets/images/Favicon.ico" type="image/x-icon" />
-
-  <link rel="preload" as="image" href="./assets/images/accademia-800.webp" imagesrcset="./assets/images/accademia-400.webp 400w, 
-                   ./assets/images/accademia-800.webp 800w,
-                   ./assets/images/accademia.webp 1200w"
-    imagesizes="(max-width: 480px) 400px, (max-width: 900px) 800px, 1200px" fetchpriority="high" />
 
   <link rel="stylesheet" href="./css/fonts.css" />
   <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/nostriCorsi.css" />
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/footer.css" />
 </head>
 
@@ -29,50 +23,79 @@
   <main>
     <div id="menu-smartphone-placeholder"></div>
 
-    <section class="title">
-      <h1>Benvenuti alla Monsters University</h1>
-      <p>Qui impariamo a spaventare con stile!</p>
-    </section>
-
-    <section class="school">
-      <img src="assets/images/accademia-800.webp" srcset="assets/images/accademia-400.webp 400w,
-                  assets/images/accademia-800.webp 800w,
-                  assets/images/accademia.webp 1200w"
-        sizes="(max-width: 480px) 400px, (max-width: 900px) 800px, 1200px"
-        alt="Facciata storica dell'Università dei Mostri" width="800" height="533" style="width: 100%; height: auto"
-        fetchpriority="high" />
-    </section>
-
-    <section class="storia">
-      <div class="container-storia">
-        <h2>La Nostra Storia</h2>
-        <div class="storia-grid">
-          <div class="testo-storia">
-            <h3>Fondata nel 1313</h3>
-            <p>
-              Da oltre sette secoli, la <strong>Monsters University</strong> è
-              il faro dell'istruzione nel mondo dei mostri.
-            </p>
-            <p>Il nostro motto, <em>"Visita Concilium"</em>, guida ogni studente.</p>
-          </div>
-          <div class="citazione">
-            <blockquote aria-label="Citazione del Rettore">
-              "Non si nasce mostri, si diventa leggende."
-              <span> Rettore: <br />Tritamarmo</span>
-            </blockquote>
-          </div>
+    <!-- Hero: coerente con le altre pagine (usa classi già presenti) -->
+    <section class="hero-corsi small">
+      <div class="hero-overlay">
+        <div class="hero-contenuti">
+          <h2>Benvenuto alla<br>Monsters University</h2>
+          <p class="lead">Dove la passione per lo spavento incontra l'ingegno.</p>
+          <!-- CTA rimosse: header mostra solo il testo per una resa pulita -->
         </div>
       </div>
     </section>
+
+    <!-- Sezioni informative rapide -->
+    <section class="intro container">
+      <div class="intro-grid">
+        <article class="card">
+          <img src="assets/images/percorsoCorsi.webp" alt="Sulley" class="card-img">
+          <h3>I nostri corsi</h3>
+          <p>Scopri i percorsi in Spavento e Ingegneria dello Spavento, pensati per tutti i livelli.</p>
+          <a class="link" href="./pages/nostriCorsi.html">Vedi i corsi →</a>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/monsters/iNuoviArrivati.webp" alt="Nuovi Arrivati" class="card-img">
+          <h3>tu sei monsters university</h3>
+          <p>Fai il quiz e scopri il percorso alla Monsters Un. fatto su misura per te!</p>
+          <a class="link" href="./pages/test.html">Fai il quiz →</a>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/accademia.webp" alt="Facciata dell'università" class="card-img">
+          <h3>Visita il campus</h3>
+          <p>Tour guidati e mappe per raggiungere la nostra storica facciata e gli spazi prova.</p>
+          <a class="link" href="./pages/comeRaggiungerci.html">Come arrivare →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sezione: La nostra storia (rielaborata) -->
+    <section class="storia container" aria-labelledby="storia-title">
+      <div class="storia-inner">
+        <div class="storia-main">
+          <h2 id="storia-title">La nostra storia</h2>
+          <p class="lead">Dalle aule storiche ai moderni laboratori di Scaring Engineering, la Monsters University è il luogo dove tecnica e creatività si uniscono per formare i migliori specialisti dello spavento.</p>
+
+          <p>Fondata come Accademia degli Arcani Spaventi, l'Università ha saputo evolversi mantenendo salde tradizioni pratiche: lezioni dal vivo, esercitazioni sul campo e progetti interdisciplinari che integrano performance e tecnologia.</p>
+
+          <ul class="timeline">
+            <li><strong>1313</strong> — Nascita dell'Accademia: prime tecniche di training sul campo.</li>
+            <li><strong>1889</strong> — Primo curriculum ufficiale in Spavento Avanzato.</li>
+            <li><strong>2004</strong> — Apertura dei Laboratori di Ingegneria dello Spavento.</li>
+            <li><strong>Oggi</strong> — Formazione ibrida, partnership internazionali e stage aziendali.</li>
+          </ul>
+        </div>
+
+        <aside class="storia-aside" aria-label="Riepilogo Monsters University">
+          <img src="assets/images/logoScuola.webp" alt="Logo Monsters University" class="storia-img">
+          <div class="stats">
+            <div class="stat"><strong>20k</strong><span>Studenti</span></div>
+            <div class="stat"><strong>150</strong><span>Docenti</span></div>
+          </div>
+          <p class="quote">"Formiamo mostri coraggiosi e consapevoli."<br><em>— Dean Hardscrabble</em></p>
+        </aside>
+      </div>
+    </section>
+
   </main>
 
-  <script src="./JavaScript/jquery-3.6.0.min.js"></script>
+  <footer id="site-footer"></footer>
 
+  <script src="./JavaScript/jquery-3.6.0.min.js"></script>
   <script src="./JavaScript/navbar.js"></script>
   <script src="./JavaScript/footer.js"></script>
-
   <script src="./services/caricaNavBar.js"></script>
-
   <script src="./JavaScript/customNavbar.js"></script>
 
 </body>

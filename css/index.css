@@ -1,0 +1,309 @@
+/* Stili specifici per la homepage - index.html
+   Mantengono i colori e il linguaggio visivo del sito principale.
+*/
+
+:root {
+    --primary: #002D62;
+    --accent: #93c54b;
+    --muted: #f6fbf4;
+    --card-bg: #ffffff;
+    --text: #222;
+}
+
+/* Reset minimale e layout contenitore */
+body {
+    background: linear-gradient(180deg, #f7fbfc 0%, #ffffff 100%);
+    color: var(--text);
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 22px;
+}
+
+/* Hero coerente con .hero-corsi.small ma con un aspetto più ricco */
+.hero-corsi.small {
+    /* contenitore con immagine di sfondo; posizionato per permettere overlay assoluto */
+    position: relative;
+    background-image: url('../assets/images/accademia.webp');
+    /* forza il punto focale al centro per evitare sgranature visibili fuori dalla maschera */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 0px solid rgba(0, 0, 0, 0.04);
+    min-height: 420px;
+    /* altezza minima per avere una buona presenza del hero */
+    overflow: hidden;
+    /* evita che elementi o effetti visivi escano dal contenitore */
+}
+
+.hero-overlay {
+    /* overlay posizionato assolutamente per coprire esattamente l'immagine sottostante */
+    position: absolute;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0 */
+    background: linear-gradient(180deg, rgba(0, 45, 98, 0.72), rgba(0, 45, 98, 0.42));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    /* padding interno gestito dalla hero-contenuti */
+    backdrop-filter: blur(2px);
+    z-index: 2;
+    /* assicurati che l'overlay stia sopra l'immagine di sfondo */
+}
+
+.hero-contenuti {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 8px 26px rgba(0, 0, 0, 0.36);
+    max-width: 920px;
+    padding: 72px 0;
+    /* crea spazio verticale coerente dentro l'overlay assoluto */
+    position: relative;
+    z-index: 3;
+    /* contenuti leggibili sopra l'overlay */
+}
+
+.hero-contenuti h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.4rem;
+    margin: 0 0 8px 0;
+    line-height: 1.05;
+    color: #ffffff;
+}
+
+.hero-contenuti .lead {
+    color: rgba(255, 255, 255, 0.92);
+    margin: 8px 0 18px 0;
+    font-weight: 600;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+}
+
+/* CTA specifiche per la hero - coerenti col resto del sito */
+.hero-cta .btn-primary {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 12px 34px rgba(51, 69, 19, 0.18);
+}
+
+.hero-cta .btn-scopri {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.hero-cta .btn-scopri:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.26);
+}
+
+/* Intro cards */
+.intro {
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px 18px 20px 18px;
+    box-shadow: 0 18px 46px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 6px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: linear-gradient(90deg, rgba(147, 197, 75, 1) 0%, rgba(0, 45, 98, 1) 100%);
+}
+
+.card h3 {
+    margin: 0 0 6px 0;
+    color: var(--primary);
+    font-size: 1.05rem;
+}
+
+.card p {
+    margin: 0 0 12px 0;
+    color: #333;
+}
+
+.card .link {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    transition: transform 220ms ease;
+}
+
+/* Immagini nelle card */
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px 8px 6px 6px;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 1200px) {
+    .intro-grid { grid-template-columns: repeat(3, 1fr); gap: 36px; }
+    .card-img { height: 220px; }
+    .card { padding: 18px; }
+}
+
+/* Storia (sezione rielaborata) */
+.storia {
+    margin: 40px 0 72px 0;
+}
+
+.storia-inner {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: start;
+}
+
+/* Desktop: rendi la sezione 'storia' full-width e centra il contenuto interno */
+@media (min-width: 901px) {
+    .storia.container {
+        width: 100%;
+        max-width: 100%;
+        padding: 48px 0; /* più respiro verticalmente */
+        margin: 0; /* occupa tutta la larghezza della pagina */
+    }
+    .storia-inner {
+        max-width: 1200px; /* contenuto centrato con larghezza controllata */
+        margin: 0 auto;
+        grid-template-columns: 1fr 340px;
+    }
+}
+
+.storia-main h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.storia-main .lead { margin-bottom: 10px; font-weight: 600; color: #16324a; }
+.storia-main p { margin-bottom: 12px; line-height: 1.5; color: #2a2a2a; }
+
+.timeline { list-style: none; padding: 0; margin: 10px 0 16px 0; }
+.timeline li { padding: 8px 0; border-bottom: 1px dashed rgba(0,0,0,0.04); color: #2b2b2b; }
+.timeline li strong { color: var(--accent); margin-right: 8px; }
+
+.storia-aside { background: linear-gradient(180deg,#ffffff,#fbfff9); padding: 18px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 8px 24px rgba(0,0,0,0.04); text-align:center; }
+.storia-img { width: 100%; height: 140px; object-fit: contain; margin-bottom: 12px; }
+.stats { display:flex; gap:12px; justify-content:center; margin: 10px 0 8px 0; }
+.stat { text-align:center; }
+.stat strong { display:block; font-size:1.2rem; color: var(--primary); }
+.stat span { font-size:0.85rem; color:#556; }
+.storia-aside .quote { margin-top:12px; font-style:italic; color:#123; font-size:0.95rem; }
+
+/* Footer spacing */
+footer#site-footer {
+    margin-top: 32px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .intro-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-overlay {
+        padding: 64px 18px 48px 18px;
+    }
+
+    .hero-contenuti h2 {
+        font-size: 1.9rem;
+    }
+
+    .card::before {
+        height: 5px;
+    }
+    /* Sposta il focus dell'immagine della prima card verso l'alto (mostra l'insegna) */
+    .intro-grid > article.card:first-child .card-img {
+        object-position: center 12%;
+        height: 200px;
+    }
+    /* Uniforma l'altezza delle immagini delle card su tablet (stessa altezza per tutte) */
+    .intro-grid > article.card .card-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-overlay {
+        padding: 40px 12px 32px 12px;
+    }
+
+    .hero-contenuti h2 {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .intro {
+        margin-top: 12px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 8px;
+    }
+    /* Ulteriore rialzo del focus su telefoni per la prima card */
+    .intro-grid > article.card:first-child .card-img {
+        object-position: center 8%;
+        height: 180px;
+    }
+    /* Uniforma l'altezza delle immagini delle card su telefoni */
+    .intro-grid > article.card .card-img {
+        height: 180px;
+    }
+    /* Storia: impila il contenuto e posiziona il riepilogo (aside) sopra il testo principale */
+    .storia-inner { grid-template-columns: 1fr; }
+    .storia-aside { order: 1; margin-bottom: 14px; }
+    .storia-main { order: 2; }
+}

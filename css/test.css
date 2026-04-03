@@ -129,8 +129,8 @@ input[type="radio"] {
 /* Pulsante principale coerente con il tema */
 button[type="button"] {
     display: inline-block;
-    background-color: #93c54b;
-    color: white;
+    background-color: #334513;
+    color: #ffffff;
     border: none;
     padding: 12px 20px;
     border-radius: 10px;

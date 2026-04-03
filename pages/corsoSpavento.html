@@ -1,104 +1,102 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Corso Spavento" />
-    <title>Monsters University</title>
 
-    <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Corso Spavento" />
+  <title>Monsters University</title>
 
-    <!-- Font Google: Roboto Slab usato come font principale del progetto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
 
-    <!-- Fogli di stile separati per responsabilità: navbar, stili globali, stili specifici per la sezione corsi -->
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/sezioneCorsi.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
-  </head>
+  <!-- Fogli di stile separati per responsabilità: navbar, stili globali, stili specifici per la sezione corsi -->
+  <link rel="stylesheet" href="../css/fonts.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/sezioneCorsi.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+</head>
 
-  <body>
-    <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
-    <div id="navbar-placeholder"></div>
+<body>
+  <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
+  <div id="navbar-placeholder"></div>
 
-    <main>
-      <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
-      <div id="menu-smartphone-placeholder"></div>
+  <main>
+    <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
+    <div id="menu-smartphone-placeholder"></div>
 
-      <!-- HERO: immagine di sfondo + overlay scuro + titolo corso e info rapide (durata e crediti) -->
-      <section class="hero-corsi">
-        <div class="hero-overlay">
-          <div class="hero-contenuti">
-            <h1>Facoltà di Spavento</h1>
-            <p class="hero-descrizione">Dove la paura diventa leggenda e le urla diventano energia.</p>
-            <!-- Dettagli sintetici del corso, visibili nell'hero -->
-            <div class="hero-dettagli">
-              <div class="dettagli-elementi">
-                <strong>Durata</strong>
-                <span>3 Anni</span>
-              </div>
-              <div class="dettagli-elementi">
-                <strong>Crediti</strong>
-                <span>180 SC</span>
-              </div>
+    <!-- HERO: immagine di sfondo + overlay scuro + titolo corso e info rapide (durata e crediti) -->
+    <section class="hero-corsi">
+      <div class="hero-overlay">
+        <div class="hero-contenuti">
+          <h1>Facoltà di Spavento</h1>
+          <p class="hero-descrizione">Dove la paura diventa leggenda e le urla diventano energia.</p>
+          <!-- Dettagli sintetici del corso, visibili nell'hero -->
+          <div class="hero-dettagli">
+            <div class="dettagli-elementi">
+              <strong>Durata</strong>
+              <span>3 Anni</span>
+            </div>
+            <div class="dettagli-elementi">
+              <strong>Crediti</strong>
+              <span>180 SC</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE PROGRAMMA: griglia con percorso formativo (3 anni) + citazione del docente -->
-      <section class="programma">
-        <div class="container-programma">
-          <h2>Percorso Accademico</h2>
-          <!-- Layout a due colonne: testo a sinistra, citazione a destra (vedi programma-grid in sezioneCorsi.css) -->
-          <div class="programma-grid">
-            <div class="programma-testo">
-              <h3>Percorso Formativo: Spaventatore Professionista</h3>
-              <p>
-                Il nostro programma è strutturato per fornire una preparazione completa, dalla teoria psicologica alla
-                pratica sul campo nei simulatori.
-              </p>
-              <!-- Un <article> per ogni anno accademico: aggiungere qui eventuali anni futuri -->
-              <div class="moduli-didattici">
-                <article class="anno-accademico">
-                  <strong>1° Anno: Teoria dell'Ombra</strong>
-                  <p>Studio delle fobie primordiali e tecniche di mimetismo ambientale.</p>
-                </article>
-                <article class="anno-accademico">
-                  <strong>2° Anno: Meccanica degli Armadi</strong>
-                  <p>Ingegneria delle porte e coordinazione motoria in spazi ristretti.</p>
-                </article>
-                <article class="anno-accademico">
-                  <strong>3° Anno: Perfezionamento del Ruggito</strong>
-                  <p>Laboratorio avanzato di fonetica del terrore e raccolta energia.</p>
-                </article>
-              </div>
+    <!-- SEZIONE PROGRAMMA: griglia con percorso formativo (3 anni) + citazione del docente -->
+    <section class="programma">
+      <div class="container-programma">
+        <h2>Percorso Accademico</h2>
+        <!-- Layout a due colonne: testo a sinistra, citazione a destra (vedi programma-grid in sezioneCorsi.css) -->
+        <div class="programma-grid">
+          <div class="programma-testo">
+            <h3>Percorso Formativo: Spaventatore Professionista</h3>
+            <p>
+              Il nostro programma è strutturato per fornire una preparazione completa, dalla teoria psicologica alla
+              pratica sul campo nei simulatori.
+            </p>
+            <!-- Un <article> per ogni anno accademico: aggiungere qui eventuali anni futuri -->
+            <div class="moduli-didattici">
+              <article class="anno-accademico">
+                <strong>1° Anno: Teoria dell'Ombra</strong>
+                <p>Studio delle fobie primordiali e tecniche di mimetismo ambientale.</p>
+              </article>
+              <article class="anno-accademico">
+                <strong>2° Anno: Meccanica degli Armadi</strong>
+                <p>Ingegneria delle porte e coordinazione motoria in spazi ristretti.</p>
+              </article>
+              <article class="anno-accademico">
+                <strong>3° Anno: Perfezionamento del Ruggito</strong>
+                <p>Laboratorio avanzato di fonetica del terrore e raccolta energia.</p>
+              </article>
             </div>
-
-            <!-- Citazione laterale: aggiornare nome e ruolo del docente se cambia -->
-            <aside class="citazione">
-              <blockquote>
-                "Uno spaventatore non si limita a fare rumore; uno spaventatore diventa l'incubo."
-                <span>— Prof. Knight <br />Capo Dipartimento</span>
-              </blockquote>
-            </aside>
           </div>
-        </div>
-      </section>
-    </main>
 
-    <!-- jQuery: libreria esterna, deve essere caricata per prima -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Template HTML della navbar per pagine in /pages (path con ../) -->
-    <script src="../JavaScript/navbar.js"></script>
-    <!-- Servizio di iniezione dei componenti nel DOM -->
-    <script src="../services/caricaNavBar.js"></script>
-    <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
-    <script src="../JavaScript/customNavbar.js"></script>
-    <!-- Footer dinamico aggiunto dai colleghi -->
-    <script src="../JavaScript/footer.js"></script>
-  </body>
+          <!-- Citazione laterale: aggiornare nome e ruolo del docente se cambia -->
+          <aside class="citazione">
+            <blockquote>
+              "Uno spaventatore non si limita a fare rumore; uno spaventatore diventa l'incubo."
+              <span>— Prof. Knight <br />Capo Dipartimento</span>
+            </blockquote>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- jQuery: libreria esterna, deve essere caricata per prima -->
+  <script src="../JavaScript/jquery-3.6.0.min.js"></script>
+  <!-- Template HTML della navbar per pagine in /pages (path con ../) -->
+  <script src="../JavaScript/navbar.js"></script>
+  <!-- Servizio di iniezione dei componenti nel DOM -->
+  <script src="../services/caricaNavBar.js"></script>
+  <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
+  <script src="../JavaScript/customNavbar.js"></script>
+  <!-- Footer dinamico aggiunto dai colleghi -->
+  <script src="../JavaScript/footer.js"></script>
+</body>
+
 </html>

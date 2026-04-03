@@ -170,7 +170,7 @@
 
 .btn-scopri:hover,
 .btn-scopri:focus {
-    background: #93c54b;
+    background: #334513; /* Migliore punteggio su controllo colore */
     color: #ffffff;
     transform: translateY(-2px);
 }

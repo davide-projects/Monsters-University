@@ -1,0 +1,24 @@
+/* CONFIGURAZIONE FONT LOCALE - ROBOTO SLAB
+   Questa configurazione permette al progetto di funzionare 100% offline,
+   risolvendo i warning di sicurezza (Subresource Integrity) di SonarQube
+   ed evitando chiamate esterne ai server Google.
+*/
+
+/* roboto-slab-700 - latin */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/roboto-v51-latin-regular.woff2') format('woff2');
+}
+
+/* Nota: Controlla se anche il file regular (400) ha il v51 nel nome! 
+   Se sì, aggiorna anche quello qui sotto: */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/roboto-v51-latin-700.woff2') format('woff2');
+}

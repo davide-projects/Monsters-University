@@ -1,115 +1,115 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Corso Ingegneria" />
-    <title>Monsters University</title>
 
-    <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Corso Ingegneria" />
+  <title>Monsters University</title>
 
-    <!-- Font Google: Roboto Slab usato come font principale del progetto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
 
-    <!-- Fogli di stile separati per responsabilità: navbar, stili globali, stili specifici per la sezione corsi -->
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/sezioneCorsi.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
-  </head>
+  
 
-  <body>
-    <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
-    <div id="navbar-placeholder"></div>
+  <!-- Fogli di stile separati per responsabilità: navbar, stili globali, stili specifici per la sezione corsi -->
+  <link rel="stylesheet" href="../css/fonts.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/sezioneCorsi.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+</head>
 
-    <main>
-      <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
-      <div id="menu-smartphone-placeholder"></div>
+<body>
+  <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
+  <div id="navbar-placeholder"></div>
 
-      <!-- HERO: immagine di sfondo + overlay scuro + titolo corso e info rapide (durata e crediti) -->
-      <section class="hero-corsi">
-        <div class="hero-overlay">
-          <div class="hero-contenuti">
-            <h1>Ingegneria dello Spavento</h1>
-            <p class="hero-descrizione">
-              Progettare il terrore, costruire il domani. Il corso d'élite per i futuri campioni della Monsters Inc.
-            </p>
-            <!-- Dettagli sintetici del corso, visibili nell'hero -->
-            <div class="hero-dettagli">
-              <div class="dettagli-elementi">
-                <strong>Durata</strong>
-                <span>4 Anni</span>
-              </div>
-              <div class="dettagli-elementi">
-                <strong>Crediti</strong>
-                <span>250 SC</span>
-              </div>
+  <main>
+    <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
+    <div id="menu-smartphone-placeholder"></div>
+
+    <!-- HERO: immagine di sfondo + overlay scuro + titolo corso e info rapide (durata e crediti) -->
+    <section class="hero-corsi">
+      <div class="hero-overlay">
+        <div class="hero-contenuti">
+          <h1>Ingegneria dello Spavento</h1>
+          <p class="hero-descrizione">
+            Progettare il terrore, costruire il domani. Il corso d'élite per i futuri campioni della Monsters Inc.
+          </p>
+          <!-- Dettagli sintetici del corso, visibili nell'hero -->
+          <div class="hero-dettagli">
+            <div class="dettagli-elementi">
+              <strong>Durata</strong>
+              <span>4 Anni</span>
+            </div>
+            <div class="dettagli-elementi">
+              <strong>Crediti</strong>
+              <span>250 SC</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--
+    <!--
         SEZIONE PROGRAMMA: la colonna sinistra (colonna-didattica) contiene sia l'introduzione
         testuale sia i moduli per anno, mentre la destra ospita la citazione del docente.
         Vedi programma-grid in sezioneCorsi.css per il layout a due colonne.
       -->
-      <section class="programma">
-        <div class="container-programma">
-          <div class="programma-grid">
-            <div class="colonna-didattica">
-              <!-- Testo introduttivo del corso -->
-              <div class="testo-introduzione">
-                <h2>Percorso Accademico</h2>
-                <p>Non si tratta solo di fare paura. Si tratta di comprendere la fisica del suono, la
-                  meccanica delle ombre e la psicologia del sonno infantile. I nostri laboratori nel "Scream Lab"
-                  offrono tecnologie all'avanguardia per catturare ogni singolo decibel di energia.</p>
+    <section class="programma">
+      <div class="container-programma">
+        <div class="programma-grid">
+          <div class="colonna-didattica">
+            <!-- Testo introduttivo del corso -->
+            <div class="testo-introduzione">
+              <h2>Percorso Accademico</h2>
+              <p>Non si tratta solo di fare paura. Si tratta di comprendere la fisica del suono, la
+                meccanica delle ombre e la psicologia del sonno infantile. I nostri laboratori nel "Scream Lab"
+                offrono tecnologie all'avanguardia per catturare ogni singolo decibel di energia.</p>
+            </div>
+            <!-- Un <div> per ogni anno accademico: questo corso dura 4 anni -->
+            <div class="moduli-didattici">
+              <div class="anno-accademico">
+                <strong>Anno 1: Fondamenti di Spavento</strong>
+                <p>Studio dei profili psicologici infantili e tecniche di avvicinamento furtivo.</p>
               </div>
-              <!-- Un <div> per ogni anno accademico: questo corso dura 4 anni -->
-              <div class="moduli-didattici">
-                <div class="anno-accademico">
-                  <strong>Anno 1: Fondamenti di Spavento</strong>
-                  <p>Studio dei profili psicologici infantili e tecniche di avvicinamento furtivo.</p>
-                </div>
-                <div class="anno-accademico">
-                  <strong>Anno 2: Biomeccanica e Ruggiti</strong>
-                  <p>Ottimizzazione della postura e proiezione vocale per spaventi di classe A.</p>
-                </div>
-                <div class="anno-accademico">
-                  <strong>Anno 3: Progettazione Scream-Energy</strong>
-                  <p>Ingegneria dei contenitori di urla e conversione energetica efficiente.</p>
-                </div>
-                <div class="anno-accademico">
-                  <strong>Anno 4: Tesi presso la Monsters Inc.</strong>
-                  <p>Stage operativo sul campo con accesso diretto alle porte del mondo umano.</p>
-                </div>
+              <div class="anno-accademico">
+                <strong>Anno 2: Biomeccanica e Ruggiti</strong>
+                <p>Ottimizzazione della postura e proiezione vocale per spaventi di classe A.</p>
+              </div>
+              <div class="anno-accademico">
+                <strong>Anno 3: Progettazione Scream-Energy</strong>
+                <p>Ingegneria dei contenitori di urla e conversione energetica efficiente.</p>
+              </div>
+              <div class="anno-accademico">
+                <strong>Anno 4: Tesi presso la Monsters Inc.</strong>
+                <p>Stage operativo sul campo con accesso diretto alle porte del mondo umano.</p>
               </div>
             </div>
-
-            <!-- Citazione laterale: aggiornare nome e ruolo del docente se cambia -->
-            <aside class="citazione">
-              <blockquote title="Ingegneria dello Spavento">
-                "L'urlo è energia pura, ma l'ingegneria è il contenitore che la trasforma in progresso. Non
-                cerchiamo solo decibel, cerchiamo l'efficienza assoluta del terrore."
-                <span>— Dr. Phineas Arbuckle <br />Direttore del Laboratorio Energia Urla</span>
-              </blockquote>
-            </aside>
           </div>
-        </div>
-      </section>
-    </main>
 
-    <!-- jQuery: libreria esterna, deve essere caricata per prima -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Template HTML della navbar per pagine in /pages (path con ../) -->
-    <script src="../JavaScript/navbar.js"></script>
-    <!-- Servizio di iniezione dei componenti nel DOM -->
-    <script src="../services/caricaNavBar.js"></script>
-    <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
-    <script src="../JavaScript/customNavbar.js"></script>
-    <!-- Footer dinamico aggiunto dai colleghi -->
-    <script src="../JavaScript/footer.js"></script>
-  </body>
+          <!-- Citazione laterale: aggiornare nome e ruolo del docente se cambia -->
+          <aside class="citazione">
+            <blockquote title="Ingegneria dello Spavento">
+              "L'urlo è energia pura, ma l'ingegneria è il contenitore che la trasforma in progresso. Non
+              cerchiamo solo decibel, cerchiamo l'efficienza assoluta del terrore."
+              <span>— Dr. Phineas Arbuckle <br />Direttore del Laboratorio Energia Urla</span>
+            </blockquote>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- jQuery: libreria esterna, deve essere caricata per prima -->
+  <script src="../JavaScript/jquery-3.6.0.min.js"></script>
+  <!-- Template HTML della navbar per pagine in /pages (path con ../) -->
+  <script src="../JavaScript/navbar.js"></script>
+  <!-- Servizio di iniezione dei componenti nel DOM -->
+  <script src="../services/caricaNavBar.js"></script>
+  <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
+  <script src="../JavaScript/customNavbar.js"></script>
+  <!-- Footer dinamico aggiunto dai colleghi -->
+  <script src="../JavaScript/footer.js"></script>
+</body>
+
 </html>

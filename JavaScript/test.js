@@ -28,19 +28,19 @@ function calcolaRisultato() {
     // 3. Genera l'output in base al punteggio
     if (spavento > ingegneria) { 
         htmlContent = `
-            <img src="../assets/images/monsters/sulley.256.png" alt="Sulley" class="result-icon">
+            <img src="../assets/images/monsters/sulley.256.webp" alt="Sulley" class="result-icon">
             <h3>${t["test_profilo_spavento"]}</h3>
             <p>${t["test_desc_spavento"]}</p>
         `;
     } else if (ingegneria > spavento) { 
         htmlContent = `
-            <img src="../assets/images/monsters/mike-wazowski.256.png" alt="Mike Wazowski" class="result-icon">
+            <img src="../assets/images/monsters/mike-wazowski.256.webp" alt="Mike Wazowski" class="result-icon">
             <h3>${t["test_profilo_ingegneria"]}</h3>
             <p>${t["test_desc_ingegneria"]}</p>
         `;
     } else { 
         htmlContent = `
-            <img src="../assets/images/monsters/randall.256.png" alt="Randall" class="result-icon">
+            <img src="../assets/images/monsters/randall.256.webp" alt="Randall" class="result-icon">
             <h3>${t["test_profilo_pareggio"]}</h3>
             <p>${t["test_desc_pareggio"]}</p>
         `;

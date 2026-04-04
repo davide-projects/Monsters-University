@@ -250,7 +250,7 @@ button[type="button"]:hover {
     background: #375E00;
     /* AGGIUNTA: Bordo sottile nero */
     /* Usiamo un'opacità (0.5) per renderlo meno "tagliente" e più integrato */
-    border: 1px solid rgba(0, 0, 0, 0.5);
+
     /* Trick: includi il bordo nel calcolo della larghezza/altezza */
     box-sizing: border-box;
     transform-origin: 50% 100%;

@@ -3,63 +3,158 @@
    una volta spostato il componente nella navbar
    =================================================== */
 
-#lang-selector {
-  position: fixed;
-  top: 85px;
-  right: 20px;
-  display: inline-block;
-  z-index: 999;
-}
-
-#lang-toggle {
-  background: none;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-size: 0.9rem;
+/* Styling del selettore lingua integrato nel menu hamburger */
+.menu-lang { list-style: none; }
+.menu-lang .lang-toggle {
   display: flex;
   align-items: center;
-  gap: 6px;
-}
-
-#lang-toggle:hover {
-  background-color: #f0f0f0;
-}
-
-/* Dropdown nascosto di default */
-#lang-dropdown {
-  display: none;
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  overflow: hidden;
-  z-index: 1000;
-  min-width: 140px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Dropdown visibile quando ha la classe open */
-#lang-dropdown.open {
-  display: block;
-}
-
-.lang-option {
+  justify-content: space-between;
   width: 100%;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 12px 12px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.menu-lang .lang-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(2,22,40,0.45);
+}
+
+.menu-lang .lang-dropdown {
+  display: none;
+  margin-top: 6px;
+  padding-left: 12px;
+}
+
+.menu-lang .lang-dropdown.open { display: block; }
+
+.menu-lang .lang-option {
+  display: block;
   background: none;
   border: none;
-  padding: 10px 14px;
-  cursor: pointer;
-  font-size: 0.9rem;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.05rem;
+  padding: 10px 0;
   text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.menu-lang .lang-option:hover {
+  background: rgba(255,255,255,0.04);
+  color: white;
+}
+
+/* Professional tweaks: flag, current label, caret */
+.menu-lang .flag { display:none; }
+
+.flag-img { width:28px; height:20px; object-fit:cover; border-radius:4px; margin-right:10px; display:inline-block; vertical-align:middle; }
+
+/* Visible label next to each flag in the dropdown */
+.menu-lang .lang-label {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1.02rem;
+  color: white;
+  vertical-align: middle;
+}
+
+/* Ensure toggle current name styling matches */
+.lang-toggle .lang-current-name { margin-left: 8px; font-size: 1.02rem; color: white; }
+
+/* Visually hidden text for accessibility */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Desktop: language selector placed inline in navbar */
+.nav-lang {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-lang .lang-toggle {
+  background: none;
+  border: none;
+  color: white;
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.92rem;
 }
 
-.lang-option:hover {
-  background-color: #f5f5f5;
+.nav-lang .lang-toggle:hover { background: rgba(255,255,255,0.02); }
+
+.nav-lang .lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: rgba(2,22,40,0.98);
+  border-radius: 10px;
+  padding: 6px;
+  min-width: 160px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  z-index: 1100;
 }
+
+.nav-lang .lang-dropdown.open { display: block; }
+
+.nav-lang .lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-lang .lang-option:hover { background: rgba(255,255,255,0.03); }
+
+.nav-lang .lang-label { color: white; font-size: 0.98rem; }
+
+.menu-lang .lang-left { display:flex; align-items:center; gap:8px; }
+.menu-lang .lang-right { display:flex; align-items:center; gap:8px; color: rgba(255,255,255,0.8); }
+.menu-lang .caret { font-size: 0.9rem; margin-left:6px; }
+
+.menu-lang .lang-dropdown { margin-top:8px; padding-left:8px; border-left: 2px solid rgba(255,255,255,0.03); }
+
+.menu-lang .lang-option.selected {
+  font-weight: 700;
+  color: white;
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  padding-left: 8px;
+}
+
+/* mostra la bandiera prima dell'opzione usando data-emoji */
+.menu-lang .lang-option::before {
+  content: attr(data-emoji);
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+/* rimuove eventuale codice lingua residuo */
+.menu-lang .current-lang { display: none !important; }
+
+/* Keep previous desktop styles (if used) — minimal fallback */
+#lang-selector { display: none; }

@@ -43,6 +43,15 @@ const navbarTemplate = `
         <li><a href="${_p}index.html" data-i18n="nav_home">Home</a></li>
         <li><a href="${_p}pages/nostriCorsi.html" data-i18n="nav_corsi">I Nostri Corsi</a></li>
         <li><a href="${_p}pages/comeRaggiungerci.html" data-i18n="nav_raggiungerci">Come Raggiungerci</a></li>
+            <li class="nav-lang">
+              <div class="lang-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                <img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="IT" aria-hidden="true"><span class="visually-hidden">Italiano</span>
+              </div>
+              <div class="lang-dropdown">
+                <button class="lang-option" data-lang="it" data-flag="${_p}assets/images/flags/it.svg" data-label="Italian"><img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="Italian"><span class="lang-label">Italian</span></button>
+                <button class="lang-option" data-lang="en" data-flag="${_p}assets/images/flags/gb.svg" data-label="English (GB)"><img class="flag-img" src="${_p}assets/images/flags/gb.svg" alt="English (GB)"><span class="lang-label">English (GB)</span></button>
+              </div>
+            </li>
       </ul>
     </nav>
   </header>
@@ -51,7 +60,21 @@ const navbarTemplate = `
 const menuSmartphoneTemplate = `
   <ul class="menuSmartphone">
 
-  <!-- data-i18n per la traduzione dinamica dei link del menu smartphone -->
+    <!-- lingua: posizionata sopra la voce Home in mobile -->
+    <li class="menu-lang">
+      <div class="lang-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+        <span class="lang-left"><img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="IT" aria-hidden="true"><span class="lang-current-name">Italiano</span></span>
+        <span class="lang-right"><span class="caret">▾</span></span>
+      </div>
+      <div class="lang-dropdown">
+        <button class="lang-option" data-lang="it" data-flag="${_p}assets/images/flags/it.svg" data-label="Italiano"><img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="Italiano"><span class="lang-label">Italiano</span></button>
+        <button class="lang-option" data-lang="en" data-flag="${_p}assets/images/flags/gb.svg" data-label="English (GB)"><img class="flag-img" src="${_p}assets/images/flags/gb.svg" alt="English (GB)"><span class="lang-label">English (GB)</span></button>
+      </div>
+    </li>
+
+    <li class="menu-divider"></li>
+
+    <!-- data-i18n per la traduzione dinamica dei link del menu smartphone -->
     <li><a href="${_p}index.html" data-i18n="nav_home">Home</a></li>
     <li><a href="${_p}pages/nostriCorsi.html" data-i18n="nav_corsi">I Nostri Corsi</a></li>
     <li><a href="${_p}pages/comeRaggiungerci.html" data-i18n="nav_raggiungerci">Come Raggiungerci</a></li>

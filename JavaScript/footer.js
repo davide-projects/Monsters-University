@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const footer = document.createElement("footer");
     footer.className = "site-footer";
     footer.innerHTML = `
-        <p>© ${annoCorrente} Monsters University — Tutti i diritti riservati</p>
+        <p>© ${annoCorrente} <span data-i18n="footer_testo">Monsters University — Tutti i diritti riservati</span></p>
     `;
 
     // Appende il footer in fondo al body, dopo tutto il contenuto della pagina

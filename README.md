@@ -3,7 +3,7 @@
 Sito web front-end ispirato all'università immaginaria del film Pixar *Monsters University*.  
 Progetto realizzato come esercitazione nell'ambito del corso ITS, con focus su qualità del codice, sicurezza e architettura modulare.
 
-> ⚠️ Il sito non è pubblicato online: funziona esclusivamente in locale tramite server locale o apertura diretta del file.
+> ⚠️ Il sito NON è pubblicato online: funziona esclusivamente in locale tramite server locale o apertura diretta del file.
 
 ---
 
@@ -26,7 +26,7 @@ Progetto realizzato come esercitazione nell'ambito del corso ITS, con focus su q
 | `pages/corsoIngegneria.html` | Dettaglio corso Ingegneria dello Spavento |
 | `pages/corsoSpavento.html` | Dettaglio corso Facoltà di Spavento |
 | `pages/comeRaggiungerci.html` | Informazioni su come raggiungere l'università |
-| `pages/test.html` | Quiz interattivo per aiutare l'utente a scegliere il corso più adatto tra Ingegneria dello Spavento e Facoltà di Spavento | |
+| `pages/test.html` | Quiz interattivo per aiutare l'utente a scegliere il corso più adatto, tra Ingegneria dello Spavento e Facoltà di Spavento | |
 
 ---
 
@@ -34,12 +34,22 @@ Progetto realizzato come esercitazione nell'ambito del corso ITS, con focus su q
 
 ### Navbar e Footer dinamici
 La navbar e il footer non sono scritti staticamente in ogni pagina HTML.  
-Vengono iniettati dinamicamente nel DOM tramite JavaScript, garantendo un'unica fonte di verità per i componenti comuni:
+Vengono iniettati dinamicamente nel DOM tramite JavaScript, garantendo un'unica fonte per i componenti comuni:
 - `JavaScript/navbar.js` — contiene il template HTML della navbar come stringa JS
 - `JavaScript/footer.js` — contiene il template HTML del footer
 - `services/caricaNavBar.js` — si occupa dell'iniezione nel DOM
 
 Questo approccio evita la duplicazione del codice e semplifica la manutenzione: modificare la navbar in un solo file aggiorna tutte le pagine.
+
+### Cambio lingua (IT / EN)
+Il sito supporta la traduzione dinamica dei contenuti in italiano e inglese senza ricorrere a fetch o chiamate esterne, garantendo il funzionamento anche completamente offline.  
+L'architettura è composta da tre file con responsabilità separate:
+- `JavaScript/cambioLingua.js` — template HTML del selettore lingua, iniettato dinamicamente nel DOM
+- `services/lang.js` — dizionario delle traduzioni, organizzato per lingua e per pagina
+- `services/langService.js` — logica del cambio lingua, gestione del localStorage (default= 'it') e aggiornamento del DOM
+
+I testi traducibili sono marcati con l'attributo `data-i18n` nell'HTML. La lingua scelta viene salvata nel `localStorage` e mantenuta durante la navigazione tra le pagine.  
+Questa scelta elimina qualsiasi dipendenza da librerie esterne o chiamate a server di terze parti.
 
 ### Font locali
 I font (**Roboto Slab**) sono serviti localmente dalla cartella `assets/fonts/` invece di essere caricati da Google Fonts.  
@@ -66,24 +76,38 @@ La navbar calcola dinamicamente il prefisso dei link (`../` o stringa vuota) in 
 ```
 MonstersUniversity/
 ├── assets/
-│   ├── fonts/          # Font Roboto Slab in locale (.woff2)
-│   └── images/         # Immagini e favicon
+│   ├── fonts/               # Font Roboto Slab in locale (.woff2)
+│   └── images/              # Immagini e favicon
 ├── css/
-│   ├── fonts.css       # Dichiarazione @font-face
-│   ├── navbar.css      # Stili navbar e menu smartphone
-│   ├── style.css       # Stili globali
-│   ├── sezioneCorsi.css# Stili pagine corso
-│   ├── footer.css      # Stili footer
-│   └── comeRaggiungerci.css
+│   ├── cambioLingua.css     # Stili selettore lingua
+│   ├── comeRaggiungerci.css # Stili pagina come raggiungerci
+│   ├── fonts.css            # Dichiarazione @font-face
+│   ├── footer.css           # Stili footer
+│   ├── navbar.css           # Stili navbar e menu smartphone
+│   ├── nostriCorsi.css      # Stili pagina nostri corsi
+│   ├── sezioneCorsi.css     # Stili pagine corso
+│   ├── style.css            # Stili globali
+│   └── test.css             # Stili pagina quiz
 ├── JavaScript/
-│   ├── navbar.js       # Template HTML navbar
-│   ├── footer.js       # Template HTML footer
-│   ├── customNavbar.js # Logica hamburger menu e animazioni
-│   └── jquery-3.6.0.min.js
-├── pages/              # Pagine secondarie del sito
+│   ├── cambioLingua.js      # Template HTML selettore lingua
+│   ├── customNavbar.js      # Logica menu ad hamburger
+│   ├── footer.js            # Template HTML footer
+│   ├── jquery-3.6.0.min.js  # Libreria jQuery
+│   ├── navbar.js            # Template HTML navbar
+│   └── test.js              # Logica quiz interattivo
+├── pages/
+│   ├── comeRaggiungerci.html
+│   ├── corsoIngegneria.html
+│   ├── corsoSpavento.html
+│   ├── nostriCorsi.html
+│   └── test.html
 ├── services/
-│   └── caricaNavBar.js # Iniezione navbar e footer nel DOM
-└── index.html          # Homepage
+│   ├── caricaNavBar.js      # Iniezione navbar e footer nel DOM
+│   ├── lang.js              # Dizionario traduzioni IT/EN
+│   └── langService.js       # Logica cambio lingua e iniezione selettore
+├── .gitignore
+├── index.html               # Homepage
+└── README.md
 ```
 
 ---
@@ -104,13 +128,3 @@ Il progetto è un sito statico e non richiede installazioni o dipendenze.
 3. Il sito si aprirà nel browser predefinito
 
 > 💡 Entrambe le modalità sono state testate e funzionano correttamente.
-
-
-
----
-
-## 📌 TODO
-
-| Funzionalità | Descrizione | Stato |
-|--------------|-------------|-------|
-| Cambio lingua | Implementare la logica per switchare il sito tra italiano e inglese | 🔜 In programma |

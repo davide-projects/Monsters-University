@@ -37,9 +37,12 @@ const navbarTemplate = `
     </button>
     <nav>
       <ul class="nav-links">
-        <li><a href="${_p}index.html">Home</a></li>
-        <li><a href="${_p}pages/nostriCorsi.html">I Nostri Corsi</a></li>
-        <li><a href="${_p}pages/comeRaggiungerci.html">Come Raggiungerci</a></li>
+
+      <!-- Nota: i link usano il prefisso calcolato per funzionare correttamente sia in locale che su server.
+       <!--data-i18n è usato per la traduzione dinamica del testo dei link, gestita da cambioLingua.js -->
+        <li><a href="${_p}index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="${_p}pages/nostriCorsi.html" data-i18n="nav_corsi">I Nostri Corsi</a></li>
+        <li><a href="${_p}pages/comeRaggiungerci.html" data-i18n="nav_raggiungerci">Come Raggiungerci</a></li>
       </ul>
     </nav>
   </header>
@@ -47,8 +50,10 @@ const navbarTemplate = `
 
 const menuSmartphoneTemplate = `
   <ul class="menuSmartphone">
-    <li><a href="${_p}index.html">Home</a></li>
-    <li><a href="${_p}pages/nostriCorsi.html">I Nostri Corsi</a></li>
-    <li><a href="${_p}pages/comeRaggiungerci.html">Come Raggiungerci</a></li>
+
+  <!-- data-i18n per la traduzione dinamica dei link del menu smartphone -->
+    <li><a href="${_p}index.html" data-i18n="nav_home">Home</a></li>
+    <li><a href="${_p}pages/nostriCorsi.html" data-i18n="nav_corsi">I Nostri Corsi</a></li>
+    <li><a href="${_p}pages/comeRaggiungerci.html" data-i18n="nav_raggiungerci">Come Raggiungerci</a></li>
   </ul>
 `;

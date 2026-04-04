@@ -9,11 +9,10 @@
 
   <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
 
-  
-
   <!-- Fogli di stile separati per responsabilità: navbar, stili globali, stili specifici per la sezione corsi -->
   <link rel="stylesheet" href="../css/fonts.css" />
   <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/cambioLingua.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/sezioneCorsi.css" />
   <link rel="stylesheet" href="../css/footer.css" />
@@ -27,23 +26,28 @@
     <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
     <div id="menu-smartphone-placeholder"></div>
 
+    
+
+  <!-- Selettore lingua iniettato dinamicamente da langService.js -->
+  <div id="lang-selector-placeholder"></div>
+
     <!-- HERO: immagine di sfondo + overlay scuro + titolo corso e info rapide (durata e crediti) -->
     <section class="hero-corsi">
       <div class="hero-overlay">
         <div class="hero-contenuti">
-          <h1>Ingegneria dello Spavento</h1>
-          <p class="hero-descrizione">
+          <h1 data-i18n="ing_hero_title">Ingegneria dello Spavento</h1>
+          <p class="hero-descrizione" data-i18n="ing_hero_descrizione">
             Progettare il terrore, costruire il domani. Il corso d'élite per i futuri campioni della Monsters Inc.
           </p>
           <!-- Dettagli sintetici del corso, visibili nell'hero -->
           <div class="hero-dettagli">
             <div class="dettagli-elementi">
-              <strong>Durata</strong>
-              <span>4 Anni</span>
+              <strong data-i18n="hero_durata_label">Durata</strong>
+              <span data-i18n="ing_hero_durata_valore">4 Anni</span>
             </div>
             <div class="dettagli-elementi">
-              <strong>Crediti</strong>
-              <span>250 SC</span>
+              <strong data-i18n="hero_crediti_label">Crediti</strong>
+              <span data-i18n="ing_hero_crediti_valore">250 SC</span>
             </div>
           </div>
         </div>
@@ -61,28 +65,32 @@
           <div class="colonna-didattica">
             <!-- Testo introduttivo del corso -->
             <div class="testo-introduzione">
-              <h2>Percorso Accademico</h2>
-              <p>Non si tratta solo di fare paura. Si tratta di comprendere la fisica del suono, la
-                meccanica delle ombre e la psicologia del sonno infantile. I nostri laboratori nel "Scream Lab"
-                offrono tecnologie all'avanguardia per catturare ogni singolo decibel di energia.</p>
+              <h2 data-i18n="programma_titolo">Percorso Accademico</h2>
+              <p data-i18n="ing_programma_intro">Non si tratta solo di fare paura. Si tratta di comprendere la fisica
+                del suono, la meccanica delle ombre e la psicologia del sonno infantile. I nostri laboratori nel
+                "Scream Lab" offrono tecnologie all'avanguardia per catturare ogni singolo decibel di energia.</p>
             </div>
             <!-- Un <div> per ogni anno accademico: questo corso dura 4 anni -->
             <div class="moduli-didattici">
               <div class="anno-accademico">
-                <strong>Anno 1: Fondamenti di Spavento</strong>
-                <p>Studio dei profili psicologici infantili e tecniche di avvicinamento furtivo.</p>
+                <strong data-i18n="ing_anno1_titolo">Anno 1: Fondamenti di Spavento</strong>
+                <p data-i18n="ing_anno1_desc">Studio dei profili psicologici infantili e tecniche di avvicinamento
+                  furtivo.</p>
               </div>
               <div class="anno-accademico">
-                <strong>Anno 2: Biomeccanica e Ruggiti</strong>
-                <p>Ottimizzazione della postura e proiezione vocale per spaventi di classe A.</p>
+                <strong data-i18n="ing_anno2_titolo">Anno 2: Biomeccanica e Ruggiti</strong>
+                <p data-i18n="ing_anno2_desc">Ottimizzazione della postura e proiezione vocale per spaventi di classe
+                  A.</p>
               </div>
               <div class="anno-accademico">
-                <strong>Anno 3: Progettazione Scream-Energy</strong>
-                <p>Ingegneria dei contenitori di urla e conversione energetica efficiente.</p>
+                <strong data-i18n="ing_anno3_titolo">Anno 3: Progettazione Scream-Energy</strong>
+                <p data-i18n="ing_anno3_desc">Ingegneria dei contenitori di urla e conversione energetica
+                  efficiente.</p>
               </div>
               <div class="anno-accademico">
-                <strong>Anno 4: Tesi presso la Monsters Inc.</strong>
-                <p>Stage operativo sul campo con accesso diretto alle porte del mondo umano.</p>
+                <strong data-i18n="ing_anno4_titolo">Anno 4: Tesi presso la Monsters Inc.</strong>
+                <p data-i18n="ing_anno4_desc">Stage operativo sul campo con accesso diretto alle porte del mondo
+                  umano.</p>
               </div>
             </div>
           </div>
@@ -90,9 +98,11 @@
           <!-- Citazione laterale: aggiornare nome e ruolo del docente se cambia -->
           <aside class="citazione">
             <blockquote title="Ingegneria dello Spavento">
-              "L'urlo è energia pura, ma l'ingegneria è il contenitore che la trasforma in progresso. Non
-              cerchiamo solo decibel, cerchiamo l'efficienza assoluta del terrore."
-              <span>— Dr. Phineas Arbuckle <br />Direttore del Laboratorio Energia Urla</span>
+              <span data-i18n="ing_citazione_testo">"L'urlo è energia pura, ma l'ingegneria è il contenitore che la
+                trasforma in progresso. Non cerchiamo solo decibel, cerchiamo l'efficienza assoluta del
+                terrore."</span>
+              <span data-i18n="ing_citazione_autore">— Dr. Phineas Arbuckle</span>
+              <span data-i18n="ing_citazione_ruolo">Direttore del Laboratorio Energia Urla</span>
             </blockquote>
           </aside>
         </div>
@@ -110,6 +120,12 @@
   <script src="../JavaScript/customNavbar.js"></script>
   <!-- Footer dinamico aggiunto dai colleghi -->
   <script src="../JavaScript/footer.js"></script>
+  <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di langService.js -->
+  <script src="../JavaScript/cambioLingua.js"></script>
+  <!-- Dizionario traduzioni — deve essere caricato PRIMA di langService.js -->
+  <script src="../services/lang.js"></script>
+  <!-- Logica cambio lingua -->
+  <script src="../services/langService.js"></script>
 </body>
 
 </html>

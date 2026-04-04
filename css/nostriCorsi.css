@@ -291,6 +291,15 @@
     padding: 36px 16px;
 }
 
+/* Su desktop aumentiamo il padding-top della hero ridotta per creare spazio visivo
+   senza alterare il flusso del contenuto (evita che l'immagine si 'allunghi') */
+@media (min-width: 901px) {
+    .hero-corsi.small .hero-overlay {
+        padding-top: 100px;
+        padding-bottom: 36px;
+    }
+}
+
 .hero-corsi.small .hero-contenuti h1,
 .hero-corsi.small .hero-contenuti h2 {
     font-size: 2rem;

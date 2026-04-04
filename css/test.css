@@ -9,13 +9,71 @@ body {
 
 /* Contenitore quiz */
 #quiz {
-    max-width: 720px;
-    margin: 40px auto;
+    max-width: 100%; /* lascia che la grid definisca la larghezza */
+    margin: 0; /* la grid gestisce il margin centrale */
     background: #ffffff;
     padding: 28px;
     border-radius: 12px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Layout a due colonne per quiz + aside */
+.quiz-grid {
+    display: grid;
+    max-width: 980px; /* aumenta la larghezza complessiva della grid */
+    margin: 40px auto;
+    grid-template-columns: 1fr 360px; /* area principale + aside più grande */
+    gap: 32px;
+    align-items: start;
+}
+
+.test-aside {
+    background: linear-gradient(180deg, #ffffff, #f8fff6);
+    border: 1px solid rgba(0,0,0,0.04);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+.test-aside h4 {
+    margin: 0 0 8px 0;
+    color: #334513;
+    font-size: 1.05rem;
+}
+.aside-thumb {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 8px 0 12px 0;
+}
+.test-aside ul { margin: 8px 0 12px 1rem; }
+.test-aside p { margin: 0 0 8px 0; color: #1a1a1a }
+
+@media (max-width: 900px) {
+    /* layout più compatto su smartphone/tablet */
+    .quiz-grid { 
+        grid-template-columns: 1fr; 
+        max-width: 100%;
+        margin: -12px 8px 6px 8px; /* tira la grid verso l'alto, molto vicino all'header */
+        gap: 12px;
+    }
+    .test-aside { order: 2; }
+    #quiz { order: 1; padding: 12px; }
+    main { padding-top: 4px; }
+    /* Nota: .btn-scopri visibile su tablet; nascosto solo sui telefoni (<=600px) */
+    /* riduci spazio dell'hero per avvicinare ulteriormente */
+    .hero-corsi.small { margin-bottom: 4px; }
+    .hero-corsi.small .hero-overlay { padding-bottom: 6px; }
+}
+
+@media (max-width: 600px) {
+    /* su telefoni tira ancora più su la grid */
+    .quiz-grid { margin: -24px 8px 4px 8px; gap: 10px; }
+    main { padding-top: 2px; }
+    #quiz { padding: 10px; }
+    .hero-corsi.small { margin-bottom: 2px; }
 }
 
 h2 {
@@ -31,7 +89,7 @@ h2 {
 #quiz p {
     font-weight: 600;
     color: #1a1a1a;
-    margin: 18px 0 8px 0;
+    margin: 12px 0 12px 0; /* spazio tra domanda e prima opzione mantenuto */
 }
 
 /* Nuovo design per le opzioni (label) - layout compatto e coerente col sito */
@@ -39,7 +97,7 @@ label {
     display: flex;
     align-items: center;
     padding: 8px 12px 8px 56px;
-    margin: 4px 0;
+    margin: 0; /* opzioni il più vicine possibile */
     border-radius: 10px;
     transition: background 0.14s, transform 0.08s, box-shadow 0.10s, border-color 0.14s;
     cursor: pointer;
@@ -99,9 +157,14 @@ label::after {
 /* Mantieni uno spazio maggiore tra la domanda e la prima opzione */
 p + label,
 #quiz p + label {
-    margin-top: 10px;
+    margin-top: 0; /* lo spazio tra domanda e prima opzione è gestito dal margin-bottom della domanda */
 }
 
+/* Aumenta lo spazio tra una sezione di domanda e la successiva:
+   applicato alla seconda label di ogni coppia per creare un gap evidente */
+#quiz label:nth-of-type(2n) {
+    margin-bottom: 20px; /* aumenta lo spazio tra sezioni (regola se necessario) */
+}
 /* Stato checked (usa :has); evidenzia label e mostra il puntino */
 label:has(input[type="radio"]:checked) {
     background: linear-gradient(180deg, rgba(147,197,75,0.06), rgba(147,197,75,0.02));
@@ -129,14 +192,14 @@ input[type="radio"] {
 /* Pulsante principale coerente con il tema */
 button[type="button"] {
     display: inline-block;
-    background-color: #334513;
+    background-color:#93c54b;
     color: #ffffff;
     border: none;
     padding: 12px 20px;
     border-radius: 10px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 6px 16px rgba(147,197,75,0.18);
+    box-shadow: 0 8px 22px rgba(51,69,19,0.10), 0 2px 6px rgba(0,0,0,0.04);
     transition: transform 0.12s ease, filter 0.12s ease;
 }
 
@@ -145,12 +208,78 @@ button[type="button"]:hover {
     filter: brightness(0.98);
 }
 
+/* Pulsante primario specifico con animazione al passaggio del mouse */
+.btn-primary {
+    display: inline-block;
+    background-color:#93c54b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 12px 28px rgba(51,69,19,0.18), 0 3px 8px rgba(0,0,0,0.06);
+    transition: transform 180ms ease, box-shadow 220ms ease, filter 120ms ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.04);
+    filter: brightness(1.02);
+    animation: btn-pulse 720ms ease 0s 1;
+}
+
+@keyframes btn-pulse {
+    0% { box-shadow: 0 12px 28px rgba(51,69,19,0.18), 0 3px 8px rgba(0,0,0,0.06); }
+    50% { box-shadow: 0 22px 44px rgba(51,69,19,0.22), 0 6px 16px rgba(0,0,0,0.08); }
+    100% { box-shadow: 0 12px 28px rgba(51,69,19,0.18), 0 3px 8px rgba(0,0,0,0.06); }
+}
+
+@media (max-width: 600px) {
+    .btn-primary { width: 100%; }
+}
+
+/* Cornini (decorazione) attorno al pulsante, stile 'Mike' - versione migliorata */
+.btn-primary {
+    position: relative;
+    overflow: visible;
+    z-index: 2; /* ancora più sopra le orecchie */
+}
+.btn-primary::before,
+.btn-primary::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    width: 20px;
+    height: 36px;
+    border-radius: 8px 8px 4px 4px;
+    /* colore richiesto per le orecchie */
+    background: #93c54b;
+    transform-origin: 50% 100%;
+    transition: transform 200ms ease, top 200ms ease, box-shadow 200ms ease;
+    z-index: -1; /* completamente dietro il bottone */
+}
+.btn-primary::before {
+    left: 10px;
+    transform: rotate(-16deg) translateY(0);
+}
+.btn-primary::after {
+    right: 10px;
+    transform: rotate(16deg) translateY(0);
+}
+.btn-primary:hover::before,
+.btn-primary:hover::after {
+    top: -12px;
+    transform: translateY(-2px) scale(1.06) rotate(0deg);
+
+}
+
 /* Bottone 'Scopri' coerente con lo stile del sito */
 .btn-scopri {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     margin-top: 12px;
+    margin-right: 12px;
     padding: 8px 14px;
     border-radius: 6px;
     text-decoration: none;
@@ -187,6 +316,8 @@ button[type="button"]:hover {
         width: 100%;
         padding: 12px;
     }
+    /* Nascondi il link 'Torna Indietro' sui telefoni per evitare overflow */
+    .btn-scopri { display: none !important; margin-right: 0; width: 100%; margin-bottom: 8px; }
 }
 
 /* Spazio superiore su mobile per evitare che la navbar assoluta copra il titolo */
@@ -205,4 +336,12 @@ button[type="button"]:hover {
     font-family: 'Roboto Slab', serif;
     font-size: 2.4rem;
     text-align: center;
+}
+
+/* Spazio extra per l'h2 su desktop per distanziarlo dalla navbar */
+@media (min-width: 901px) {
+    /* Manteniamo margin-top dell'h2 azzerato; usiamo padding di .hero-overlay per lo spazio */
+    .hero-corsi.small .hero-contenuti h2 {
+        margin-top: 0 !important;
+    }
 }

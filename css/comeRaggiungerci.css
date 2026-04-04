@@ -1,6 +1,9 @@
+h1{
+    font-size: 2.5rem;
+}
 /* Modifiche per la pagina "Come Raggiungerci" */
 .hero-descrizione{
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 /* Impostazione bordo e immagine della mappa */
 .mappa {
@@ -32,7 +35,7 @@
 /* Allineo tutti i testi al centro */
 #inizio{
     text-align: center;
-    padding: 70px 5%;
+    padding: 110px 5%;
 }
 
 .info-container {
@@ -42,7 +45,6 @@
     padding: 60px 5%;             
     background-color: #f9f9f9;
     border-top: 4px solid #002D62;
-    right: 100%;
 }
 .contatti, .orari {
     flex: 1;
@@ -50,18 +52,13 @@
     text-align: center;
 }
 
-a{
+.informazioni{
     font-family: 'Graduate', serif;
     color: #002D62;
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contatti p a:hover {
-    color: #93c54b;
-    font-weight: bold; /* Lo rende anche grassetto al passaggio */
     font-size: 17px;
 }
+
 
 .orari {
     text-align: center; /* Spinge il contenuto degli orari verso il bordo destro */

@@ -72,6 +72,19 @@ La navbar calcola dinamicamente il prefisso dei link (`../` o stringa vuota) in 
 
 ---
 
+
+## 🔍 Qualità del Codice (SonarQube)
+ Il progetto include un file di configurazione sonar-project.properties per ottimizzare l'analisi statica e focalizzarla esclusivamente sul codice sorgente sviluppato dal team. Sono state applicate le seguenti regole:
+
+**Esclusione** librerie esterne: La libreria jquery-3.6.0.min.js è stata esclusa dall'analisi (sonar.exclusions) per evitare che bug o segnalazioni interne a codice di terze parti influenzino il Quality Gate del progetto.
+
+**Gestione Duplicati** (i18n): La cartella services/i18n/ è stata esclusa dal controllo di duplicazione (sonar.cpd.exclusions). Questa scelta è necessaria poiché i file di traduzione devono condividere per natura la stessa struttura di chiavi (IT/EN) per garantire la coerenza del sistema multilingua.
+
+**Accessibilità**  Sono stati risolti i warning relativi al contrasto cromatico (S7924) per soddisfare i requisiti minimi di leggibilità.
+
+---
+
+
 ## 📁 Struttura del progetto
 ```
 MonstersUniversity/

@@ -9,13 +9,10 @@
   <title>Monsters University</title>
   <link rel="shortcut icon" href="./assets/images/Favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="./css/fonts.css" />
-  <link rel="stylesheet" href="./css/navbar.css" />
-  <link rel="stylesheet" href="./css/cambioLingua.css" />
-  <link rel="stylesheet" href="./css/nostriCorsi.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/index.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="preload" href="./assets/images/accademia.webp" as="image">
+  <link rel="preload" href="./assets/fonts/roboto-v51-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/roboto-v51-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.min.css" />
 </head>
 
 <body>
@@ -40,7 +37,7 @@
     <section class="intro container">
       <div class="intro-grid">
         <article class="card">
-          <img src="assets/images/percorsoCorsi.webp" alt="Sulley" class="card-img">
+          <img src="assets/images/percorsoCorsi.webp" alt="Sulley" class="card-img" loading="lazy" decoding="async">
           <h3 data-i18n="index_card1_titolo">I nostri corsi</h3>
           <p data-i18n="index_card1_desc">Scopri i percorsi in Spavento e Ingegneria dello Spavento, pensati per tutti i
             livelli.</p>
@@ -48,14 +45,14 @@
         </article>
 
         <article class="card">
-          <img src="assets/images/monsters/iNuoviArrivati.webp" alt="Nuovi Arrivati" class="card-img">
+          <img src="assets/images/monsters/iNuoviArrivati.webp" alt="Nuovi Arrivati" class="card-img" loading="lazy" decoding="async">
           <h3 data-i18n="index_card2_titolo">tu sei monsters university</h3>
           <p data-i18n="index_card2_desc">Fai il quiz e scopri il percorso alla Monsters Un. fatto su misura per te!</p>
           <a class="link" href="./pages/test.html" data-i18n="index_card2_link">Fai il quiz →</a>
         </article>
 
         <article class="card">
-          <img src="assets/images/accademia.webp" alt="Facciata dell'università" class="card-img">
+          <img src="assets/images/accademia.webp" alt="Facciata dell'università" class="card-img" loading="lazy" decoding="async">
           <h3 data-i18n="index_card3_titolo">Visita il campus</h3>
           <p data-i18n="index_card3_desc">Tour guidati e mappe per raggiungere la nostra storica facciata e gli spazi
             prova.</p>
@@ -90,7 +87,7 @@
         </div>
 
         <aside class="storia-aside" aria-label="Riepilogo Monsters University">
-          <img src="assets/images/logoScuola.webp" alt="Logo Monsters University" class="storia-img">
+          <img src="assets/images/logoScuola.webp" alt="Logo Monsters University" class="storia-img" loading="lazy" decoding="async">
           <div class="stats">
             <div class="stat"><strong>20k</strong><span data-i18n="index_stat_studenti">Studenti</span></div>
             <div class="stat"><strong>150</strong><span data-i18n="index_stat_docenti">Docenti</span></div>
@@ -106,26 +103,12 @@
 
   <footer id="site-footer"></footer>
 
-  <!-- jQuery: libreria esterna, deve essere caricata per prima -->
-  <script src="./JavaScript/jquery-3.6.0.min.js"></script>
-  <!-- Template HTML della navbar -->
-  <script src="./JavaScript/navbar.js"></script>
-  <!-- Footer dinamico -->
-  <script src="./JavaScript/footer.js"></script>
-  <!-- Servizio di iniezione dei componenti nel DOM -->
-  <script src="./services/caricaNavBar.js"></script>
-  <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
-  <script src="./JavaScript/customNavbar.js"></script>
-  <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di lang.js -->
-  <script src="./JavaScript/cambioLingua.js"></script>
-  <!-- Dizionario italiano — deve essere caricato PRIMA di lang.js -->
-  <script src="./services/i18n/lang.it.js"></script>
-  <!-- Dizionario inglese — deve essere caricato PRIMA di lang.js -->
-  <script src="./services/i18n/lang.en.js"></script>
-  <!-- Assembla i due dizionari — deve essere caricato PRIMA di langService.js -->
-  <script src="./services/lang.js"></script>
-  <!-- Logica cambio lingua -->
-  <script src="./services/langService.js"></script>
+  <!-- Carica librerie e codice in modalità deferred per ridurre il blocking -->
+  <script src="./JavaScript/jquery-3.6.0.min.js" defer></script>
+  <script src="./services/i18n/lang.it.js" defer></script>
+  <script src="./services/i18n/lang.en.js" defer></script>
+  <!-- Codice del sito combinato (navbar, footer, lingua, injectors) -->
+  <script src="./JavaScript/site.min.js" defer></script>
 </body>
 
 </html>

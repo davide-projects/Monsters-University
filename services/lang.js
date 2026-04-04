@@ -5,7 +5,7 @@
   - services/i18n/lang.it.js → translationsIT
   - services/i18n/lang.en.js → translationsEN
 */
-
+ // Importa le traduzioni dalle due lingue separate
 const translations = {
   it: translationsIT,
   en: translationsEN

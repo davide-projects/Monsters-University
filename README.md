@@ -102,6 +102,9 @@ MonstersUniversity/
 │   ├── nostriCorsi.html
 │   └── test.html
 ├── services/
+    ├── i18n/                # Cartella per i dizionari
+    │   │── lang.en.js       # Traduzioni inglesi
+│   │   └── lang.it.js       # Traduzioni italiane
 │   ├── caricaNavBar.js      # Iniezione navbar e footer nel DOM
 │   ├── lang.js              # Dizionario traduzioni IT/EN
 │   └── langService.js       # Logica cambio lingua e iniezione selettore

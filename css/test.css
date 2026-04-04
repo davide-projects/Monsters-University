@@ -192,8 +192,8 @@ input[type="radio"] {
 /* Pulsante principale coerente con il tema */
 button[type="button"] {
     display: inline-block;
-    background-color:#93c54b;
-    color: #ffffff;
+    background-color:#375E00;
+    color: #FFFFFF;
     border: none;
     padding: 12px 20px;
     border-radius: 10px;
@@ -211,8 +211,8 @@ button[type="button"]:hover {
 /* Pulsante primario specifico con animazione al passaggio del mouse */
 .btn-primary {
     display: inline-block;
-    background-color:#93c54b;
-    color: #ffffff;
+    background-color:#375E00;
+    color: #FFFFFF;
     border: none;
     padding: 12px 22px;
     border-radius: 10px;
@@ -238,12 +238,6 @@ button[type="button"]:hover {
     .btn-primary { width: 100%; }
 }
 
-/* Cornini (decorazione) attorno al pulsante, stile 'Mike' - versione migliorata */
-.btn-primary {
-    position: relative;
-    overflow: visible;
-    z-index: 2; /* ancora più sopra le orecchie */
-}
 .btn-primary::before,
 .btn-primary::after {
     content: "";
@@ -253,11 +247,17 @@ button[type="button"]:hover {
     height: 36px;
     border-radius: 8px 8px 4px 4px;
     /* colore richiesto per le orecchie */
-    background: #93c54b;
+    background: #375E00;
+    /* AGGIUNTA: Bordo sottile nero */
+    /* Usiamo un'opacità (0.5) per renderlo meno "tagliente" e più integrato */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    /* Trick: includi il bordo nel calcolo della larghezza/altezza */
+    box-sizing: border-box;
     transform-origin: 50% 100%;
     transition: transform 200ms ease, top 200ms ease, box-shadow 200ms ease;
     z-index: -1; /* completamente dietro il bottone */
 }
+
 .btn-primary::before {
     left: 10px;
     transform: rotate(-16deg) translateY(0);
@@ -329,6 +329,9 @@ button[type="button"]:hover {
 
 /* Se l'h2 è dentro .hero-contenuti (hero) annulla il margin-top aggiuntivo */
 .hero-contenuti h2 {
+    white-space: pre-line; /* consente di mantenere i ritorni a capo se presenti */
+    display: block;
+    line-height: 1.2;
     margin-top: 0 !important;
     color: #ffffff;
     text-transform: uppercase;

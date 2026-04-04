@@ -1,25 +1,50 @@
+// Funzione per calcolare il risultato del test
 function calcolaRisultato() {
     let spavento = 0;
     let ingegneria = 0;
 
     const risposte = document.querySelectorAll('input[type="radio"]:checked');
+    const lang = localStorage.getItem("lang") || "it";
+    
+    // Recupera l'oggetto traduzioni corretto (assumendo che 'translations' sia l'oggetto globale)
+    const t = translations[lang];
 
+    // 1. Verifica che tutte le domande abbiano una risposta
     if (risposte.length < 6) {
-        document.getElementById("risultato").innerText = "Rispondi a tutte le domande!";
+        // Usa la chiave corretta definita nel dizionario
+        document.getElementById("risultato").innerText = t["test_errore_compilazione"];
         return;
     }
 
+    // 2. Conta le risposte
     risposte.forEach(r => {
         if (r.value === "spavento") spavento++;
         else if (r.value === "ingegneria") ingegneria++;
     });
 
     const out = document.getElementById("risultato");
-    if (spavento > ingegneria) {
-        out.innerHTML = `<img src="../assets/images/monsters/sulley.256.png" alt="Sulley" class="result-icon"> Sei la vera star di Spavento! Hai presenza, forza e stile alla Sulley.`;
-    } else if (ingegneria > spavento) {
-        out.innerHTML = `<img src="../assets/images/monsters/mike-wazowski.256.png" alt="Mike Wazowski" class="result-icon"> Sei un genio come Mike Wazowski: strategico, creativo e preciso.`;
-    } else {
-        out.innerHTML = `<img src="../assets/images/monsters/randall.256.png" alt="Randall" class="result-icon"> Sei un mostro completo: perfetto mix di talento e ingegno (Sulley + Mike).`;
+    let htmlContent = "";
+
+    // 3. Genera l'output in base al punteggio
+    if (spavento > ingegneria) { 
+        htmlContent = `
+            <img src="../assets/images/monsters/sulley.256.png" alt="Sulley" class="result-icon">
+            <h3>${t["test_profilo_spavento"]}</h3>
+            <p>${t["test_desc_spavento"]}</p>
+        `;
+    } else if (ingegneria > spavento) { 
+        htmlContent = `
+            <img src="../assets/images/monsters/mike-wazowski.256.png" alt="Mike Wazowski" class="result-icon">
+            <h3>${t["test_profilo_ingegneria"]}</h3>
+            <p>${t["test_desc_ingegneria"]}</p>
+        `;
+    } else { 
+        htmlContent = `
+            <img src="../assets/images/monsters/randall.256.png" alt="Randall" class="result-icon">
+            <h3>${t["test_profilo_pareggio"]}</h3>
+            <p>${t["test_desc_pareggio"]}</p>
+        `;
     }
+
+    out.innerHTML = htmlContent;
 }

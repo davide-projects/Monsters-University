@@ -26,10 +26,10 @@
     <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
     <div id="menu-smartphone-placeholder"></div>
 
-    
 
-  <!-- Selettore lingua iniettato dinamicamente da langService.js -->
-  <div id="lang-selector-placeholder"></div>
+
+    <!-- Selettore lingua iniettato dinamicamente da langService.js -->
+    <div id="lang-selector-placeholder"></div>
 
     <!-- HERO: immagine di sfondo + overlay scuro + titolo corso e info rapide (durata e crediti) -->
     <section class="hero-corsi">
@@ -120,9 +120,13 @@
   <script src="../JavaScript/customNavbar.js"></script>
   <!-- Footer dinamico aggiunto dai colleghi -->
   <script src="../JavaScript/footer.js"></script>
-  <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di langService.js -->
+  <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di lang.js -->
   <script src="../JavaScript/cambioLingua.js"></script>
-  <!-- Dizionario traduzioni — deve essere caricato PRIMA di langService.js -->
+  <!-- Dizionario italiano — deve essere caricato PRIMA di lang.js -->
+  <script src="../services/i18n/lang.it.js"></script>
+  <!-- Dizionario inglese — deve essere caricato PRIMA di lang.js -->
+  <script src="../services/i18n/lang.en.js"></script>
+  <!-- Assembla i due dizionari — deve essere caricato PRIMA di langService.js -->
   <script src="../services/lang.js"></script>
   <!-- Logica cambio lingua -->
   <script src="../services/langService.js"></script>

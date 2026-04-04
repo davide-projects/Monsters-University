@@ -4,24 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Scopri se sei più Spavento o Ingegneria dello Spavento con il nostro quiz interattivo!">
-    
-    <title>Test Monsters University</title>
+    <meta name="description"
+        content="Scopri se sei più Spavento o Ingegneria dello Spavento con il nostro quiz interattivo!">
+    <title>Monsters University — Test di Orientamento</title>
 
     <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/test.css">
-    <link rel="stylesheet" href="../css/nostriCorsi.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/cambioLingua.css" />
+    <link rel="stylesheet" href="../css/nostriCorsi.css" />
+    <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/footer.css" />
 </head>
 
 <body>
-
     <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
     <div id="navbar-placeholder"></div>
+
+    <!-- Selettore lingua iniettato dinamicamente da langService.js -->
+    <div id="lang-selector-placeholder"></div>
 
     <main>
         <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
@@ -30,76 +32,116 @@
         <section class="hero-corsi small">
             <div class="hero-overlay">
                 <div class="hero-contenuti">
-                    <h2>Test <br>Sei più Spavento o Ingegneria dello Spavento?</h2>
+                    <h2 data-i18n="test_hero_title">Test Sei più Spavento o Ingegneria dello Spavento?</h2>
                 </div>
             </div>
         </section>
 
         <div class="quiz-grid">
-        <form id="quiz">
-            <p>1. Durante un esame pratico in "Spavento 101" ti chiedono di provocare un urlo immediato: cosa fai?</p>
-            <label><input type="radio" name="q1" value="spavento"> Uso voce, mimica e presenza per spaventare subito il bambino.</label><br>
-            <label><input type="radio" name="q1" value="ingegneria"> Attivo un congegno che ho progettato per ottenere il massimo dell'urlo.</label>
+            <form id="quiz">
+                <p data-i18n="test_q1">1. Durante un esame pratico in "Spavento 101" ti chiedono di provocare un urlo
+                    immediato: cosa fai?</p>
+                <label><input type="radio" name="q1" value="spavento"> <span data-i18n="test_q1_spavento">Uso voce,
+                        mimica e presenza per spaventare subito il bambino.</span></label><br>
+                <label><input type="radio" name="q1" value="ingegneria"> <span data-i18n="test_q1_ingegneria">Attivo un
+                        congegno che ho progettato per ottenere il massimo dell'urlo.</span></label>
 
-            <p>2. Alle Scare Games la tua squadra deve mettere in scena uno spettacolo: qual è il tuo ruolo ideale?</p>
-            <label><input type="radio" name="q2" value="spavento"> Sono il performer: energia e improvvisazione sul palco.</label><br>
-            <label><input type="radio" name="q2" value="ingegneria"> Mi occupo degli effetti speciali e delle scenografie tecniche.</label>
+                <p data-i18n="test_q2">2. Alle Scare Games la tua squadra deve mettere in scena uno spettacolo: qual è
+                    il tuo ruolo ideale?</p>
+                <label><input type="radio" name="q2" value="spavento"> <span data-i18n="test_q2_spavento">Sono il
+                        performer: energia e improvvisazione sul palco.</span></label><br>
+                <label><input type="radio" name="q2" value="ingegneria"> <span data-i18n="test_q2_ingegneria">Mi occupo
+                        degli effetti speciali e delle scenografie tecniche.</span></label>
 
-            <p>3. Entri nella stanza di un bambino alla luce accesa: come massimizzi il risultato?</p>
-            <label><input type="radio" name="q3" value="spavento"> Studio il comportamento del bambino e sfrutto i rumori e i movimenti.</label><br>
-            <label><input type="radio" name="q3" value="ingegneria"> Modifico luci e dispositivi per creare ombre e trigger che aumentano l'urlo.</label>
+                <p data-i18n="test_q3">3. Entri nella stanza di un bambino alla luce accesa: come massimizzi il
+                    risultato?</p>
+                <label><input type="radio" name="q3" value="spavento"> <span data-i18n="test_q3_spavento">Studio il
+                        comportamento del bambino e sfrutto i rumori e i movimenti.</span></label><br>
+                <label><input type="radio" name="q3" value="ingegneria"> <span data-i18n="test_q3_ingegneria">Modifico
+                        luci e dispositivi per creare ombre e trigger che aumentano l'urlo.</span></label>
 
-            <p>4. Cosa dicono di te i compagni di corso?</p>
-            <label><input type="radio" name="q4" value="spavento"> "Ha una presenza naturale che terrorizza la stanza."</label><br>
-            <label><input type="radio" name="q4" value="ingegneria"> "È il cervello dietro ogni buona strategia e gadget."</label>
+                <p data-i18n="test_q4">4. Cosa dicono di te i compagni di corso?</p>
+                <label><input type="radio" name="q4" value="spavento"> <span data-i18n="test_q4_spavento">"Ha una
+                        presenza naturale che terrorizza la stanza."</span></label><br>
+                <label><input type="radio" name="q4" value="ingegneria"> <span data-i18n="test_q4_ingegneria">"È il
+                        cervello dietro ogni buona strategia e gadget."</span></label>
 
-            <p>5. Devi fare squadra: preferisci collaborare con Sulley o con Mike?</p>
-            <label><input type="radio" name="q5" value="spavento"> Con Sulley: forza, carisma e improvvisazione pura.</label><br>
-            <label><input type="radio" name="q5" value="ingegneria"> Con Mike: pianificazione, tattica e ingegnosità.</label>
-            
-            <p>6. Per il progetto finale preferisci una performance dal vivo o un congegno ingegneristico?</p>
-            <label><input type="radio" name="q6" value="spavento"> Performance dal vivo: emozione, improvvisazione e presenza scenica.</label><br>
-            <label><input type="radio" name="q6" value="ingegneria"> Congegno ingegneristico: progettazione, test e ottimizzazione.</label>
-            <br><br>
-            <a class="btn-scopri" href="./nostriCorsi.html" aria-label="Torna indietro alla pagina dei nostri corsi">
-                <span class="arrow">←</span> Torna Indietro
-            </a>
-            <button type="button" class="btn-primary" onclick="calcolaRisultato()">Scopri il tuo corso!</button>
-        </form>
+                <p data-i18n="test_q5">5. Devi fare squadra: preferisci collaborare con Sulley o con Mike?</p>
+                <label><input type="radio" name="q5" value="spavento"> <span data-i18n="test_q5_spavento">Con Sulley:
+                        forza, carisma e improvvisazione pura.</span></label><br>
+                <label><input type="radio" name="q5" value="ingegneria"> <span data-i18n="test_q5_ingegneria">Con Mike:
+                        pianificazione, tattica e ingegnosità.</span></label>
 
-        <aside class="test-aside" aria-label="Informazioni sul test">
-            <h4>Curiosità & Consigli</h4>
-            <img src="../assets/images/monsters/mike-wazowski.256.png" alt="Mike" class="aside-thumb">
-            <p>Rispondi con sincerità: le tue scelte mostreranno il profilo più adatto a te.</p>
-            <ul>
-                <li><strong>Spavento:</strong> preferisci l'improvvisazione e la presenza scenica.</li>
-                <li><strong>Ingegneria:</strong> ami progettare soluzioni e gadget.</li>
-                <li>Non esistono risposte giuste o sbagliate: divertiti!</li>
-            </ul>
-            <h5>Piccoli consigli</h5>
-            <ul>
-                <li>Leggi la domanda con calma e immagina la scena: la scelta istintiva è spesso la più significativa.</li>
-                <li>Sei indeciso? Scegli l'opzione che descrive meglio il tuo comportamento abituale, non l'eccezione.</li>
-                <li>Puoi ripetere il test dopo qualche giorno: il profilo può variare con l'esperienza.</li>
-            </ul>
-            <p style="margin-top:8px; font-size:0.95rem; color:#334513">Interpretazione rapida: il risultato indicherà il corso più affine—`Spavento` per chi punta alla performance, `Ingegneria` per chi ama progettare. In caso di pareggio avrai entrambe le qualità, utili in squadra.</p>
-        </aside>
+                <p data-i18n="test_q6">6. Per il progetto finale preferisci una performance dal vivo o un congegno
+                    ingegneristico?</p>
+                <label><input type="radio" name="q6" value="spavento"> <span data-i18n="test_q6_spavento">Performance
+                        dal vivo: emozione, improvvisazione e presenza scenica.</span></label><br>
+                <label><input type="radio" name="q6" value="ingegneria"> <span data-i18n="test_q6_ingegneria">Congegno
+                        ingegneristico: progettazione, test e ottimizzazione.</span></label>
 
-        <h3 id="risultato" aria-live="polite"></h3>
+                <br><br>
+                <a class="btn-scopri" href="./nostriCorsi.html"
+                    aria-label="Torna indietro alla pagina dei nostri corsi">
+                    <span class="arrow">←</span> <span data-i18n="test_btn_torna">Torna Indietro</span>
+                </a>
+                <button type="button" class="btn-primary" onclick="calcolaRisultato()"
+                    data-i18n="test_btn_scopri">Scopri il tuo corso!</button>
+            </form>
+
+            <aside class="test-aside" aria-label="Informazioni sul test">
+                <h4 data-i18n="test_aside_titolo">Curiosità & Consigli</h4>
+                <img src="../assets/images/monsters/mike-wazowski.256.png" alt="Mike" class="aside-thumb">
+                <p data-i18n="test_aside_intro">Rispondi con sincerità: le tue scelte mostreranno il profilo più adatto
+                    a te.</p>
+                <ul>
+                    <li><strong data-i18n="test_aside_spavento_label">Spavento:</strong> <span
+                            data-i18n="test_aside_spavento_desc">preferisci l'improvvisazione e la presenza
+                            scenica.</span></li>
+                    <li><strong data-i18n="test_aside_ingegneria_label">Ingegneria:</strong> <span
+                            data-i18n="test_aside_ingegneria_desc">ami progettare soluzioni e gadget.</span></li>
+                    <li data-i18n="test_aside_nota">Non esistono risposte giuste o sbagliate: divertiti!</li>
+                </ul>
+                <h5 data-i18n="test_aside_consigli_titolo">Piccoli consigli</h5>
+                <ul>
+                    <li data-i18n="test_aside_consiglio1">Leggi la domanda con calma e immagina la scena: la scelta
+                        istintiva è spesso la più significativa.</li>
+                    <li data-i18n="test_aside_consiglio2">Sei indeciso? Scegli l'opzione che descrive meglio il tuo
+                        comportamento abituale, non l'eccezione.</li>
+                    <li data-i18n="test_aside_consiglio3">Puoi ripetere il test dopo qualche giorno: il profilo può
+                        variare con l'esperienza.</li>
+                </ul>
+                <p style="margin-top:8px; font-size:0.95rem; color:#334513" data-i18n="test_aside_interpretazione">
+                    Interpretazione rapida: il risultato indicherà il corso più affine — Spavento per chi punta alla
+                    performance, Ingegneria per chi ama progettare. In caso di pareggio avrai entrambe le qualità, utili
+                    in squadra.</p>
+            </aside>
+
+            <output id="risultato" aria-live="polite"></output>
         </div>
-        <!-- jQuery: libreria esterna, deve essere caricata per prima -->
-        <script src="../JavaScript/jquery-3.6.0.min.js"></script>
-        <!-- Template HTML della navbar per pagine in /pages (path con ../) -->
-        <script src="../JavaScript/navbar.js"></script>
-        <!-- Servizio di iniezione dei componenti nel DOM -->
-        <script src="../services/caricaNavBar.js"></script>
-        <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
-        <script src="../JavaScript/customNavbar.js"></script>
-        <!-- Footer dinamico aggiunto dai colleghi -->
-        <script src="../JavaScript/footer.js"></script>
-        <!-- Logica del quiz, calcolo del risultato e aggiornamento del DOM -->
-        <script src="../JavaScript/test.js" defer></script>
+    </main>
 
+    <!-- jQuery: libreria esterna, deve essere caricata per prima -->
+    <script src="../JavaScript/jquery-3.6.0.min.js"></script>
+    <!-- Template HTML della navbar per pagine in /pages (path con ../) -->
+    <script src="../JavaScript/navbar.js"></script>
+    <!-- Servizio di iniezione dei componenti nel DOM -->
+    <script src="../services/caricaNavBar.js"></script>
+    <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
+    <script src="../JavaScript/customNavbar.js"></script>
+    <!-- Footer dinamico aggiunto dai colleghi -->
+    <script src="../JavaScript/footer.js"></script>
+    <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di lang.js -->
+    <script src="../JavaScript/cambioLingua.js"></script>
+    <!-- Dizionario italiano — deve essere caricato PRIMA di lang.js -->
+    <script src="../services/i18n/lang.it.js"></script>
+    <!-- Dizionario inglese — deve essere caricato PRIMA di lang.js -->
+    <script src="../services/i18n/lang.en.js"></script>
+    <!-- Assembla i due dizionari — deve essere caricato PRIMA di langService.js -->
+    <script src="../services/lang.js"></script>
+    <!-- Logica cambio lingua -->
+    <script src="../services/langService.js"></script>
+    <!-- Logica del quiz, calcolo del risultato e aggiornamento del DOM -->
+    <script src="../JavaScript/test.js" defer></script>
 </body>
 
 </html>

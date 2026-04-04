@@ -45,7 +45,6 @@ body {
     /* overlay posizionato assolutamente per coprire esattamente l'immagine sottostante */
     position: absolute;
     inset: 0;
-    /* top:0; right:0; bottom:0; left:0 */
     background: linear-gradient(180deg, rgba(0, 45, 98, 0.72), rgba(0, 45, 98, 0.42));
     display: flex;
     align-items: center;

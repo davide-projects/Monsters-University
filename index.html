@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="./css/fonts.css" />
   <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/cambioLingua.css" />
   <link rel="stylesheet" href="./css/nostriCorsi.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/index.css" />
@@ -20,6 +21,9 @@
 <body>
   <div id="navbar-placeholder"></div>
 
+  <!-- Selettore lingua iniettato dinamicamente da langService.js -->
+  <div id="lang-selector-placeholder"></div>
+
   <main>
     <div id="menu-smartphone-placeholder"></div>
 
@@ -27,9 +31,8 @@
     <section class="hero-corsi small">
       <div class="hero-overlay">
         <div class="hero-contenuti">
-          <h2>Benvenuto alla<br>Monsters University</h2>
-          <p class="lead">Dove la passione per lo spavento incontra l'ingegno.</p>
-          <!-- CTA rimosse: header mostra solo il testo per una resa pulita -->
+          <h2 data-i18n="index_hero_title">Benvenuto alla<br>Monsters University</h2>
+          <p class="lead" data-i18n="index_hero_sottotitolo">Dove la passione per lo spavento incontra l'ingegno.</p>
         </div>
       </div>
     </section>
@@ -39,23 +42,25 @@
       <div class="intro-grid">
         <article class="card">
           <img src="assets/images/percorsoCorsi.webp" alt="Sulley" class="card-img">
-          <h3>I nostri corsi</h3>
-          <p>Scopri i percorsi in Spavento e Ingegneria dello Spavento, pensati per tutti i livelli.</p>
-          <a class="link" href="./pages/nostriCorsi.html">Vedi i corsi →</a>
+          <h3 data-i18n="index_card1_titolo">I nostri corsi</h3>
+          <p data-i18n="index_card1_desc">Scopri i percorsi in Spavento e Ingegneria dello Spavento, pensati per tutti i
+            livelli.</p>
+          <a class="link" href="./pages/nostriCorsi.html" data-i18n="index_card1_link">Vedi i corsi →</a>
         </article>
 
         <article class="card">
           <img src="assets/images/monsters/iNuoviArrivati.webp" alt="Nuovi Arrivati" class="card-img">
-          <h3>tu sei monsters university</h3>
-          <p>Fai il quiz e scopri il percorso alla Monsters Un. fatto su misura per te!</p>
-          <a class="link" href="./pages/test.html">Fai il quiz →</a>
+          <h3 data-i18n="index_card2_titolo">tu sei monsters university</h3>
+          <p data-i18n="index_card2_desc">Fai il quiz e scopri il percorso alla Monsters Un. fatto su misura per te!</p>
+          <a class="link" href="./pages/test.html" data-i18n="index_card2_link">Fai il quiz →</a>
         </article>
 
         <article class="card">
           <img src="assets/images/accademia.webp" alt="Facciata dell'università" class="card-img">
-          <h3>Visita il campus</h3>
-          <p>Tour guidati e mappe per raggiungere la nostra storica facciata e gli spazi prova.</p>
-          <a class="link" href="./pages/comeRaggiungerci.html">Come arrivare →</a>
+          <h3 data-i18n="index_card3_titolo">Visita il campus</h3>
+          <p data-i18n="index_card3_desc">Tour guidati e mappe per raggiungere la nostra storica facciata e gli spazi
+            prova.</p>
+          <a class="link" href="./pages/comeRaggiungerci.html" data-i18n="index_card3_link">Come arrivare →</a>
         </article>
       </div>
     </section>
@@ -64,40 +69,64 @@
     <section class="storia container" aria-labelledby="storia-title">
       <div class="storia-inner">
         <div class="storia-main">
-          <h2 id="storia-title">La nostra storia</h2>
-          <p class="lead">Dalle aule storiche ai moderni laboratori di Scaring Engineering, la Monsters University è il luogo dove tecnica e creatività si uniscono per formare i migliori specialisti dello spavento.</p>
-
-          <p>Fondata come Accademia degli Arcani Spaventi, l'Università ha saputo evolversi mantenendo salde tradizioni pratiche: lezioni dal vivo, esercitazioni sul campo e progetti interdisciplinari che integrano performance e tecnologia.</p>
+          <h2 id="storia-title" data-i18n="index_storia_titolo">La nostra storia</h2>
+          <p class="lead" data-i18n="index_storia_lead">Dalle aule storiche ai moderni laboratori di Scaring
+            Engineering, la Monsters University è il luogo dove tecnica e creatività si uniscono per formare i migliori
+            specialisti dello spavento.</p>
+          <p data-i18n="index_storia_desc">Fondata come Accademia degli Arcani Spaventi, l'Università ha saputo
+            evolversi mantenendo salde tradizioni pratiche: lezioni dal vivo, esercitazioni sul campo e progetti
+            interdisciplinari che integrano performance e tecnologia.</p>
 
           <ul class="timeline">
-            <li><strong>1313</strong> — Nascita dell'Accademia: prime tecniche di training sul campo.</li>
-            <li><strong>1889</strong> — Primo curriculum ufficiale in Spavento Avanzato.</li>
-            <li><strong>2004</strong> — Apertura dei Laboratori di Ingegneria dello Spavento.</li>
-            <li><strong>Oggi</strong> — Formazione ibrida, partnership internazionali e stage aziendali.</li>
+            <li><strong>1313</strong> — <span data-i18n="index_timeline_1313">Nascita dell'Accademia: prime tecniche di
+                training sul campo.</span></li>
+            <li><strong>1889</strong> — <span data-i18n="index_timeline_1889">Primo curriculum ufficiale in Spavento
+                Avanzato.</span></li>
+            <li><strong>2004</strong> — <span data-i18n="index_timeline_2004">Apertura dei Laboratori di Ingegneria
+                dello Spavento.</span></li>
+            <li><strong data-i18n="index_timeline_oggi_label">Oggi</strong> — <span
+                data-i18n="index_timeline_oggi">Formazione ibrida, partnership internazionali e stage aziendali.</span>
+            </li>
           </ul>
         </div>
 
         <aside class="storia-aside" aria-label="Riepilogo Monsters University">
           <img src="assets/images/logoScuola.webp" alt="Logo Monsters University" class="storia-img">
           <div class="stats">
-            <div class="stat"><strong>20k</strong><span>Studenti</span></div>
-            <div class="stat"><strong>150</strong><span>Docenti</span></div>
+            <div class="stat"><strong>20k</strong><span data-i18n="index_stat_studenti">Studenti</span></div>
+            <div class="stat"><strong>150</strong><span data-i18n="index_stat_docenti">Docenti</span></div>
           </div>
-          <p class="quote">"Formiamo mostri coraggiosi e consapevoli."<br><em>— Dean Hardscrabble</em></p>
+          <p class="quote">
+            <span data-i18n="index_quote_testo">"Formiamo mostri coraggiosi e consapevoli."</span><br>
+            <em data-i18n="index_quote_autore">— Dean Hardscrabble</em>
+          </p>
         </aside>
       </div>
     </section>
-
   </main>
 
   <footer id="site-footer"></footer>
 
+  <!-- jQuery: libreria esterna, deve essere caricata per prima -->
   <script src="./JavaScript/jquery-3.6.0.min.js"></script>
+  <!-- Template HTML della navbar -->
   <script src="./JavaScript/navbar.js"></script>
+  <!-- Footer dinamico -->
   <script src="./JavaScript/footer.js"></script>
+  <!-- Servizio di iniezione dei componenti nel DOM -->
   <script src="./services/caricaNavBar.js"></script>
+  <!-- Logica interattiva della navbar (hamburger menu, animazioni) -->
   <script src="./JavaScript/customNavbar.js"></script>
-
+  <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di lang.js -->
+  <script src="./JavaScript/cambioLingua.js"></script>
+  <!-- Dizionario italiano — deve essere caricato PRIMA di lang.js -->
+  <script src="./services/i18n/lang.it.js"></script>
+  <!-- Dizionario inglese — deve essere caricato PRIMA di lang.js -->
+  <script src="./services/i18n/lang.en.js"></script>
+  <!-- Assembla i due dizionari — deve essere caricato PRIMA di langService.js -->
+  <script src="./services/lang.js"></script>
+  <!-- Logica cambio lingua -->
+  <script src="./services/langService.js"></script>
 </body>
 
 </html>

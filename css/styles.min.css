@@ -364,7 +364,7 @@ body {
 }
 
 .timeline li strong {
-    color: var(--accent);
+    color: var(--primary);
     margin-right: 8px
 }
 

@@ -72,46 +72,6 @@ body {
     color: #7fb24a;
 }
 
-/* --- SELETTORE LINGUA (Shared Styles) --- */
-.flag-img {
-    width: 28px;
-    height: 20px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.visually-hidden {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
-}
-
-/* --- Selettore Lingua Desktop --- */
-.nav-lang {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.nav-lang .lang-toggle {
-    background: none;
-    border: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    height: 44px;
-}
-
 .nav-lang .lang-toggle:hover {
     background: rgba(255, 255, 255, 0.1);
 }
@@ -153,27 +113,35 @@ body {
 }
 
 /* --- HAMBURGER MENU --- */
-.hamburger {
+.hamburger-btn {
     display: none;
     /* Nascosto su desktop */
-    flex-direction: column;
-    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    width: 50px !important;
+    width: 48px;
+    height: 48px;
     z-index: 1100;
-    padding: 10px;
-    /* Recupera il padding per allinearsi al bordo */
-    transition: right 0.3s ease;
+    padding: 8px;
+    position: relative;
 }
 
-.hamburger span {
+.hamburger-btn .bar {
+    display: block;
     width: 28px;
     height: 3px;
     background: white;
     border-radius: 3px;
-    transition: transform 0.4s cubic-bezier(.2, .9, .25, 1), opacity 0.2s ease;
+    margin: 6px auto;
+    transition: transform 320ms cubic-bezier(.2,.9,.25,1), background 160ms linear, top 320ms cubic-bezier(.2,.9,.25,1), width 160ms ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Rimuove la transizione sul transform SOLO per la barra centrale: lo scale avverrà istantaneamente */
+.hamburger-btn .bar:nth-child(2) {
+    transition: top 320ms cubic-bezier(.2,.9,.25,1), background 160ms linear;
 }
 
 /* --- RESPONSIVE (Mobile) --- */
@@ -233,60 +201,67 @@ body {
         overflow: visible !important; /* Garantisce che la X sia sempre visibile anche se esce dai confini del bottone */
         margin-right: 0;
         padding: 0;
+        transition: transform 0.22s cubic-bezier(.2,.9,.25,1);
     }
 
-    .hamburger span {
+    .hamburger-btn {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 2000;
+        /* Allineamento: rimuoviamo margin-left:auto e applichiamo margin-right
+           per far combaciare il bottone con il padding della navbar */
+        margin-left: 0;
+        margin-right: 2%;
+        margin-top: -2%;
+        overflow: visible !important; /* Garantisce che la X sia sempre visibile anche se esce dai confini del bottone */
+        padding: 0;
+        transition: transform 0.22s cubic-bezier(.2,.9,.25,1);
+        align-self: center;
+    }
+
+    .hamburger-btn .bar {
         position: absolute;
-        width: 26px;
+        width: 22px;
         height: 3px;
         background: white;
         border-radius: 3px;
-        transition: all 0.4s ease-in-out;
-        /* Centratura assoluta rispetto al bottone 45x45 */
+        transition: transform 320ms cubic-bezier(.2,.9,.25,1), top 320ms cubic-bezier(.2,.9,.25,1), background 160ms linear, width 160ms ease;
         left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* stato chiuso */
+    .hamburger-btn .bar:nth-child(1) { top: calc(50% - 9px); }
+    .hamburger-btn .bar:nth-child(2) { top: 50%; }
+    .hamburger-btn .bar:nth-child(3) { top: calc(50% + 9px); }
+
+    .hamburger-btn.open { overflow: visible !important; isolation: isolate; }
+
+    /* stato aperto: X */
+    .hamburger-btn.open .bar:nth-child(1) {
         top: 50%;
-        transform-origin: center center;
+        transform: translateX(-50%) rotate(45deg);
     }
 
-    /* --- STATO CHIUSO (Lineette distanziate) --- */
-    .hamburger span:nth-child(1) {
-        transform: translate(-50%, -10px);
+    .hamburger-btn.open .bar:nth-child(2) {
+        top: 50%;
+        transform: translateX(-50%) scaleX(0);
     }
 
-    .hamburger span:nth-child(2) {
-        transform: translate(-50%, -50%);
+    .hamburger-btn.open .bar:nth-child(3) {
+        top: 50%;
+        transform: translateX(-50%) rotate(-45deg);
     }
 
-    .hamburger span:nth-child(3) {
-        transform: translate(-50%, 7px);
-    }
-
-    /* --- STATO APERTO (La X perfetta) --- */
-    .hamburger.open {
-        position: relative !important;
-         /* Rende il bottone relativo per mantenere la X sempre visibile */
-        overflow: visible !important;
-        /* Forza il contesto di rendering sopra tutto */
-        isolation: isolate;
-    }
-
-    .hamburger.open span {
-        width: 24px !important;
-        /* Misura equilibrata */
-    }
-
-    .hamburger.open span:nth-child(1) {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    .hamburger.open span:nth-child(2) {
-        opacity: 0;
-        transform: translate(-150%, -50%);
-        /* Schizza via a sinistra */
-    }
-
-    .hamburger.open span:nth-child(3) {
-        transform: translate(-50%, -50%) rotate(-45deg);
+    /* enlarge X bars when open */
+    .hamburger-btn.open .bar:nth-child(1),
+    .hamburger-btn.open .bar:nth-child(3) {
+        width: 25px;
     }
 
     .menuSmartphone {
@@ -302,15 +277,18 @@ body {
         top: 0;
         /* Copre tutto lo schermo */
         left: 0;
-        transition: all 0.1s ease-in-out;
-        opacity: 0;
+        /* rimuoviamo la transizione di opacità per apertura senza fade */
+        transition: transform 0.01s ease-in-out;
+        opacity: 0.9;
         pointer-events: none;
         z-index: 900;
     }
 
     .menuSmartphone.open {
-        opacity: 1;
+        /* rendi visibile immediatamente senza transizione di opacità */
+        opacity: 1 !important;
         pointer-events: auto;
+        transform: translateY(0);
     }
 
     .menuSmartphone a {

@@ -32,10 +32,10 @@ const navbarTemplate = `
       <span>Monsters University</span>
     </div>
 
-    <button class="hamburger" aria-label="Apri menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="hamburger-btn" aria-label="Apri menu" aria-controls="menu-smartphone" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
 
     <nav>

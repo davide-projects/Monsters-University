@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.hamburger').click(function(){
+    $('.hamburger-btn').click(function(){
         $('.menuSmartphone').toggleClass('open');
         $(this).toggleClass('open');
         // Aggiorna aria-expanded per accessibilità

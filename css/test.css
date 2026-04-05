@@ -28,18 +28,18 @@ body {
     align-items: start;
 }
 
-.test-aside {
-    background: linear-gradient(180deg, #ffffff, #f8fff6);
-    border: 1px solid rgba(0,0,0,0.04);
-    padding: 18px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-}
-.test-aside h4 {
-    margin: 0 0 8px 0;
+.test-aside h3 {
+    margin: 0 0 5px 0;
     color: #334513;
     font-size: 1.05rem;
 }
+
+.test-aside h4 {
+    margin: 8px 0 5px 0;
+    color: #334513;
+    font-size: 0.95rem;
+}
+
 .aside-thumb {
     width: 72px;
     height: 72px;
@@ -48,6 +48,7 @@ body {
     display: block;
     margin: 8px 0 12px 0;
 }
+
 .test-aside ul { margin: 8px 0 12px 1rem; }
 .test-aside p { margin: 0 0 8px 0; color: #1a1a1a }
 

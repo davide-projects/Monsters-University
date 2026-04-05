@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,11 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/cambioLingua.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/styles.min.css" />
     <link rel="stylesheet" href="../css/comeRaggiungerci.css" />
     <link rel="stylesheet" href="../css/footer.css" />
 </head>
+
 <body>
     <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
     <div id="navbar-placeholder"></div>
@@ -23,27 +25,24 @@
     <!-- Selettore lingua iniettato dinamicamente da langService.js -->
     <div id="lang-selector-placeholder"></div>
 
+    <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
+    <div id="menu-smartphone-placeholder"></div>
+
     <main>
-        <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
-        <div id="menu-smartphone-placeholder"></div>
 
         <!-- Contenuto della pagina "Come Raggiungerci" -->
         <section class="hero-come-raggiungerci">
             <div class="hero-overlay">
                 <div class="hero-contenuti" id="inizio">
                     <h1 data-i18n="cr_hero_title">Come Raggiungerci</h1>
-                    <p class="hero-descrizione" data-i18n="cr_hero_descrizione">Scopri come arrivare alla Monsters University e unisciti a noi per un'avventura indimenticabile!</p>
-                    <div class="mappa">
-                        <img src="../assets/images/mappaUniversitaDesktop.webp"
-                            srcset="../assets/images/mappaUniversitaDesktop.webp 500w,
-                                    ../assets/images/mappaUniversitaDesktop.webp 1000w"
-                            sizes="(max-width: 768px) 90vw, 500px"
-                            alt="Mappa della Monsters University"
-                            loading="lazy"
-                            width="500"
-                            height="662">
-                    </div>
+                    <p class="hero-descrizione" data-i18n="cr_hero_descrizione">Scopri come arrivare alla Monsters
+                        University e unisciti a noi per un'avventura indimenticabile!</p>
                 </div>
+            </div>
+            <div class="mappa">
+                <img src="../assets/images/mappaUniversitaDesktop.webp" srcset="../assets/images/mappaUniversitaDesktop.webp 500w,
+                    ../assets/images/mappaUniversitaDesktop.webp 1000w" sizes="(max-width: 768px) 90vw, 500px"
+                    alt="Mappa della Monsters University" loading="lazy" width="500" height="662">
             </div>
         </section>
 
@@ -52,7 +51,8 @@
                 <h2 data-i18n="cr_contatti_titolo">I nostri contatti</h2>
                 <p>
                     <strong data-i18n="cr_indirizzo_label">Indirizzo: </strong>
-                    <a href="http://maps.google.com/?q=Via+dei+Monsters%2C+123+-+12345+-+Monstropolis" target="_blank" class="informazioni" data-i18n="cr_indirizzo_valore">Via dei Monsters, 123 - 12345</a>
+                    <a href="http://maps.google.com/?q=Via+dei+Monsters%2C+123+-+12345+-+Monstropolis" target="_blank"
+                        class="informazioni" data-i18n="cr_indirizzo_valore">Via dei Monsters, 123 - 12345</a>
                 </p>
                 <p>
                     <strong data-i18n="cr_telefono_label">Telefono: </strong>
@@ -100,4 +100,5 @@
     <!-- Logica cambio lingua -->
     <script src="../services/langService.js"></script>
 </body>
+
 </html>

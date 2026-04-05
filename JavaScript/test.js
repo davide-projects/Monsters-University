@@ -47,4 +47,10 @@ function calcolaRisultato() {
     }
 
     out.innerHTML = htmlContent;
+
+    // 4. Scorri fino al risultato
+    out.querySelector('p').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => { // Scroll aggiuntivo per assicurarsi che il risultato sia ben visibile
+        window.scrollBy({ top: 100, behavior: 'smooth' });
+    }, 200);
 }

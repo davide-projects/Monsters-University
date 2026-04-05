@@ -17,7 +17,7 @@ const translationsIT = {
 
   // --- Selettore lingua ---
   lang_it: "Italiano",
-  lang_en: "Inglese",
+  lang_en: "Inglese (UK)",
 
   // --- Footer ---
   footer_testo: "Monsters University — Tutti i diritti riservati",

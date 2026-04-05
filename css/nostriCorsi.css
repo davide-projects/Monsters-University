@@ -186,9 +186,9 @@
 
 @media (max-width: 768px) {
     .hero-corsi {
-        margin-top: 60px;
+        margin-top: 6px;
         /* Forza l'altezza a 450px per contenere comodamente le 3 righe di testo */
-        height: 450px !important;
+        height: 4px !important;
         width: 100% !important;
         display: flex;
         overflow: hidden;

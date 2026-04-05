@@ -2,6 +2,45 @@ h1{
     font-size: 2.5rem;
 }
 
+/* Titolo specifico per l'header "Come Raggiungerci": più piccolo e centrato */
+.hero-come-raggiungerci .hero-contenuti h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 0 8px 0;
+    line-height: 1.05;
+}
+
+/* Rendiamo il titolo coerente con gli header delle altre pagine (.hero-contenuti h2) */
+.hero-come-raggiungerci .hero-contenuti h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.4rem !important;
+    /* Spazio superiore per evitare sovrapposizione con la navbar */
+    margin: 140px 0 15px 0 !important;
+    line-height: 1.05 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    text-align: center !important;
+}
+
+@media (max-width: 768px) {
+    .hero-come-raggiungerci .hero-contenuti h1 {
+        font-size: 2.4rem !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-come-raggiungerci .hero-contenuti h1 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 852px) {
+    .hero-come-raggiungerci .hero-contenuti h1 {
+        font-size: 1.4rem;
+    }
+}
+
 .hero-come-raggiungerci {
     position: relative;
     background-image: url('../assets/images/accademia.webp') !important;
@@ -18,10 +57,21 @@ h1{
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    padding: 10px 20px !important;
+    padding: 20px 20px !important;
     box-sizing: border-box !important;
     width: 100% !important;
     min-height: unset !important;
+}
+
+/* Ensure the hero content is vertically centered inside the overlay */
+.hero-come-raggiungerci .hero-overlay .hero-contenuti {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 /* Modifiche per la pagina "Come Raggiungerci" */
@@ -60,7 +110,7 @@ h1{
 /* Allineo tutti i testi al centro */
 #inizio{
     text-align: center;
-    padding: 70px 5% 20px 5%;
+    padding: 20px 5% 12px 5%;
 }
 
 .info-container {
@@ -89,21 +139,63 @@ h1{
     text-align: center; /* Spinge il contenuto degli orari verso il bordo destro */
 }
 
+/* Regole responsive per ridurre l'altezza dello header su mobile */
 @media screen and (max-width: 852px) {
-    .menuSmartphone {
-        top: 0 !important;
-        -webkit-clip-path: circle(0px at 90% 5%) !important;
-        clip-path: circle(0px at 90% 5%) !important;
+    .hero-come-raggiungerci {
+        min-height: 260px !important;
+        background-position: center top !important;
     }
 
-    .menuSmartphone.open {
-        -webkit-clip-path: circle(150% at 90% 5%) !important;
-        clip-path: circle(150% at 90% 5%) !important;
+    .hero-come-raggiungerci .hero-overlay {
+        padding: 28px 12px !important;
+        min-height: 260px !important;
+        justify-content: center !important;
     }
 
-    /* Neutralizza la regola .open generica di styles.min.css */
-    .open:not(.menuSmartphone):not(.hamburger):not(.lang-dropdown) {
-        clip-path: none !important;
-        -webkit-clip-path: none !important;
+    #inizio {
+        padding: 36px 5% 12px 5% !important;
+    }
+
+    .hero-descrizione {
+        font-size: 1rem !important;
+    }
+
+    .mappa img { max-width: 90% !important; }
+}
+
+/* Riduci lo spostamento dell'h1 su schermi più piccoli */
+@media screen and (max-width: 852px) {
+    .hero-come-raggiungerci .hero-contenuti h1 {
+        margin-top: 36px !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .hero-come-raggiungerci .hero-contenuti h1 {
+        margin-top: 28px !important;
+    }
+}
+
+/* Assicura che il contenuto dell'header non sia nascosto dalla navbar fissa */
+.hero-come-raggiungerci .hero-overlay {
+    padding-top: calc(70px + 12px) !important;
+}
+
+@media screen and (max-width: 852px) {
+    .hero-come-raggiungerci .hero-overlay {
+        padding-top: calc(70px + 10px) !important;
+    }
+}
+
+/* Slightly increase header height on wider screens to match other pages */
+@media screen and (min-width: 853px) {
+    .hero-come-raggiungerci {
+        min-height: 340px !important;
+    }
+
+    .hero-come-raggiungerci .hero-overlay {
+        padding: 48px 20px !important;
+        min-height: 340px !important;
+    }
+}
+

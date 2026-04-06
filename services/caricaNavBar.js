@@ -1,25 +1,23 @@
-/*
-  caricaNavBar.js
-  Servizio di iniezione dei componenti condivisi.
-  Sostituisce i placeholder nell'HTML con i template
-  definiti nei rispettivi file JavaScript.
-
-  Componenti gestiti:
-  - navbar: navbar.js → #navbar-placeholder
-  - menuSmartphone.js → #menuSmartphone-placeholder
-*/
+/**
+ * caricaNavBar.js
+ * Servizio di iniezione dei componenti condivisi tramite globalThis.
+ */
 
 document.addEventListener("DOMContentLoaded", function () {
-  /* Iniezione navbar */
+  // 1. Iniezione Navbar Desktop
   const navbarPlaceholder = document.getElementById("navbar-placeholder");
-  if (navbarPlaceholder) {
-    navbarPlaceholder.outerHTML = navbarTemplate;
+  // Leggiamo il template dall'oggetto globale registrato in navbar.js
+  const navContent = globalThis.navbarTemplate;
+
+  if (navbarPlaceholder && navContent) {
+    navbarPlaceholder.outerHTML = navContent;
+  }
+
+  // 2. Iniezione Menu Smartphone
+  const menuPlaceholder = document.getElementById("menu-smartphone-placeholder");
+  const menuContent = globalThis.menuSmartphoneTemplate;
+
+  if (menuPlaceholder && menuContent) {
+    menuPlaceholder.outerHTML = menuContent;
   }
 });
-
-const menuSmartphonePlaceholder = document.getElementById(
-  "menu-smartphone-placeholder",
-);
-if (menuSmartphonePlaceholder) {
-  menuSmartphonePlaceholder.outerHTML = menuSmartphoneTemplate;
-}

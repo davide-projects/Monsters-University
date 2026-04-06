@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/cambioLingua.css" />
-    <link rel="stylesheet" href="../css/styles.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nostriCorsi.css" />
     <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/footer.css" />
@@ -26,9 +26,11 @@
     <!-- Selettore lingua iniettato dinamicamente da langService.js -->
     <div id="lang-selector-placeholder"></div>
 
+
+    <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
+    <div id="menu-smartphone-placeholder"></div>
+
     <main>
-        <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
-        <div id="menu-smartphone-placeholder"></div>
 
         <section class="hero-corsi small">
             <div class="hero-overlay">
@@ -131,16 +133,14 @@
     <script src="../JavaScript/customNavbar.js"></script>
     <!-- Footer dinamico aggiunto dai colleghi -->
     <script src="../JavaScript/footer.js"></script>
-    <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di lang.js -->
-    <script src="../JavaScript/cambioLingua.js"></script>
-    <!-- Dizionario italiano — deve essere caricato PRIMA di lang.js -->
-    <script src="../services/i18n/lang.it.js"></script>
-    <!-- Dizionario inglese — deve essere caricato PRIMA di lang.js -->
-    <script src="../services/i18n/lang.en.js"></script>
-    <!-- Assembla i due dizionari — deve essere caricato PRIMA di langService.js -->
-    <script src="../services/lang.js"></script>
+    <!-- Dizionari — devono essere caricati PRIMA di lang.js -->
+    <script src="../services/i18n/lang.it.min.js"></script>
+    <script src="../services/i18n/lang.en.min.js"></script>
+    <script src="../services/i18n/lang.de.min.js"></script>
+    <script src="../services/i18n/lang.es.min.js"></script>
+    <script src="../services/i18n/lang.fr.min.js"></script>
     <!-- Logica cambio lingua -->
-    <script src="../services/langService.js"></script>
+    <script src="../services/langService.min.js"></script>
     <!-- Logica del quiz, calcolo del risultato e aggiornamento del DOM -->
     <script src="../JavaScript/test.js" defer></script>
 </body>

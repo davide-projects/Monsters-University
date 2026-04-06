@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/fonts.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/cambioLingua.css" />
-    <link rel="stylesheet" href="../css/styles.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/nostriCorsi.css" />
 </head>
@@ -25,9 +25,10 @@
     <!-- Selettore lingua iniettato dinamicamente da langService.js -->
     <div id="lang-selector-placeholder"></div>
 
+    <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
+    <div id="menu-smartphone-placeholder"></div>
+
     <main>
-        <!-- Menu smartphone iniettato dinamicamente da caricaNavBar.js -->
-        <div id="menu-smartphone-placeholder"></div>
 
         <!-- HERO: immagine di sfondo + overlay scuro + titolo corso e info rapide (durata e crediti) -->
         <section class="hero-corsi">
@@ -58,7 +59,8 @@
                         <!-- Testo introduttivo del corso -->
                         <div class="testo-introduzione">
                             <h2 data-i18n="nc_sezione_titolo">Scegli il tuo percorso formativo</h2>
-                            <p data-i18n="nc_sezione_intro">Quando si parla di far paura a un bambino non esistono eroi: ogni componente diventa
+                            <p data-i18n="nc_sezione_intro">Quando si parla di far paura a un bambino non esistono eroi:
+                                ogni componente diventa
                                 fondamentale. Il mostro è l'estrattore di energia, l'ingegnere dell'Urlo colui che la
                                 trasforma. Scegli la tua strada nella Monsters University.</p>
                         </div>
@@ -66,43 +68,50 @@
                         <div class="moduli-didattici">
                             <div class="anno-accademico">
                                 <strong data-i18n="nc_spavento_titolo">Spavento</strong>
-                                <p data-i18n="nc_spavento_intro">Non c'è nulla di più spaventoso ed inquietante di entrare nella stanza innocente e
+                                <p data-i18n="nc_spavento_intro">Non c'è nulla di più spaventoso ed inquietante di
+                                    entrare nella stanza innocente e
                                     felice di un bambino, sì, ma non per un laureato in Spavento!</p>
                             </div>
                             <div class="descrizione-anno-accademico">
                                 <strong data-i18n="nc_spavento_perche">Perchè scegliere Spavento?</strong>
-                                <p data-i18n="nc_spavento_desc">James Sullivan ti dice qualcosa? Bill Cosby? P.Diddy? Difficile non conoscerli, vero?
+                                <p data-i18n="nc_spavento_desc">James Sullivan ti dice qualcosa? Bill Cosby? P.Diddy?
+                                    Difficile non conoscerli, vero?
                                     Beh, i più grandi mostri della storia hanno studiato qui, e se sono passati alla
                                     storia è perchè hanno ricevuto una formazione ideale. <br>Nel corso Spavento alla
                                     Monsters University avrai tutte le nozioni per passare alla storia: gestione del
                                     bambino, furtività, psicologia infantile.</p>
-                                <a class="btn-scopri" href="./corsoSpavento.html" aria-label="Scopri" data-i18n="nc_btn_scopri">Scopri <span
-                                        class="arrow">→</span></a>
+                                <a class="btn-scopri" href="./corsoSpavento.html" aria-label="Scopri"
+                                    data-i18n="nc_btn_scopri">Scopri <span class="arrow">→</span></a>
                             </div>
                             <div class="anno-accademico">
                                 <strong data-i18n="nc_ingegneria_titolo">Ingegneria dello Spavento</strong>
-                                <p data-i18n="nc_ingegneria_intro">Per far urlare un bambino serve arte, ma per trattare quell'urlo serve tecnica e
+                                <p data-i18n="nc_ingegneria_intro">Per far urlare un bambino serve arte, ma per trattare
+                                    quell'urlo serve tecnica e
                                     metodo! Se il personale della Monsters Inc. è al 70% composto da ingegneri non è
                                     sicuramente un caso.</p>
                             </div>
                             <div class="descrizione-anno-accademico">
-                                <strong data-i18n="nc_ingegneria_perche">Perchè scegliere Ingegneria dello Spavento?</strong>
-                                <p data-i18n="nc_ingegneria_desc">Se pensate che i veri protagonisti siano solo i mostri vi sbagliate di grosso,
+                                <strong data-i18n="nc_ingegneria_perche">Perchè scegliere Ingegneria dello
+                                    Spavento?</strong>
+                                <p data-i18n="nc_ingegneria_desc">Se pensate che i veri protagonisti siano solo i mostri
+                                    vi sbagliate di grosso,
                                     chiedere a Mike Wazowski. L'energia dell'urlo di un bambino è il nettare degli dei:
                                     tutto il nostro mondo si basa su questo. Gestire l'energia dell'urlo è materia
                                     complessa, e nella Monsters Inc. gli ingegneri solo la base dell'industria: per
                                     questo gli ingegneri coprono il 70% del personale.</p>
-                                <a class="btn-scopri" href="./corsoIngegneria.html" aria-label="Scopri" data-i18n="nc_btn_scopri">Scopri <span
-                                        class="arrow">→</span></a>
+                                <a class="btn-scopri" href="./corsoIngegneria.html" aria-label="Scopri"
+                                    data-i18n="nc_btn_scopri">Scopri <span class="arrow">→</span></a>
                             </div>
                             <div class="anno-accademico">
                                 <strong data-i18n="nc_indeciso_titolo">Sei ancora indeciso?</strong>
-                                <p data-i18n="nc_indeciso_desc">Scegliere una carriera adatta alla propria personalità è la base per avere una
+                                <p data-i18n="nc_indeciso_desc">Scegliere una carriera adatta alla propria personalità è
+                                    la base per avere una
                                     carriera di successo.</p>
                             </div>
                             <div class="descrizione-anno-accademico">
                                 <strong data-i18n="nc_indeciso_perche">Spavento o Ingegneria dello Spavento?</strong>
-                                <a class="btn-scopri" href="./test.html" aria-label="Fai il test di orientamento" data-i18n="nc_btn_test">
+                                <a class="btn-scopri" href="./test.html" aria-label="Fai il test di orientamento"
+                                    data-i18n="nc_btn_test">
                                     Fai il Test <span class="arrow">→</span>
                                 </a>
                             </div>
@@ -113,10 +122,12 @@
                     <div class="immagine-wrapper">
                         <aside class="citazione">
                             <blockquote title="I Nostri Corsi">
-                                <span data-i18n="nc_citazione1_testo">"La scelta del proprio percorso alla Monsters University deve essere fatta con
-                                consapevolezza della propria persona. Preferisci la spontaneità alla tecnica? O
-                                preferisci essere in terra straniera anzichè lavorare in laboratorio? Qualsiasi sia la tua scelta,
-                                fai in modo che sia la più adatta a te!"</span>
+                                <span data-i18n="nc_citazione1_testo">"La scelta del proprio percorso alla Monsters
+                                    University deve essere fatta con
+                                    consapevolezza della propria persona. Preferisci la spontaneità alla tecnica? O
+                                    preferisci essere in terra straniera anzichè lavorare in laboratorio? Qualsiasi sia
+                                    la tua scelta,
+                                    fai in modo che sia la più adatta a te!"</span>
                                 <span data-i18n="nc_citazione1_autore">— Mike Wasowski</span>
                                 <span data-i18n="nc_citazione1_ruolo">Professore della Monsters University</span>
                             </blockquote>
@@ -127,10 +138,12 @@
                             </div>
 
                             <blockquote title="I Nostri Corsi">
-                                <span data-i18n="nc_citazione2_testo">"Alla Monsters University non avrete solo teoria ma tanta, TANTA pratica. Attività
-                                sportive, alternanza scuola-lavoro, gite formative nelle varie sedi della Monsters Inc.
-                                e tanto altro! Io e Mike vi aiuteremo a diventare dei veri professionisti, qui, alla
-                                Monsters Univerity!"</span>
+                                <span data-i18n="nc_citazione2_testo">"Alla Monsters University non avrete solo teoria
+                                    ma tanta, TANTA pratica. Attività
+                                    sportive, alternanza scuola-lavoro, gite formative nelle varie sedi della Monsters
+                                    Inc.
+                                    e tanto altro! Io e Mike vi aiuteremo a diventare dei veri professionisti, qui, alla
+                                    Monsters Univerity!"</span>
                                 <span data-i18n="nc_citazione2_autore">— James Sullivan</span>
                                 <span data-i18n="nc_citazione2_ruolo">Professore della Monsters University</span>
                             </blockquote>
@@ -151,14 +164,12 @@
     <script src="../JavaScript/customNavbar.js"></script>
     <!-- Footer dinamico aggiunto dai colleghi -->
     <script src="../JavaScript/footer.js"></script>
-    <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di lang.js -->
-    <script src="../JavaScript/cambioLingua.js"></script>
-    <!-- Dizionario italiano — deve essere caricato PRIMA di lang.js -->
-    <script src="../services/i18n/lang.it.js"></script>
-    <!-- Dizionario inglese — deve essere caricato PRIMA di lang.js -->
-    <script src="../services/i18n/lang.en.js"></script>
-    <!-- Assembla i due dizionari — deve essere caricato PRIMA di langService.js -->
-    <script src="../services/lang.js"></script>
+    <!-- Dizionari — devono essere caricati PRIMA di lang.js -->
+    <script src="../services/i18n/lang.it.min.js"></script>
+    <script src="../services/i18n/lang.en.min.js"></script>
+    <script src="../services/i18n/lang.de.min.js"></script>
+    <script src="../services/i18n/lang.es.min.js"></script>
+    <script src="../services/i18n/lang.fr.min.js"></script>
     <!-- Logica cambio lingua -->
     <script src="../services/langService.js"></script>
 </body>

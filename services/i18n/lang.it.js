@@ -4,7 +4,8 @@
   Viene assemblato insieme a lang.en.js in lang.js.
 */
 
-const translationsIT = {
+globalThis.translations = globalThis.translations || {};
+globalThis.translations.it = {
 
   // =============================================
   // COMPONENTI CONDIVISI
@@ -16,7 +17,7 @@ const translationsIT = {
   nav_raggiungerci: "Come Raggiungerci",
 
   // --- Selettore lingua ---
-  lang_it: "Italiano",
+  lang_it: "Italiano (IT)",
   lang_en: "Inglese (UK)",
 
   // --- Footer ---

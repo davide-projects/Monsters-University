@@ -1,56 +1,62 @@
-// Funzione per calcolare il risultato del test
 function calcolaRisultato() {
     let spavento = 0;
     let ingegneria = 0;
 
     const risposte = document.querySelectorAll('input[type="radio"]:checked');
+    // Usa globalThis per coerenza con il resto del progetto
     const lang = localStorage.getItem("lang") || "it";
-    
-    // Recupera l'oggetto traduzioni corretto (assumendo che 'translations' sia l'oggetto globale)
-    const t = translations[lang];
+    const t = globalThis.translations?.[lang];
 
-    // 1. Verifica che tutte le domande abbiano una risposta
+    const out = document.getElementById("risultato");
+
+    // 1. Verifica compilazione
     if (risposte.length < 6) {
-        // Usa la chiave corretta definita nel dizionario
-        document.getElementById("risultato").innerText = t["test_errore_compilazione"];
+        // Aggiungiamo data-i18n così si traduce se l'utente cambia lingua dopo l'errore
+        out.innerHTML = `<p data-i18n="test_errore_compilazione">${t["test_errore_compilazione"] || "Errore"}</p>`;
         return;
     }
 
-    // 2. Conta le risposte
+    // 2. Conteggio
     risposte.forEach(r => {
         if (r.value === "spavento") spavento++;
         else if (r.value === "ingegneria") ingegneria++;
     });
 
-    const out = document.getElementById("risultato");
-    let htmlContent = "";
+    let imgSrc, h3Key, pKey;
 
-    // 3. Genera l'output in base al punteggio
+    // 3. Determina il profilo (prepariamo solo i dati)
     if (spavento > ingegneria) { 
-        htmlContent = `
-            <img src="../assets/images/monsters/sulley.256.webp" alt="Sulley" class="result-icon">
-            <h3>${t["test_profilo_spavento"]}</h3>
-            <p>${t["test_desc_spavento"]}</p>
-        `;
+        imgSrc = "../assets/images/monsters/sulley.256.webp";
+        h3Key = "test_profilo_spavento";
+        pKey = "test_desc_spavento";
     } else if (ingegneria > spavento) { 
-        htmlContent = `
-            <img src="../assets/images/monsters/mike-wazowski.256.webp" alt="Mike Wazowski" class="result-icon">
-            <h3>${t["test_profilo_ingegneria"]}</h3>
-            <p>${t["test_desc_ingegneria"]}</p>
-        `;
+        imgSrc = "../assets/images/monsters/mike-wazowski.256.webp";
+        h3Key = "test_profilo_ingegneria";
+        pKey = "test_desc_ingegneria";
     } else { 
-        htmlContent = `
-            <img src="../assets/images/monsters/randall.256.webp" alt="Randall" class="result-icon">
-            <h3>${t["test_profilo_pareggio"]}</h3>
-            <p>${t["test_desc_pareggio"]}</p>
-        `;
+        imgSrc = "../assets/images/monsters/randall.256.webp";
+        h3Key = "test_profilo_pareggio";
+        pKey = "test_desc_pareggio";
     }
 
-    out.innerHTML = htmlContent;
+    // 4. Iniezione con attributi data-i18n per renderlo DINAMICO
+    out.innerHTML = `
+        <img src="${imgSrc}" alt="Monster" class="result-icon">
+        <h3 data-i18n="${h3Key}">${t[h3Key]}</h3>
+        <p data-i18n="${pKey}">${t[pKey]}</p>
+    `;
 
-    // 4. Scorri fino al risultato
-    out.querySelector('p').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    setTimeout(() => { // Scroll aggiuntivo per assicurarsi che il risultato sia ben visibile
+    // AGGIUNTA FONDAMENTALE: Forza il refresh della traduzione 
+    // per gestire eventuali testi appena iniettati
+    if (typeof globalThis.applyLang === "function") {
+        globalThis.applyLang(lang); 
+    }
+
+    // 5. Scroll e rifinitura
+    const pElement = out.querySelector('p');
+    pElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    setTimeout(() => {
         window.scrollBy({ top: 100, behavior: 'smooth' });
     }, 200);
 }

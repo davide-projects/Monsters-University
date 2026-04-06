@@ -1,0 +1,243 @@
+/*
+  lang.de.js
+  Dizionario delle traduzioni in tedesco.
+  Viene assemblato insieme agli altri dizionari in lang.js.
+*/
+
+globalThis.translations = globalThis.translations || {};
+globalThis.translations.de = {
+
+  // =============================================
+  // COMPONENTI CONDIVISI
+  // =============================================
+
+  // --- Navbar ---
+  nav_home: "Startseite",
+  nav_corsi: "Unsere Kurse",
+  nav_raggiungerci: "Anfahrt",
+
+  // --- Selettore lingua ---
+  lang_it: "Italienisch (IT)",
+  lang_en: "Englisch (UK)",
+  lang_de: "Deutsch (DE)",
+  lang_es: "Spanisch (ES)",
+  lang_fr: "Französisch (FR)",
+
+  // --- Footer ---
+  footer_testo: "Monsters University — Alle Rechte vorbehalten",
+
+
+  // =============================================
+  // PAGINA: index.html
+  // =============================================
+
+  // --- Hero ---
+  index_hero_title: "Willkommen an der Monsters University",
+  index_hero_sottotitolo: "Wo die Leidenschaft für das Erschrecken auf Einfallsreichtum trifft.",
+
+  // --- Card corsi ---
+  index_card1_titolo: "Unsere Kurse",
+  index_card1_desc: "Entdecke die Studiengänge in Schrecken und Schreck-Ingenieurwesen, für alle Niveaus geeignet.",
+  index_card1_link: "Kurse ansehen →",
+
+  index_card2_titolo: "Du bist Monsters University",
+  index_card2_desc: "Mach das Quiz und finde den Weg an der Monsters University, der genau zu dir passt!",
+  index_card2_link: "Quiz machen →",
+
+  index_card3_titolo: "Campus besuchen",
+  index_card3_desc: "Geführte Touren und Karten, um unseren historischen Eingang und die Übungsräume zu erreichen.",
+  index_card3_link: "Anfahrt →",
+
+  // --- Storia ---
+  index_storia_titolo: "Unsere Geschichte",
+  index_storia_lead: "Von historischen Hörsälen bis zu modernen Schreck-Ingenieurlabors ist die Monsters University der Ort, wo Technik und Kreativität zusammenkommen.",
+  index_storia_desc: "Gegründet als Akademie der Geheimnisvollen Schrecken hat sich die Universität weiterentwickelt und dabei starke praktische Traditionen bewahrt: Live-Unterricht, Feldübungen und interdisziplinäre Projekte.",
+
+  // --- Timeline ---
+  index_timeline_1313: "Gründung der Akademie: erste Feldtraining-Techniken.",
+  index_timeline_1889: "Erster offizieller Lehrplan in Fortgeschrittenem Schrecken.",
+  index_timeline_2004: "Eröffnung der Schreck-Ingenieurlabors.",
+  index_timeline_oggi_label: "Heute",
+  index_timeline_oggi: "Hybrides Training, internationale Partnerschaften und Unternehmenspraktika.",
+
+  // --- Stats ---
+  index_stat_studenti: "Studierende",
+  index_stat_docenti: "Dozenten",
+
+  // --- Quote ---
+  index_quote_testo: '"Wir bilden mutige und selbstbewusste Monster aus."',
+  index_quote_autore: "— Dekanin Hardscrabble",
+
+
+  // =============================================
+  // PAGINA: nostriCorsi.html
+  // =============================================
+
+  // --- Hero ---
+  nc_hero_title: "Unsere Kurse",
+  nc_hero_descrizione: "Deine Karriere bei Monsters Inc. beginnt hier.",
+  nc_hero_tagline: "das Sprungbrett für deine Karriere",
+
+  // --- Sezione intro ---
+  nc_sezione_titolo: "Wähle deinen Studienweg",
+  nc_sezione_intro: "Wenn es darum geht, ein Kind zu erschrecken, gibt es keine Helden: jede Komponente wird unverzichtbar. Das Monster ist der Energieextrahierer, der Schreck-Ingenieur derjenige, der sie umwandelt.",
+
+  // --- Corso Spavento ---
+  nc_spavento_titolo: "Schrecken",
+  nc_spavento_intro: "Nichts ist erschreckender als das Eintreten in das unschuldige Zimmer eines Kindes — nun, nicht für einen Schrecken-Absolventen!",
+  nc_spavento_perche: "Warum Schrecken wählen?",
+  nc_spavento_desc: "Die größten Monster der Geschichte haben hier studiert, und wenn sie Geschichte gemacht haben, liegt es daran, dass sie eine ideale Ausbildung erhalten haben: Kinderbetreuung, Heimlichkeit, Kinderpsychologie.",
+
+  // --- Corso Ingegneria ---
+  nc_ingegneria_titolo: "Schreck-Ingenieurwesen",
+  nc_ingegneria_intro: "Ein Kind zum Schreien zu bringen braucht Kunst, aber diesen Schrei zu verarbeiten braucht Technik und Methode!",
+  nc_ingegneria_perche: "Warum Schreck-Ingenieurwesen wählen?",
+  nc_ingegneria_desc: "Wenn ihr denkt, die echten Protagonisten seien nur die Monster, irrt ihr euch sehr — fragt Mike Wazowski. Die Energie aus dem Schrei eines Kindes ist der Nektar der Götter.",
+
+  // --- Sezione indeciso ---
+  nc_indeciso_titolo: "Noch unentschlossen?",
+  nc_indeciso_desc: "Eine Karriere zu wählen, die zur eigenen Persönlichkeit passt, ist die Grundlage für eine erfolgreiche Karriere.",
+  nc_indeciso_perche: "Schrecken oder Schreck-Ingenieurwesen?",
+
+  // --- Pulsanti ---
+  nc_btn_scopri: "Entdecken →",
+  nc_btn_test: "Test machen →",
+
+  // --- Citazioni ---
+  nc_citazione1_testo: '"Die Wahl deines Weges an der Monsters University muss mit Selbstbewusstsein getroffen werden."',
+  nc_citazione1_autore: "— Mike Wasowski",
+  nc_citazione1_ruolo: "Professor an der Monsters University",
+  nc_citazione2_testo: '"An der Monsters University habt ihr nicht nur Theorie, sondern viel, VIEL Praxis!"',
+  nc_citazione2_autore: "— James Sullivan",
+  nc_citazione2_ruolo: "Professor an der Monsters University",
+
+
+  // =============================================
+  // PAGINA: corsoSpavento.html
+  // =============================================
+
+  hero_title: "Fakultät für Schrecken",
+  hero_descrizione: "Wo Angst zur Legende wird und Schreie zu Energie werden.",
+  hero_durata_label: "Dauer",
+  hero_durata_valore: "3 Jahre",
+  hero_crediti_label: "Credits",
+  hero_crediti_valore: "180 SC",
+
+  programma_titolo: "Akademischer Weg",
+  programma_sottotitolo: "Ausbildungsprogramm: Professioneller Erschrecker",
+  programma_intro: "Unser Programm bietet eine vollständige Vorbereitung, von der psychologischen Theorie bis zur praktischen Übung in Simulatoren.",
+
+  anno1_titolo: "1. Jahr: Schattentheorie",
+  anno1_desc: "Studium der ursprünglichen Phobien und Techniken der Umweltmimikry.",
+  anno2_titolo: "2. Jahr: Schrankmechanik",
+  anno2_desc: "Türtechnik und motorische Koordination in engen Räumen.",
+  anno3_titolo: "3. Jahr: Brüll-Meisterschaft",
+  anno3_desc: "Fortgeschrittenes Labor für Terror-Phonetik und Energiegewinnung.",
+
+  citazione_testo: '"Ein Erschrecker macht nicht nur Lärm; ein Erschrecker wird zum Albtraum."',
+  citazione_autore: "— Prof. Knight",
+  citazione_ruolo: "Abteilungsleiter",
+
+
+  // =============================================
+  // PAGINA: corsoIngegneria.html
+  // =============================================
+
+  ing_hero_title: "Schreck-Ingenieurwesen",
+  ing_hero_descrizione: "Terror entwerfen, die Zukunft gestalten. Der Elite-Studiengang für zukünftige Monsters Inc. Champions.",
+  ing_hero_durata_valore: "4 Jahre",
+  ing_hero_crediti_valore: "250 SC",
+
+  ing_programma_intro: "Es geht nicht nur ums Erschrecken. Es geht darum, die Physik des Schalls, die Mechanik der Schatten und die Psychologie des Kinderschlafs zu verstehen.",
+
+  ing_anno1_titolo: "Jahr 1: Grundlagen des Schreckens",
+  ing_anno1_desc: "Studium der psychologischen Profile von Kindern und heimliche Annäherungstechniken.",
+  ing_anno2_titolo: "Jahr 2: Biomechanik und Brüllen",
+  ing_anno2_desc: "Haltungsoptimierung und Stimmprojektion für Klasse-A-Erschreckungen.",
+  ing_anno3_titolo: "Jahr 3: Schreckenergie-Design",
+  ing_anno3_desc: "Entwicklung von Schreikontainern und effizienter Energieumwandlung.",
+  ing_anno4_titolo: "Jahr 4: Abschlussarbeit bei Monsters Inc.",
+  ing_anno4_desc: "Operatives Feldpraktikum mit direktem Zugang zu den Türen der Menschenwelt.",
+
+  ing_citazione_testo: '"Ein Schrei ist reine Energie, aber die Ingenieurwissenschaft ist der Behälter, der sie in Fortschritt verwandelt."',
+  ing_citazione_autore: "— Dr. Phineas Arbuckle",
+  ing_citazione_ruolo: "Direktor des Schreienergie-Labors",
+
+
+  // =============================================
+  // PAGINA: test.html (Quiz)
+  // =============================================
+
+  test_hero_title: "Test: Bist du eher Schrecken oder Schreck-Ingenieurwesen?",
+
+  test_q1: "1. Während einer praktischen Prüfung in 'Schrecken 101' wirst du aufgefordert, einen sofortigen Schrei zu provozieren: Was tust du?",
+  test_q1_spavento: "Ich nutze Stimme, Mimik und Präsenz, um das Kind sofort zu erschrecken.",
+  test_q1_ingegneria: "Ich aktiviere ein Gerät, das ich entworfen habe, um den maximalen Schrei zu erzielen.",
+
+  test_q2: "2. Bei den Scare Games muss dein Team eine Show aufführen: Was ist deine ideale Rolle?",
+  test_q2_spavento: "Ich bin der Performer: Energie und Improvisation auf der Bühne.",
+  test_q2_ingegneria: "Ich kümmere mich um Spezialeffekte und technische Bühnenbilder.",
+
+  test_q3: "3. Du betrittst das Zimmer eines Kindes bei eingeschaltetem Licht: Wie maximierst du das Ergebnis?",
+  test_q3_spavento: "Ich studiere das Verhalten des Kindes und nutze Geräusche und Bewegungen.",
+  test_q3_ingegneria: "Ich modifiziere Lichter und Geräte, um Schatten und Auslöser zu erzeugen.",
+
+  test_q4: "4. Was sagen deine Kommilitonen über dich?",
+  test_q4_spavento: "'Sie haben eine natürliche Präsenz, die den Raum terrorisiert.'",
+  test_q4_ingegneria: "'Sie sind das Gehirn hinter jeder guten Strategie und jedem Gadget.'",
+
+  test_q5: "5. Du musst ein Team bilden: Arbeitest du lieber mit Sulley oder Mike zusammen?",
+  test_q5_spavento: "Mit Sulley: Stärke, Charisma und pure Improvisation.",
+  test_q5_ingegneria: "Mit Mike: Planung, Taktik und Einfallsreichtum.",
+
+  test_q6: "6. Für das Abschlussprojekt bevorzugst du eine Live-Performance oder ein Ingenieurgerät?",
+  test_q6_spavento: "Live-Performance: Emotion, Improvisation und Bühnenpräsenz.",
+  test_q6_ingegneria: "Ingenieurgerät: Design, Testen und Optimierung.",
+
+  test_btn_torna: "Zurück",
+  test_btn_scopri: "Entdecke deinen Kurs!",
+
+  test_aside_titolo: "Neuigkeiten & Tipps",
+  test_aside_intro: "Antworte ehrlich: deine Entscheidungen zeigen das am besten geeignete Profil für dich.",
+  test_aside_spavento_label: "Schrecken:",
+  test_aside_spavento_desc: "du bevorzugst Improvisation und Bühnenpräsenz.",
+  test_aside_ingegneria_label: "Ingenieurwesen:",
+  test_aside_ingegneria_desc: "du liebst es, Lösungen und Gadgets zu entwerfen.",
+  test_aside_nota: "Es gibt keine richtigen oder falschen Antworten: Viel Spaß!",
+  test_aside_consigli_titolo: "Kleine Tipps",
+  test_aside_consiglio1: "Lies die Frage ruhig und stell dir die Szene vor: Die instinktive Wahl ist oft die bedeutsamste.",
+  test_aside_consiglio2: "Unentschlossen? Wähle die Option, die dein übliches Verhalten am besten beschreibt.",
+  test_aside_consiglio3: "Du kannst den Test nach einigen Tagen wiederholen: Dein Profil kann sich mit Erfahrung ändern.",
+  test_aside_interpretazione: "Schnelle Interpretation: Das Ergebnis zeigt den am besten geeigneten Kurs — Schrecken für Performer, Ingenieurwesen für Designer.",
+
+  test_risultato_titolo: "Dein ideales Profil ist:",
+  test_profilo_spavento: "Fakultät für Schrecken",
+  test_desc_spavento: "Du bist ein natürliches Talent! Deine Bühnenpräsenz und dein Charisma machen dich perfekt für die Feldarbeit.",
+  test_profilo_ingegneria: "Schreck-Ingenieurwesen",
+  test_desc_ingegneria: "Dein analytischer Ansatz und deine technische Kreativität sind der Schlüssel zur Energie der Zukunft.",
+  test_profilo_pareggio: "Hybridprofil",
+  test_desc_pareggio: "Unglaublich! Du hast den Instinkt eines Erschreckers und den Verstand eines Ingenieurs. Ein vollständiges Monster!",
+  test_errore_compilazione: "Bitte beantworte alle Fragen, um deine Zukunft zu entdecken!",
+
+
+  // =============================================
+  // PAGINA: comeRaggiungerci.html
+  // =============================================
+
+  cr_hero_title: "Anfahrt",
+  cr_hero_descrizione: "Finde heraus, wie du die Monsters University erreichst und begleite uns auf ein unvergessliches Abenteuer!",
+
+  cr_contatti_titolo: "Unsere Kontakte",
+  cr_indirizzo_label: "Adresse: ",
+  cr_indirizzo_valore: "Monsterstraße 123 - 12345",
+  cr_telefono_label: "Telefon: ",
+  cr_email_label: "E-Mail: ",
+
+  cr_orari_titolo: "Öffnungszeiten",
+  cr_orari_mattina: "Morgen",
+  cr_orari_pomeriggio: "Nachmittag",
+  cr_orari_lun_ven: "Montag bis Freitag: ",
+  cr_orari_mattina_ore: "Von 8:00 bis 13:00",
+  cr_orari_pomeriggio_ore: "Von 15:00 bis 18:00",
+
+};

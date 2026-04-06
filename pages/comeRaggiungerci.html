@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/cambioLingua.css" />
-    <link rel="stylesheet" href="../css/styles.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/comeRaggiungerci.css" />
     <link rel="stylesheet" href="../css/footer.css" />
 </head>
@@ -40,8 +40,8 @@
                 </div>
             </div>
             <div class="mappa">
-                <img src="../assets/images/mappaUniversitaDesktop.webp" srcset="../assets/images/mappaUniversitaDesktop.webp 500w,
-                    ../assets/images/mappaUniversitaDesktop.webp 1000w" sizes="(max-width: 768px) 90vw, 500px"
+                <img src="../assets/images/lingue/mappaUniversitaDesktop.IT.webp" srcset="../assets/images/lingue/mappaUniversitaDesktop.IT.webp 500w,
+            ../assets/images/lingue/mappaUniversitaDesktop.IT.webp 1000w" sizes="(max-width: 768px) 90vw, 500px"
                     alt="Mappa della Monsters University" loading="lazy" width="500" height="662">
             </div>
         </section>
@@ -89,17 +89,15 @@
     <script src="../JavaScript/customNavbar.js"></script>
     <!-- Footer dinamico aggiunto dai colleghi -->
     <script src="../JavaScript/footer.js"></script>
-    <!-- Template HTML del selettore lingua — deve essere caricato PRIMA di lang.js -->
-    <script src="../JavaScript/cambioLingua.js"></script>
-    <!-- Dizionario italiano — deve essere caricato PRIMA di lang.js -->
-    <script src="../services/i18n/lang.it.js"></script>
-    <!-- Dizionario inglese — deve essere caricato PRIMA di lang.js -->
-    <script src="../services/i18n/lang.en.js"></script>
-    <!-- Assembla i due dizionari — deve essere caricato PRIMA di langService.js -->
-    <script src="../services/lang.js"></script>
+    <!-- Dizionari — devono essere caricati PRIMA di lang.js -->
+    <script src="../services/i18n/lang.it.min.js"></script>
+    <script src="../services/i18n/lang.en.min.js"></script>
+    <script src="../services/i18n/lang.de.min.js"></script>
+    <script src="../services/i18n/lang.es.min.js"></script>
+    <script src="../services/i18n/lang.fr.js"></script>
     <!-- Logica cambio lingua -->
-    <script src="../services/langService.js"></script>
-    
+    <script src="../services/langService.min.js"></script>
+
 </body>
 
 </html>

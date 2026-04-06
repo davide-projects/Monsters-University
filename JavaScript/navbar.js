@@ -1,14 +1,8 @@
 /**
  * navbar.js
  * Template HTML della navbar e del menu mobile.
- * Utilizza stringhe JavaScript per l'iniezione dinamica, permettendo
- * il corretto funzionamento del sito anche in ambiente locale (protocollo file://).
  */
 
-/**
- * Calcola il prefisso corretto per i link (href) e le sorgenti (src).
- * Se la pagina si trova nella sottocartella /pages/, aggiunge '../' per risalire alla root.
- */
 function calcPrefix() {
   const path = globalThis.location.pathname || '';
   if (path.includes('/pages/') || path.includes('\\pages\\')) {
@@ -22,7 +16,8 @@ const _p = calcPrefix();
 // =============================================
 // TEMPLATE NAVBAR DESKTOP
 // =============================================
-const navbarTemplate = `
+// Assegniamo direttamente a globalThis per evitare problemi di hoisting
+globalThis.navbarTemplate = `
   <header class="navbar">
     <div class="logo">
       <a href="${_p}index.html">
@@ -51,12 +46,24 @@ const navbarTemplate = `
           </div>
           <div class="lang-dropdown">
             <button class="lang-option" data-lang="it" data-flag="${_p}assets/images/flags/it.svg">
-              <img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="Italian">
+              <img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="Italiano">
               <span class="lang-label" data-i18n="lang_it">Italiano</span>
             </button>
             <button class="lang-option" data-lang="en" data-flag="${_p}assets/images/flags/gb.svg">
               <img class="flag-img" src="${_p}assets/images/flags/gb.svg" alt="English (GB)">
               <span class="lang-label" data-i18n="lang_en">English (GB)</span>
+            </button>
+            <button class="lang-option" data-lang="de" data-flag="${_p}assets/images/flags/de.svg">
+              <img class="flag-img" src="${_p}assets/images/flags/de.svg" alt="Deutsch (DE)">
+              <span class="lang-label" data-i18n="lang_de">Deutsch</span>
+            </button>
+            <button class="lang-option" data-lang="es" data-flag="${_p}assets/images/flags/es.svg">
+              <img class="flag-img" src="${_p}assets/images/flags/es.svg" alt="Español (ES)">
+              <span class="lang-label" data-i18n="lang_es">Español</span>
+            </button>
+            <button class="lang-option" data-lang="fr" data-flag="${_p}assets/images/flags/fr.svg">
+              <img class="flag-img" src="${_p}assets/images/flags/fr.svg" alt="Français (FR)">
+              <span class="lang-label" data-i18n="lang_fr">Français</span>
             </button>
           </div>
         </li>
@@ -68,7 +75,7 @@ const navbarTemplate = `
 // =============================================
 // TEMPLATE MENU SMARTPHONE (HAMBURGER)
 // =============================================
-const menuSmartphoneTemplate = `
+globalThis.menuSmartphoneTemplate = `
   <ul class="menuSmartphone">
     <li class="menu-lang">
       <div class="lang-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
@@ -86,6 +93,18 @@ const menuSmartphoneTemplate = `
         <button class="lang-option" data-lang="en" data-flag="${_p}assets/images/flags/gb.svg">
           <img class="flag-img" src="${_p}assets/images/flags/gb.svg" alt="English (GB)">
           <span class="lang-label" data-i18n="lang_en">English (GB)</span>
+        </button>
+        <button class="lang-option" data-lang="de" data-flag="${_p}assets/images/flags/de.svg">
+          <img class="flag-img" src="${_p}assets/images/flags/de.svg" alt="Deutsch (DE)">
+          <span class="lang-label" data-i18n="lang_de">Deutsch</span>
+        </button>
+        <button class="lang-option" data-lang="es" data-flag="${_p}assets/images/flags/es.svg">
+          <img class="flag-img" src="${_p}assets/images/flags/es.svg" alt="Español (ES)">
+          <span class="lang-label" data-i18n="lang_es">Español</span>
+        </button>
+        <button class="lang-option" data-lang="fr" data-flag="${_p}assets/images/flags/fr.svg">
+          <img class="flag-img" src="${_p}assets/images/flags/fr.svg" alt="Français (FR)">
+          <span class="lang-label" data-i18n="lang_fr">Français</span>
         </button>
       </div>
     </li>

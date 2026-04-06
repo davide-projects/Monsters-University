@@ -41,15 +41,23 @@ Vengono iniettati dinamicamente nel DOM tramite JavaScript, garantendo un'unica 
 
 Questo approccio evita la duplicazione del codice e semplifica la manutenzione: modificare la navbar in un solo file aggiorna tutte le pagine.
 
-### Cambio lingua (IT / EN)
-Il sito supporta la traduzione dinamica dei contenuti in italiano e inglese senza ricorrere a fetch o chiamate esterne, garantendo il funzionamento anche completamente offline.  
-L'architettura è composta da tre file con responsabilità separate:
-- `JavaScript/cambioLingua.js` — template HTML del selettore lingua, iniettato dinamicamente nel DOM
-- `services/lang.js` — dizionario delle traduzioni, organizzato per lingua e per pagina
-- `services/langService.js` — logica del cambio lingua, gestione del localStorage (default= 'it') e aggiornamento del DOM
+---
 
-I testi traducibili sono marcati con l'attributo `data-i18n` nell'HTML. La lingua scelta viene salvata nel `localStorage` e mantenuta durante la navigazione tra le pagine.  
-Questa scelta elimina qualsiasi dipendenza da librerie esterne o chiamate a server di terze parti.
+### 🌍 Supporto Multilingua (i18n)
+Il progetto implementa un sistema di traduzione dinamica custom che supporta 5 lingue: Italiano (default), Inglese, Tedesco, Spagnolo e Francese. Il sistema garantisce il funzionamento completamente offline e prestazioni elevate.
+
+L'architettura è stata ottimizzata per la scalabilità e la manutenibilità:
+Dizionari Modulari (services/i18n/lang.[it|en|de|es|fr].min.js): Ogni lingua ha il proprio file dedicato che popola l'oggetto globale globalThis.translations, evitando il caricamento di dati non necessari.
+UI Dinamica (JavaScript/navbar.min.js): Il selettore della lingua è integrato nel template della Navbar e iniettato dinamicamente in tutte le pagine.
+Engine di Traduzione (services/langService.min.js): Gestisce la logica di switch, la persistenza della scelta nel localStorage e l'aggiornamento del DOM (inclusi gli attributi lang e alt).
+
+`Caratteristiche avanzate:`
+
+- Sincronizzazione asset: Il sistema aggiorna automaticamente non solo i testi (tramite l'attributo data-i18n), ma anche le immagini localizzate (come la mappa dell'università).
+
+- Contenuti Dynamic-Ready: Grazie all'esposizione globale della funzione applyLang, anche i contenuti generati a runtime (es. i risultati del Test di Orientamento) vengono tradotti istantaneamente al cambio della lingua.
+
+---
 
 ### Font locali
 I font (**Roboto Slab**) sono serviti localmente dalla cartella `assets/fonts/` invece di essere caricati da Google Fonts.  

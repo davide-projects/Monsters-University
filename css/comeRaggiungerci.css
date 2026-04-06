@@ -1,26 +1,17 @@
-h1{
+h1 {
     font-size: 2.5rem;
 }
 
-/* Titolo specifico per l'header "Come Raggiungerci": più piccolo e centrato */
 .hero-come-raggiungerci .hero-contenuti h1 {
-    font-size: 1.8rem;
-    text-align: center;
-    margin: 0 0 8px 0;
-    line-height: 1.05;
-}
-
-/* Rendiamo il titolo coerente con gli header delle altre pagine (.hero-contenuti h2) */
-.hero-come-raggiungerci .hero-contenuti h1 {
+    /* Specifica per la pagina "Come Raggiungerci" */
     font-family: 'Roboto Slab', serif;
-    font-size: 2.4rem !important;
-    /* Spazio superiore per evitare sovrapposizione con la navbar */
-    margin: 140px 0 15px 0 !important;
-    line-height: 1.05 !important;
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    text-align: center !important;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 140px 0 15px 0;
+    line-height: 1.05;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 @media (max-width: 768px) {
@@ -43,7 +34,7 @@ h1{
 
 .hero-come-raggiungerci {
     position: relative;
-    background-image: url('../assets/images/accademia.webp') !important;
+    background-image: url('../assets/images/accademia-400.webp') !important;
     background-size: cover !important;
     background-position: center !important;
 }
@@ -75,8 +66,8 @@ h1{
 }
 
 /* Modifiche per la pagina "Come Raggiungerci" */
-.hero-descrizione{
-  font-size: 1.2rem;
+.hero-descrizione {
+    font-size: 1.2rem;
 }
 
 /* Impostazione bordo e immagine della mappa */
@@ -92,8 +83,10 @@ h1{
 
 .mappa img {
     display: block;
-    height: auto;    /* Mantiene le proporzioni corrette */
-    margin: 0 auto;  /* La centra nel contenitore */
+    height: auto;
+    /* Mantiene le proporzioni corrette */
+    margin: 0 auto;
+    /* La centra nel contenitore */
     max-width: 50%;
     border: 2px double #002d62;
     box-shadow: 0 5px 5px rgb(0, 45, 98);
@@ -103,31 +96,34 @@ h1{
 /* Su Desktop la vogliamo un po' più piccolina per non occupare tutto */
 @media (min-width: 769px) {
     .mappa img {
-        max-width: 500px; 
+        max-width: 500px;
     }
 }
 
 /* Allineo tutti i testi al centro */
-#inizio{
+#inizio {
     text-align: center;
     padding: 20px 5% 12px 5%;
 }
 
 .info-container {
-    display: flex;             
+    display: flex;
     justify-content: space-between;
-    align-items: flex-start;       
-    padding: 60px 5%;             
+    align-items: flex-start;
+    padding: 60px 5%;
     background-color: #f9f9f9;
     border-top: 4px solid #002D62;
 }
-.contatti, .orari {
+
+.contatti,
+.orari {
     flex: 1;
-    max-width: 46%; /* Lasciamo un 10% di "aria" in mezzo */
+    max-width: 46%;
+    /* Lasciamo un 10% di "aria" in mezzo */
     text-align: center;
 }
 
-.informazioni{
+.informazioni {
     font-family: 'Graduate', serif;
     color: #002D62;
     text-decoration: none;
@@ -136,7 +132,8 @@ h1{
 
 
 .orari {
-    text-align: center; /* Spinge il contenuto degli orari verso il bordo destro */
+    text-align: center;
+    /* Spinge il contenuto degli orari verso il bordo destro */
 }
 
 /* Regole responsive per ridurre l'altezza dello header su mobile */
@@ -160,7 +157,9 @@ h1{
         font-size: 1rem !important;
     }
 
-    .mappa img { max-width: 90% !important; }
+    .mappa img {
+        max-width: 90% !important;
+    }
 }
 
 /* Riduci lo spostamento dell'h1 su schermi più piccoli */
@@ -199,3 +198,8 @@ h1{
     }
 }
 
+@media (min-width: 801px) {
+    .hero-come-raggiungerci {
+        background-image: url('../assets/images/accademia.webp') !important;
+    }
+}

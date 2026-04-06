@@ -374,3 +374,15 @@ html[lang="it"] .lang-option[data-lang="it"] {
 html[lang="en"] .lang-option[data-lang="en"] {
     display: none !important;
 }
+
+html[lang="de"] .lang-option[data-lang="de"] {
+    display: none !important;
+}
+
+html[lang="es"] .lang-option[data-lang="es"] {
+    display: none !important;
+}
+
+html[lang="fr"] .lang-option[data-lang="fr"] {
+    display: none !important;
+}

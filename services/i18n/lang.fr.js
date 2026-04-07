@@ -222,15 +222,13 @@ globalThis.translations.fr = {
 
   cr_contatti_titolo: "Nos contacts",
   cr_indirizzo_label: "Adresse: ",
-  cr_indirizzo_valore: "Rue des Monstres, 123 - 12345",
   cr_telefono_label: "Téléphone: ",
   cr_email_label: "E-mail: ",
 
+
   cr_orari_titolo: "Horaires",
-  cr_orari_mattina: "Matin",
-  cr_orari_pomeriggio: "Après-midi",
   cr_orari_lun_ven: "Du lundi au vendredi: ",
-  cr_orari_mattina_ore: "De 8h00 à 13h00",
-  cr_orari_pomeriggio_ore: "De 15h00 à 18h00",
+  cr_orari_mattina_ore: "8h00 – 13h00",
+  cr_orari_pomeriggio_ore: "15h00 – 18h00",
 
 };

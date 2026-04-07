@@ -203,3 +203,21 @@ h1 {
         background-image: url('../assets/images/accademia.webp') !important;
     }
 }
+
+/* AGGIUNGI QUI SOTTO */
+.orari p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orari-flow {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.orari-flow span {
+    display: block;
+    line-height: 1.4;
+}

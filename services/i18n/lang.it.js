@@ -249,8 +249,6 @@ globalThis.translations.it = {
 
   // --- Orari ---
   cr_orari_titolo: "Orari",
-  cr_orari_mattina: "Mattina",
-  cr_orari_pomeriggio: "Pomeriggio",
   cr_orari_lun_ven: "Dal Lunedi al Venerdi: ",
   cr_orari_mattina_ore: "Dalle 8:00 alle 13:00",
   cr_orari_pomeriggio_ore: "Dalle 15:00 alle 18:00",

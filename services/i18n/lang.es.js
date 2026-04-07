@@ -222,15 +222,13 @@ globalThis.translations.es = {
 
   cr_contatti_titolo: "Nuestros contactos",
   cr_indirizzo_label: "Dirección: ",
-  cr_indirizzo_valore: "Calle de los Monstruos, 123 - 12345",
   cr_telefono_label: "Teléfono: ",
   cr_email_label: "Correo electrónico: ",
 
+  
   cr_orari_titolo: "Horarios",
-  cr_orari_mattina: "Mañana",
-  cr_orari_pomeriggio: "Tarde",
   cr_orari_lun_ven: "De lunes a viernes: ",
-  cr_orari_mattina_ore: "De 8:00 a 13:00",
-  cr_orari_pomeriggio_ore: "De 15:00 a 18:00",
+  cr_orari_mattina_ore: "8:00 – 13:00",
+  cr_orari_pomeriggio_ore: "15:00 – 18:00",
 
 };

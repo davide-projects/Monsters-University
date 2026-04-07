@@ -1,24 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Come Raggiungerci" />
+    <title>Monsters University</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Come Raggiungerci">
-    <title>Monsters University — Come Raggiungerci</title>
-
-    <link rel="shortcut icon" href="../assets/images/Favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/Favicon.ico"
+      type="image/x-icon"
+    />
 
     <!-- Fogli di stile separati per responsabilità: navbar, stili globali, footer e lo stile specifico per comeRaggiungerci -->
-    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/fonts.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/cambioLingua.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/comeRaggiungerci.css" />
     <link rel="stylesheet" href="../css/footer.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar iniettata dinamicamente da caricaNavBar.js -->
     <div id="navbar-placeholder"></div>
 
@@ -29,54 +32,70 @@
     <div id="menu-smartphone-placeholder"></div>
 
     <main>
+      <!-- Contenuto della pagina "Come Raggiungerci" -->
+      <section class="hero-come-raggiungerci">
+        <div class="hero-overlay">
+          <div class="hero-contenuti" id="inizio">
+            <h1 data-i18n="cr_hero_title">Come Raggiungerci</h1>
+            <p class="hero-descrizione" data-i18n="cr_hero_descrizione">
+              Scopri come arrivare alla Monsters University e unisciti a noi per
+              un'avventura indimenticabile!
+            </p>
+          </div>
+        </div>
+        <div class="mappa">
+          <img
+            src="../assets/images/lingue/mappaUniversitaDesktop.IT.webp"
+            srcset="
+              ../assets/images/lingue/mappaUniversitaDesktop.IT.webp  500w,
+              ../assets/images/lingue/mappaUniversitaDesktop.IT.webp 1000w
+            "
+            sizes="(max-width: 768px) 90vw, 500px"
+            alt="Mappa della Monsters University"
+            loading="lazy"
+            width="500"
+            height="662"
+          />
+        </div>
+      </section>
 
-        <!-- Contenuto della pagina "Come Raggiungerci" -->
-        <section class="hero-come-raggiungerci">
-            <div class="hero-overlay">
-                <div class="hero-contenuti" id="inizio">
-                    <h1 data-i18n="cr_hero_title">Come Raggiungerci</h1>
-                    <p class="hero-descrizione" data-i18n="cr_hero_descrizione">Scopri come arrivare alla Monsters
-                        University e unisciti a noi per un'avventura indimenticabile!</p>
-                </div>
-            </div>
-            <div class="mappa">
-                <img src="../assets/images/lingue/mappaUniversitaDesktop.IT.webp" srcset="../assets/images/lingue/mappaUniversitaDesktop.IT.webp 500w,
-            ../assets/images/lingue/mappaUniversitaDesktop.IT.webp 1000w" sizes="(max-width: 768px) 90vw, 500px"
-                    alt="Mappa della Monsters University" loading="lazy" width="500" height="662">
-            </div>
-        </section>
-
-        <section class="info-container">
-            <div class="contatti">
-                <h2 data-i18n="cr_contatti_titolo">I nostri contatti</h2>
-                <p>
-                    <strong data-i18n="cr_indirizzo_label">Indirizzo: </strong>
-                    <a href="http://maps.google.com/?q=Via+dei+Monsters%2C+123+-+12345+-+Monstropolis" target="_blank"
-                        class="informazioni" data-i18n="cr_indirizzo_valore">Via dei Monsters, 123 - 12345</a>
-                </p>
-                <p>
-                    <strong data-i18n="cr_telefono_label">Telefono: </strong>
-                    <span class="informazioni">+39 012 3456789</span>
-                </p>
-                <p>
-                    <strong data-i18n="cr_email_label">Email: </strong>
-                    <a href="mailto:info@monstersuniversity.it" class="informazioni">info@monstersuniversity.it</a>
-                </p>
-            </div>
-            <div class="orari">
-                <h2 data-i18n="cr_orari_titolo">Orari</h2>
-                <h3 data-i18n="cr_orari_mattina">Mattina</h3>
-                <p>
-                    <strong data-i18n="cr_orari_lun_ven">Dal Lunedi al Venerdi: </strong>
-                    <span data-i18n="cr_orari_mattina_ore">Dalle 8:00 alle 13:00</span>
-                </p>
-                <h3 data-i18n="cr_orari_pomeriggio">Pomeriggio</h3>
-                <p>
-                    <strong data-i18n="cr_orari_lun_ven">Dal Lunedi al Venerdi: </strong>
-                    <span data-i18n="cr_orari_pomeriggio_ore">Dalle 15:00 alle 18:00</span>
-                </p>
-            </div>
-        </section>
+      <section class="info-container">
+        <div class="contatti">
+          <h2 data-i18n="cr_contatti_titolo">I nostri contatti</h2>
+          <p>
+            <strong data-i18n="cr_indirizzo_label">Indirizzo: </strong>
+            <a
+              href="http://maps.google.com/?q=Via+dei+Monsters%2C+123+-+12345+-+Monstropolis"
+              target="_blank"
+              class="informazioni"
+              data-i18n="cr_indirizzo_valore"
+              >Via dei Monsters, 123 - 12345</a
+            >
+          </p>
+          <p>
+            <strong data-i18n="cr_telefono_label">Telefono: </strong>
+            <span class="informazioni">+39 012 3456789</span>
+          </p>
+          <p>
+            <strong data-i18n="cr_email_label">Email: </strong>
+            <a href="mailto:info@monstersuniversity.it" class="informazioni"
+              >info@monstersuniversity.it</a
+            >
+          </p>
+        </div>
+        <div class="orari">
+          <h2 data-i18n="cr_orari_titolo">Orari</h2>
+          <p>
+            <strong data-i18n="cr_orari_lun_ven"
+              >Dal Lunedì al Venerdì:
+            </strong>
+            <span class="orari-flow">
+              <span data-i18n="cr_orari_mattina_ore">8:00 – 13:00 </span>
+              <span data-i18n="cr_orari_pomeriggio_ore">15:00 – 18:00</span>
+            </span>
+          </p>
+        </div>
+      </section>
     </main>
 
     <!-- jQuery: libreria esterna, deve essere caricata per prima -->
@@ -97,7 +116,5 @@
     <script src="../services/i18n/lang.fr.js"></script>
     <!-- Logica cambio lingua -->
     <script src="../services/langService.min.js"></script>
-
-</body>
-
+  </body>
 </html>

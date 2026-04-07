@@ -229,15 +229,13 @@ globalThis.translations.de = {
 
   cr_contatti_titolo: "Unsere Kontakte",
   cr_indirizzo_label: "Adresse: ",
-  cr_indirizzo_valore: "Monsterstraße 123 - 12345",
   cr_telefono_label: "Telefon: ",
   cr_email_label: "E-Mail: ",
 
+  
   cr_orari_titolo: "Öffnungszeiten",
-  cr_orari_mattina: "Morgen",
-  cr_orari_pomeriggio: "Nachmittag",
   cr_orari_lun_ven: "Montag bis Freitag: ",
-  cr_orari_mattina_ore: "Von 8:00 bis 13:00",
-  cr_orari_pomeriggio_ore: "Von 15:00 bis 18:00",
+  cr_orari_mattina_ore: "8:00 – 13:00",
+  cr_orari_pomeriggio_ore: "15:00 – 18:00",
 
 };

@@ -243,16 +243,13 @@ globalThis.translations.en = {
   // --- Contatti ---
   cr_contatti_titolo: "Our contacts",
   cr_indirizzo_label: "Address: ",
-  cr_indirizzo_valore: "123 Monsters Street - 12345",
   cr_telefono_label: "Phone: ",
   cr_email_label: "Email: ",
 
-  // --- Orari ---
+  
   cr_orari_titolo: "Opening Hours",
-  cr_orari_mattina: "Morning",
-  cr_orari_pomeriggio: "Afternoon",
   cr_orari_lun_ven: "Monday to Friday: ",
-  cr_orari_mattina_ore: "From 8:00 to 13:00",
-  cr_orari_pomeriggio_ore: "From 15:00 to 18:00",
+  cr_orari_mattina_ore: "8:00 am – 1:00 pm",
+  cr_orari_pomeriggio_ore: "3:00 pm – 6:00 pm",
 
 };

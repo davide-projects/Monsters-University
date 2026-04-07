@@ -42,28 +42,28 @@ globalThis.navbarTemplate = `
         <li class="nav-lang">
           <div class="lang-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
             <img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="IT" aria-hidden="true">
-            <span class="visually-hidden">Italiano</span>
-          </div>
+            <span class="visually-hidden">IT</span>
+            </div>
           <div class="lang-dropdown">
             <button class="lang-option" data-lang="it" data-flag="${_p}assets/images/flags/it.svg">
               <img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="Italiano">
-              <span class="lang-label" data-i18n="lang_it">Italiano</span>
+              <span class="lang-label" data-i18n="lang_it">IT</span>
             </button>
             <button class="lang-option" data-lang="en" data-flag="${_p}assets/images/flags/gb.svg">
               <img class="flag-img" src="${_p}assets/images/flags/gb.svg" alt="English (GB)">
-              <span class="lang-label" data-i18n="lang_en">English (GB)</span>
+              <span class="lang-label" data-i18n="lang_en">GB</span>
             </button>
             <button class="lang-option" data-lang="de" data-flag="${_p}assets/images/flags/de.svg">
               <img class="flag-img" src="${_p}assets/images/flags/de.svg" alt="Deutsch (DE)">
-              <span class="lang-label" data-i18n="lang_de">Deutsch</span>
+              <span class="lang-label" data-i18n="lang_de">DE</span>
             </button>
             <button class="lang-option" data-lang="es" data-flag="${_p}assets/images/flags/es.svg">
               <img class="flag-img" src="${_p}assets/images/flags/es.svg" alt="Español (ES)">
-              <span class="lang-label" data-i18n="lang_es">Español</span>
+              <span class="lang-label" data-i18n="lang_es">ES</span>
             </button>
             <button class="lang-option" data-lang="fr" data-flag="${_p}assets/images/flags/fr.svg">
               <img class="flag-img" src="${_p}assets/images/flags/fr.svg" alt="Français (FR)">
-              <span class="lang-label" data-i18n="lang_fr">Français</span>
+              <span class="lang-label" data-i18n="lang_fr">FR</span>
             </button>
           </div>
         </li>
@@ -81,30 +81,30 @@ globalThis.menuSmartphoneTemplate = `
       <div class="lang-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
         <span class="lang-left">
           <img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="IT" aria-hidden="true">
-          <span class="lang-current-name">Italiano</span>
+          <span class="lang-current-name">IT</span>
         </span>
         <span class="lang-right"><span class="caret">▾</span></span>
       </div>
       <div class="lang-dropdown">
         <button class="lang-option" data-lang="it" data-flag="${_p}assets/images/flags/it.svg">
           <img class="flag-img" src="${_p}assets/images/flags/it.svg" alt="Italiano">
-          <span class="lang-label" data-i18n="lang_it">Italiano</span>
+          <span class="lang-label" data-i18n="lang_it">IT</span>
         </button>
         <button class="lang-option" data-lang="en" data-flag="${_p}assets/images/flags/gb.svg">
           <img class="flag-img" src="${_p}assets/images/flags/gb.svg" alt="English (GB)">
-          <span class="lang-label" data-i18n="lang_en">English (GB)</span>
+          <span class="lang-label" data-i18n="lang_en">GB</span>
         </button>
         <button class="lang-option" data-lang="de" data-flag="${_p}assets/images/flags/de.svg">
           <img class="flag-img" src="${_p}assets/images/flags/de.svg" alt="Deutsch (DE)">
-          <span class="lang-label" data-i18n="lang_de">Deutsch</span>
+          <span class="lang-label" data-i18n="lang_de">DE</span>
         </button>
         <button class="lang-option" data-lang="es" data-flag="${_p}assets/images/flags/es.svg">
           <img class="flag-img" src="${_p}assets/images/flags/es.svg" alt="Español (ES)">
-          <span class="lang-label" data-i18n="lang_es">Español</span>
+          <span class="lang-label" data-i18n="lang_es">ES</span>
         </button>
         <button class="lang-option" data-lang="fr" data-flag="${_p}assets/images/flags/fr.svg">
           <img class="flag-img" src="${_p}assets/images/flags/fr.svg" alt="Français (FR)">
-          <span class="lang-label" data-i18n="lang_fr">Français</span>
+          <span class="lang-label" data-i18n="lang_fr">FR</span>
         </button>
       </div>
     </li>

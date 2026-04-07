@@ -17,11 +17,11 @@ globalThis.translations.de = {
   nav_raggiungerci: "Anfahrt",
 
   // --- Selettore lingua ---
-  lang_it: "Italienisch (IT)",
-  lang_en: "Englisch (UK)",
-  lang_de: "Deutsch (DE)",
-  lang_es: "Spanisch (ES)",
-  lang_fr: "Französisch (FR)",
+  lang_it: "IT",
+  lang_en: "UK",
+  lang_de: "DE",
+  lang_es: "ES",
+  lang_fr: "FR",
 
   // --- Footer ---
   footer_testo: "Monsters University — Alle Rechte vorbehalten",
@@ -235,7 +235,7 @@ globalThis.translations.de = {
   
   cr_orari_titolo: "Öffnungszeiten",
   cr_orari_lun_ven: "Montag bis Freitag: ",
-  cr_orari_mattina_ore: "8:00 – 13:00",
-  cr_orari_pomeriggio_ore: "15:00 – 18:00",
+  cr_orari_mattina_ore: "8h00 – 13h00",
+  cr_orari_pomeriggio_ore: "15h00 – 18h00",
 
 };

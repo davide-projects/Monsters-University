@@ -17,11 +17,11 @@ globalThis.translations.fr = {
   nav_raggiungerci: "Comment Nous Trouver",
 
   // --- Selettore lingua ---
-  lang_it: "Italien (IT)",
-  lang_en: "Anglais (UK)",
-  lang_de: "Allemand (DE)",
-  lang_es: "Espagnol (ES)",
-  lang_fr: "Français (FR)",
+  lang_it: "IT",
+  lang_en: "UK",
+  lang_de: "DE",
+  lang_es: "ES",
+  lang_fr: "FR",
 
   // --- Footer ---
   footer_testo: "Monsters University — Tous droits réservés",

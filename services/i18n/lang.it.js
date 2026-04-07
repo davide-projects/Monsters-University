@@ -17,8 +17,8 @@ globalThis.translations.it = {
   nav_raggiungerci: "Come Raggiungerci",
 
   // --- Selettore lingua ---
-  lang_it: "Italiano (IT)",
-  lang_en: "Inglese (UK)",
+  lang_it: "IT",
+  lang_en: "UK",
 
   // --- Footer ---
   footer_testo: "Monsters University — Tutti i diritti riservati",

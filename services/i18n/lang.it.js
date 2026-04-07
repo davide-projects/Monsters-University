@@ -84,7 +84,7 @@ globalThis.translations.it = {
   nc_spavento_titolo: "Spavento",
   nc_spavento_intro: "Non c'è nulla di più spaventoso ed inquietante di entrare nella stanza innocente e felice di un bambino, sì, ma non per un laureato in Spavento!",
   nc_spavento_perche: "Perchè scegliere Spavento?",
-  nc_spavento_desc: "James Sullivan ti dice qualcosa? Bill Cosby? P.Diddy? Difficile non conoscerli, vero? Beh, i più grandi mostri della storia hanno studiato qui, e se sono passati alla storia è perchè hanno ricevuto una formazione ideale. Nel corso Spavento alla Monsters University avrai tutte le nozioni per passare alla storia: gestione del bambino, furtività, psicologia infantile.",
+  nc_spavento_desc: "James Sullivan ti dice qualcosa? Beh, i più grandi mostri della storia hanno studiato qui, e se sono passati alla storia è perchè hanno ricevuto una formazione ideale. Nel corso Spavento alla Monsters University avrai tutte le nozioni per passare alla storia: gestione del bambino, furtività, psicologia infantile.",
 
   // --- Corso Ingegneria ---
   nc_ingegneria_titolo: "Ingegneria dello Spavento",

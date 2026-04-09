@@ -104,13 +104,13 @@ MonstersUniversity/
 │   ├── comeRaggiungerci.css # Stili pagina come raggiungerci
 │   ├── fonts.css            # Dichiarazione @font-face
 │   ├── footer.css           # Stili footer
+│   ├── index.css            # Stili pagina home
 │   ├── navbar.css           # Stili navbar e menu smartphone
 │   ├── nostriCorsi.css      # Stili pagina nostri corsi
 │   ├── sezioneCorsi.css     # Stili pagine corso
 │   ├── style.css            # Stili globali
 │   └── test.css             # Stili pagina quiz
 ├── JavaScript/
-│   ├── cambioLingua.js      # Template HTML selettore lingua
 │   ├── customNavbar.js      # Logica menu ad hamburger
 │   ├── footer.js            # Template HTML footer
 │   ├── jquery-3.6.0.min.js  # Libreria jQuery
@@ -123,17 +123,26 @@ MonstersUniversity/
 │   ├── nostriCorsi.html
 │   └── test.html
 ├── services/
-    ├── i18n/                # Cartella per i dizionari
-    │   │── lang.en.js       # Traduzioni inglesi
-│   │   └── lang.it.js       # Traduzioni italiane
+│   ├── i18n/                # Cartella per i dizionari
+│   │   ├── lang.de.js       # Traduzioni tedesche
+│   │   ├── lang.de.min.js
+│   │   ├── lang.en.js       # Traduzioni inglesi
+│   │   ├── lang.en.min.js
+│   │   ├── lang.es.js       # Traduzioni spagnole
+│   │   ├── lang.es.min.js
+│   │   ├── lang.fr.js       # Traduzioni francesi
+│   │   ├── lang.fr.min.js
+│   │   ├── lang.it.js       # Traduzioni italiane
+│   │   └── lang.it.min.js
 │   ├── caricaNavBar.js      # Iniezione navbar e footer nel DOM
-│   ├── lang.js              # Dizionario traduzioni IT/EN
+│   ├── caricaNavBar.min.js
+│   ├── lang.js              # Dizionario traduzioni IT/EN/DE/ES/FR
 │   └── langService.js       # Logica cambio lingua e iniezione selettore
+│   └── langService.min.js
 ├── .gitignore
 ├── index.html               # Homepage
 └── README.md
-```
-
+└── sonar-project.properties # Configurazione analisi SonarQube
 ---
 
 ## 🚀 Come avviare il progetto

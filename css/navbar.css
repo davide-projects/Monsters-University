@@ -74,6 +74,7 @@ body {
 
 .nav-lang .lang-toggle:hover {
     background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }
 
 .nav-lang .lang-dropdown {

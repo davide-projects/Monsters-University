@@ -15,6 +15,8 @@ globalThis.translations.it = {
   nav_home: "Home",
   nav_corsi: "I Nostri Corsi",
   nav_raggiungerci: "Come Raggiungerci",
+  auth_login: "Accedi",
+  auth_register: "Registrati",
 
   // --- Selettore lingua ---
   lang_it: "IT",

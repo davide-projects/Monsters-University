@@ -161,3 +161,20 @@ Il progetto è un sito statico e non richiede installazioni o dipendenze.
 3. Il sito si aprirà nel browser predefinito
 
 > 💡 Entrambe le modalità sono state testate e funzionano correttamente.
+
+## ✅ To do
+
+### 🔒 Sistema di autenticazione `PHP`
+- Implementazione logica di registrazione nuovi utenti/studenti
+- Implementazione login e gestione delle sessioni
+- Protezione delle rotte e gestione degli accessi
+
+### 🗄️ Integrazione database `MySQL`
+- Progettazione schema per la memorizzazione dei dati utente
+- Connessione backend-database per persistenza dati
+
+### 🔗 Navbar dinamica
+- Logica per mostrare/nascondere i tasti "Accedi" e "Registrati" in base allo stato della sessione (login/logout)
+
+### 🖥️ Area riservata
+- Sviluppo di una dashboard dedicata allo studente post-login

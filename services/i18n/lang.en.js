@@ -15,6 +15,8 @@ globalThis.translations.en = {
   nav_home: "Home",
   nav_corsi: "Our Courses",
   nav_raggiungerci: "How to Reach Us",
+  auth_login: "Login",
+  auth_register: "Register",
 
   // --- Selettore lingua ---
   lang_it: "IT",
@@ -246,7 +248,7 @@ globalThis.translations.en = {
   cr_telefono_label: "Phone: ",
   cr_email_label: "Email: ",
 
-  
+
   cr_orari_titolo: "Opening Hours",
   cr_orari_lun_ven: "Monday to Friday: ",
   cr_orari_mattina_ore: "8:00 am – 1:00 pm",

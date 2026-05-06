@@ -113,6 +113,69 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    /* Allinea verticalmente al centro */
+    gap: 20px;
+    /* Spazio tra i bottoni e la bandierina */
+    /* Se non hai dato un'altezza fissa alla navbar, assicurati che questo blocco non collassi */
+}
+
+/* --- Correzione Navigazione Centrale --- */
+.nav-central {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+/* --- Bottoni Accedi e Registrati --- */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-login,
+.btn-register {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+/* Bottone Accedi: solo bordo o testo */
+.btn-login {
+    color: white;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-login:hover {
+    border-color: #7fb24a;
+    color: #7fb24a;
+}
+
+/* Bottone Registrati: pieno (Call to Action) */
+.btn-register {
+    background-color: #7fb24a;
+    /* Il verde che usi per l'hover */
+    color: #002D62;
+    /* Blu della navbar per contrasto */
+}
+
+.btn-register:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* --- HAMBURGER MENU --- */
 .hamburger-btn {
     display: none;
@@ -134,7 +197,7 @@ body {
     background: white;
     border-radius: 3px;
     margin: 6px auto;
-    transition: transform 320ms cubic-bezier(.2,.9,.25,1), background 160ms linear, top 320ms cubic-bezier(.2,.9,.25,1), width 160ms ease;
+    transition: transform 320ms cubic-bezier(.2, .9, .25, 1), background 160ms linear, top 320ms cubic-bezier(.2, .9, .25, 1), width 160ms ease;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -142,7 +205,7 @@ body {
 
 /* Rimuove la transizione sul transform SOLO per la barra centrale: lo scale avverrà istantaneamente */
 .hamburger-btn .bar:nth-child(2) {
-    transition: top 320ms cubic-bezier(.2,.9,.25,1), background 160ms linear;
+    transition: top 320ms cubic-bezier(.2, .9, .25, 1), background 160ms linear;
 }
 
 /* --- RESPONSIVE (Mobile) --- */
@@ -154,6 +217,17 @@ body {
     }
 
     .nav-links {
+        display: none;
+    }
+
+    /* Nasconde il blocco dei bottoni desktop */
+    .navbar .auth-buttons {
+        display: none;
+    }
+
+    /* Se vuoi nascondere tutto il blocco destro (inclusa la lingua) 
+       perché la lingua è già presente dentro il menu smartphone: */
+    .nav-right {
         display: none;
     }
 
@@ -199,10 +273,11 @@ body {
         position: relative;
         z-index: 2000;
         margin-left: auto;
-        overflow: visible !important; /* Garantisce che la X sia sempre visibile anche se esce dai confini del bottone */
+        overflow: visible !important;
+        /* Garantisce che la X sia sempre visibile anche se esce dai confini del bottone */
         margin-right: 0;
         padding: 0;
-        transition: transform 0.22s cubic-bezier(.2,.9,.25,1);
+        transition: transform 0.22s cubic-bezier(.2, .9, .25, 1);
     }
 
     .hamburger-btn {
@@ -219,9 +294,10 @@ body {
         margin-left: 0;
         margin-right: 2%;
         margin-top: -2%;
-        overflow: visible !important; /* Garantisce che la X sia sempre visibile anche se esce dai confini del bottone */
+        overflow: visible !important;
+        /* Garantisce che la X sia sempre visibile anche se esce dai confini del bottone */
         padding: 0;
-        transition: transform 0.22s cubic-bezier(.2,.9,.25,1);
+        transition: transform 0.22s cubic-bezier(.2, .9, .25, 1);
         align-self: center;
     }
 
@@ -231,17 +307,28 @@ body {
         height: 3px;
         background: white;
         border-radius: 3px;
-        transition: transform 320ms cubic-bezier(.2,.9,.25,1), top 320ms cubic-bezier(.2,.9,.25,1), background 160ms linear, width 160ms ease;
+        transition: transform 320ms cubic-bezier(.2, .9, .25, 1), top 320ms cubic-bezier(.2, .9, .25, 1), background 160ms linear, width 160ms ease;
         left: 50%;
         transform: translateX(-50%);
     }
 
     /* stato chiuso */
-    .hamburger-btn .bar:nth-child(1) { top: calc(50% - 9px); }
-    .hamburger-btn .bar:nth-child(2) { top: 50%; }
-    .hamburger-btn .bar:nth-child(3) { top: calc(50% + 9px); }
+    .hamburger-btn .bar:nth-child(1) {
+        top: calc(50% - 9px);
+    }
 
-    .hamburger-btn.open { overflow: visible !important; isolation: isolate; }
+    .hamburger-btn .bar:nth-child(2) {
+        top: 50%;
+    }
+
+    .hamburger-btn .bar:nth-child(3) {
+        top: calc(50% + 9px);
+    }
+
+    .hamburger-btn.open {
+        overflow: visible !important;
+        isolation: isolate;
+    }
 
     /* stato aperto: X */
     .hamburger-btn.open .bar:nth-child(1) {
